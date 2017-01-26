@@ -142,10 +142,11 @@
 		    z-index: 0;
 		    top: 1;
 		    left: 1;
-		    background-color: rgb(135,206,250);
+		  	background: rgb(135,206,250) url("../images/bg3.png") 0 0 repeat;			
 		    overflow-x: hidden;	
 		    transition: 1s;
 		    padding-top: 35px;
+		
 		}
 		.sidenav a {
 		    padding: 8px 8px 8px 20px;
