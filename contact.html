@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Title -->
+	<title>Contact Us</title>
+
+	<!-- Imports -->
+
+  <!-- JavaScript Code -->
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js" type="text/javascript"></script>
+  <script src="script.js"></script>
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- Website -->
+<body>
+
+	<h1>STEM Academy</h1>
+
+	<!-- Main Menu -->
+	<h2>
+	<div id="cssmenu">
+		
+	<!-- 	cog 	= Wheel
+			user 	= User Maless
+			List 	= http://fontawesome.io/icons/	-->
+		<ul>
+		<li><a href="#"><i class="fa fa-fw fa-bars"></i> Menu</a></li>
+		<li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+		<li><a onclick="openNav()" href="#"><i class="fa fa-fw fa-user"></i> Login</a></li>
+		<li class="active"><a href="#"><i class="fa fa-fw fa-phone"></i> Contact</a></li>
+		</ul>
+	</div>
+
+  <!-- STEM Login -->
+  <div id="mySidenav" class="sidenav" >
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a style="text-align: center; text-decoration: none; color: black; font-size: 25px; font-family: sling;"><br><b>STEM<br>Login</b></a><br>
+    <form style="text-align: center; font-size: 17px;">
+    <b>Instructor ID</b><br>
+    <input type="text" name="username"><br><br>
+    <b>Password</b><br>
+    <input type="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+	</h2>
+
+
+		
+	<!---
+	<p style="margin: 0px 0px; text-align:right; font-size:110%"><a onclick="openNav()" href="#" class="myButton">Instructor Portal</a></p> 
+	-->
+
+
+<div class="container">
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Contact Us</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Email</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="Email Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone #</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="905 123 4567" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Address" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">City</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Please select your city</option>
+      <option>Ajax</option>
+      <option>Brampton</option>
+      <option>Burlington</option>
+      <option>Hamilton</option>
+      <option>Milton</option>
+      <option>Mississauga</option>
+      <option>Oakville</option>
+      <option>St. Catherines</option>
+      <option>Toronto</option>
+      <option>Other</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">STEM for:</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="yes" /> School Grades 1 - 12
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> College / University
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> Professional Exams
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> Programming
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> Other
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Message</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="comment" placeholder="Description"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+
+
+</form>
+</div>
+    </div><!-- /.container -->
+	</body>
+</html>
+
+<!-- Contact Us Form -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+<script src="validator.js"></script>
+<script src="contact.js"></script>
+
+<!-- Instructor Portal SideNavigation Script -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style="border-right-style: solid; border-right-color: blue; border-right-width: 1px;";
+    document.getElementById("mySidenav").style.width = "270px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style="border-right-style: none;";
+    document.getElementById("mySidenav").style.width = "0px";
+}
+</script>
+
+<!-- Footer -->
+<footer id="footer">
+	<div id="footer-inner">
+		<hr>
+		<p style="font-size:100%; background-color:transparent; text-decoration:none">&copy; Copyright 2016 - 2017 &#124; STEM Academy &#124; <a href="#">Terms of Use</a> &#124; <a href="#">Contact Us</a></p>
+		<div class="clr"></div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+
