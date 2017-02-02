@@ -33,24 +33,10 @@
 		<ul>
 		<li><a href="#"><i class="fa fa-fw fa-bars"></i> Menu</a></li>
 		<li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
-		<li><a onclick="openNav()" href="#"><i class="fa fa-fw fa-user"></i> Login</a></li>
+		<li><a href="login.php"><i class="fa fa-fw fa-user"></i> Login</a></li>
 		<li class="active"><a href="#"><i class="fa fa-fw fa-phone"></i> Contact</a></li>
 		</ul>
 	</div>
-
-  <!-- STEM Login -->
-  <div id="mySidenav" class="sidenav" >
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a style="text-align: center; text-decoration: none; color: black; font-size: 25px; font-family: sling;"><br><b>STEM<br>Login</b></a><br>
-    <form style="text-align: center; font-size: 17px;">
-    <b>Instructor ID</b><br>
-    <input type="text" name="username"><br><br>
-    <b>Password</b><br>
-    <input type="password" name="password"><br><br>
-      <input type="submit" value="Login">
-    </form>
-  </div>
-
 	</h2>
 
 
@@ -61,11 +47,11 @@
 
 
 <div class="container">
-    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form" style="text-align: center; font-size: 17px;">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Contact Us</legend>
+<legend><b>Contact Us</b></legend>
 
 <!-- Text input-->
 
@@ -209,18 +195,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
 <script src="validator.js"></script>
 <script src="contact.js"></script>
-
-<!-- Instructor Portal SideNavigation Script -->
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style="border-right-style: solid; border-right-color: blue; border-right-width: 1px;";
-    document.getElementById("mySidenav").style.width = "270px";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style="border-right-style: none;";
-    document.getElementById("mySidenav").style.width = "0px";
-}
-</script>
 
 <!-- Footer -->
 <footer id="footer">
