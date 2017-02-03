@@ -11,19 +11,20 @@
 			$password = md5($_POST['password']);
 			$sql = "INSERT INTO STEM.users (username, email, password) VALUES ('$username','$email','$password')";
 
-			if ($mysqli->query($sql) == true){
-				$_SESSION['message'] = 'Registration Successful! Added $username to the Instructor Database!';
-				header("location: welcome.php");
-			} else {
-				$_SESSION['message'] = 'User could not be added to the Instructor Database';
-			}
+
+
+			//if ($mysqli->query($sql) == true){
+			//	$_SESSION['message'] = 'Registration Successful! Added $username to the Instructor Database!';
+			//	header("location: welcome.php");
+			//} else {
+			//	$_SESSION['message'] = 'User could not be added to the Instructor Database';
+			//}
 
 			
 			
 			$result = $mysqli->query( $sql ); //$result = mysqli_result object
 			 while( $row = $result->fetch_assoc() ){ 
 		        echo "<div class='userlist'><span>".$row['username']."</span><br />";
-		        echo "<img src='".$row['avatar']."'></div>";
 		    }
 
 		} else {
