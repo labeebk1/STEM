@@ -79,7 +79,7 @@
 
 
 		<form class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off" style="text-align: center;">
-      	<div class="alert alert-error"></div><?= $_SESSION['message'] ?>
+      	<div class="alert alert-error"><b><?= $_SESSION['message'] ?><b></div>
 
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i> <span style="font-size:18px;">Username</span></span>
   		<input  name="username" placeholder="Username" class="form-control"  type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
@@ -90,7 +90,7 @@
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="fa fa-key"></i><span style="font-size:18px;"> Password</span></span>
-  		<input  name="username" placeholder="Password" class="form-control"  type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
+  		<input  name="username" placeholder="Password" class="form-control"  type="password" style="display: inline-block; width: 200px; font-size: 18px;" required>
   		<br>
   		<br>
   		<input type="password" style="text-align: center"; placeholder="STEM Instructor ID" name="STEMID" autocomplete="new-password" required />
