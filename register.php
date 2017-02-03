@@ -13,19 +13,14 @@
 
 
 
-			//if ($mysqli->query($sql) == true){
-			//	$_SESSION['message'] = 'Registration Successful! Added $username to the Instructor Database!';
-			//	header("location: welcome.php");
-			//} else {
-			//	$_SESSION['message'] = 'User could not be added to the Instructor Database';
-			//}
+			if (($mysqli->query($sql)) == true){
+				$_SESSION['message'] = 'Registration Successful! Added $username to the Instructor Database!';
+				header("location: welcome.php");
+			} else {
+				$_SESSION['message'] = 'User could not be added to the Instructor Database';
+			}
 
 			
-			
-			$result = $mysqli->query( $sql ); //$result = mysqli_result object
-			 while( $row = $result->fetch_assoc() ){ 
-		        echo "<div class='userlist'><span>".$row['username']."</span><br />";
-		    }
 
 		} else {
 			$_SESSION['message'] = 'Invalid Instructor ID';
