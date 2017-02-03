@@ -13,14 +13,12 @@
 			
 			$sql = "INSERT INTO 'STEM.users' (username, email, password) VALUES ('$username','$email','$password')";
 
-			 x
-
-			//if (($mysqli->query($sql)) == true){
-			//	$_SESSION['message'] = 'Registration Successful! Added $username to the Instructor Database!';
-			//	header("location: welcome.php");
-			//} else {
-			//	$_SESSION['message'] = 'User could not be added to the Instructor Database';
-			//}
+			if (($mysqli->query($sql)) == true){
+				$_SESSION['message'] = 'Registration Successful! Added $username to the Instructor Database!';
+				header("location: welcome.php");
+			} else {
+				$_SESSION['message'] = 'User could not be added to the Instructor Database';
+			}
 
 			
 
