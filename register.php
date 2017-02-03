@@ -94,7 +94,7 @@
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="fa fa-key"></i><span style="font-size:18px;"> Password</span></span>
-  		<input  name="username" placeholder="Password" class="form-control"  type="password" style="display: inline-block; width: 200px; font-size: 18px;" required>
+  		<input name="password" placeholder="Password" class="form-control"  type="password" style="display: inline-block; width: 200px; font-size: 18px;" required>
   		<br>
   		<br>
   		<input type="password" style="text-align: center"; placeholder="STEM Instructor ID" name="STEMID" autocomplete="new-password" required />
