@@ -2,7 +2,7 @@
 
 	session_start();
 	$_SESSION['message'] = '';
-	$mysqli = new mysqli('35.185.41.223:3307','root','nickonly','users');
+	$mysqli = new mysqli('35.185.41.223','root','nickonly','users');
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if($_POST['STEMID'] == 'STEM'){
@@ -27,8 +27,6 @@
 		}
 
 	}
-
-
 ?>
 
 <!-- -->
