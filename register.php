@@ -18,7 +18,7 @@
 				header("location: welcome.php");
 			} else {
 				$_SESSION['message'] = 'User could not be added to the Instructor Database';
-    			die('Could not connect: ' . mysql_error());
+    			die('Could not connect: ' .  $mysqli->connect_error);
 			}
 
 
