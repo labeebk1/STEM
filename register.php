@@ -14,7 +14,8 @@
 			$sql = "INSERT INTO STEM.users (username, email, password) VALUES ('$username','$email','$password')";
 
 			if ($mysqli->query($sql) == true){
-				$_SESSION['message'] = 'Registration Successful! Added $username to the Instructor Database!';
+				$_SESSION['message'] = "Registration Successful! Added $username to the Instructor Database!";
+				header("location: portal.php");
 			} else {
 				$_SESSION['message'] = 'User could not be added to the Instructor Database';
     			die('Could not connect: ' .  $mysqli->connect_error);
