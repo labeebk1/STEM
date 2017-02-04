@@ -11,16 +11,25 @@
 			$email = $mysqli->real_escape_string($_POST['email']);
 			$password = md5($_POST['password']);
 			
-			$sql = "INSERT INTO STEM.users (username, email, password) VALUES ('$username','$email','$password')";
+			$sql = "SELECT username FROM STEM.users";
+			$login = true;
+			while( $row = $result->fetch_assoc() ){
+				if($row['username'] == $username){
+					$login = false;
+				}
+    		}
 
-			if ($mysqli->query($sql) == true){
-				$_SESSION['message'] = "Registration Successful! Added $username to the Instructor Database!";
-				header("location: portal.php");
-			} else {
-				$_SESSION['message'] = 'User could not be added to the Instructor Database';
-    			die('Could not connect: ' .  $mysqli->connect_error);
-			}
-
+    		if($login == false){
+				$_SESSION['message'] = "Error! That username already exists in the Instructor Database!";
+    		} else {
+				$sql = "INSERT INTO STEM.users (username, email, password) VALUES ('$username','$email','$password')";
+				if ($mysqli->query($sql) == true){
+					$_SESSION['message'] = "Registration Successful! Added $username to the Instructor Database!";
+				} else {
+					$_SESSION['message'] = 'User could not be added to the Instructor Database';
+	    			die('Could not connect: ' .  $mysqli->connect_error);
+				}
+    		}
 
 		} else {
 			$_SESSION['message'] = 'Invalid Instructor ID';
