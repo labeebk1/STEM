@@ -13,6 +13,7 @@
 			
 			$sql = "SELECT username FROM STEM.users";
 			$login = true;
+			$result = $mysqli->query($sql);
 			while( $row = $result->fetch_assoc() ){
 				if($row['username'] == $username){
 					$login = false;
