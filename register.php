@@ -2,7 +2,7 @@
 
 	session_start();
 	$_SESSION['message'] = '';
-	$mysqli = new mysqli('35.185.41.223','root','nickonly','users');
+	$mysqli = new mysqli('35.185.41.223:3307','root','nickonly','users');
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if($_POST['STEMID'] == 'STEM'){
@@ -85,11 +85,11 @@
       	<div class="alert alert-error"><b><?= $_SESSION['message'] ?><b></div>
 
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i> <span style="font-size:18px;">Username</span></span>
-  		<input  name="username" placeholder="Username" class="form-control"  type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
+  		<input name="username" placeholder="Username" class="form-control" type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i> <span style="font-size:18px;">Email</span></span>
-  		<input  name="email" placeholder="Email" class="form-control"  type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
+  		<input  name="email" placeholder="Email" class="form-control" type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="fa fa-key"></i><span style="font-size:18px;"> Password</span></span>
