@@ -12,16 +12,15 @@
     	$sql="SELECT * FROM STEM.users WHERE username='$username'";
 		$result=mysql_query($sql);
 
-		// Mysql_num_row is counting table row
 		$count=mysql_num_rows($result);
 		if($count==1){
 		    $row = mysql_fetch_assoc($result);
-		    if (md5(md5($row['salt']).md5($password)) == $row['password']){
+		    if ($password == $row['password']){
 		        session_register("username");
 		        session_register("password"); 
 				$_SESSION['message'] = "Login Successful!";
 		    } else {
-				$_SESSION['message'] = "Incorrect Username or Password";
+				$_SESSION['message'] = "Incorrect Username or Password 2";
 		    }
 		}
 		else{
