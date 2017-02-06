@@ -62,8 +62,8 @@
 		</form>
   		<br>
   		<br>
-  		<br>
   		New instructors can register <a href="register.php">here</a>!
+  		<br>
 
 </fieldset>
 
