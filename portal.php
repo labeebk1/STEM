@@ -14,7 +14,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Instructor Portal</title>
+  <title style="text-align: center; font-size: 20px;">Instructor Portal</title>
   <link rel="stylesheet" href="css/style.css">
   STEM Academy Instructor Portal
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -33,9 +33,9 @@
     </nav>
   </section>
 
-  <span style="text-align:center;">
+  <p style="text-align:center;">
       <b>Welcome to the instructor portal! <span class="user"><?= $_SESSION['username'] ?></span></b>
-  </span>
+  </p>
 
   <!--
   <section class="about">
