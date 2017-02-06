@@ -2,7 +2,9 @@
 <?php
   session_start();
   if(empty($_SESSION['username'])){
-    header("Location:redirect.php");
+
+    $_SESSION['message'] = "Error! You are not logged in!";
+    header("Location:login.php");
   }
 ?>
 
