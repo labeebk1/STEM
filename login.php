@@ -15,7 +15,6 @@
 			$result = $mysqli->query($sql);
 			$rows = $result->num_rows;
 	    	if($rows > 0){
-				$_SESSION['message'] = "Login Successful!";
 				$_SESSION['username'] = $username;
 	            header("Location:portal.php");
 	    	} else {

@@ -2,8 +2,6 @@
 <?php
   session_start();
   if(empty($_SESSION['username'])){
-
-    $_SESSION['message'] = "Error! You are not logged in!";
     header("Location:login.php");
   }
 ?>
@@ -26,6 +24,7 @@
       <ul>
         <li class="active"><a href="portal.php">Dashboard</a></li>
         <li><a href="portal.php">Tasks<span class="badge">4</span></a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="portal.php">Messages<span class="badge green">8</span></a></li>
         <li><a href="portal.php">Settings<span class="badge yellow">15</span></a></li>
         <li><a href="portal.php">Notifications<span class="badge red">16</span></a></li>
