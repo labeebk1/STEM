@@ -17,11 +17,9 @@
   <title>Instructor Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <br>
-  <br>
   <p style="text-align: center; font-size: 30px;"> STEM Academy Instructor Portal </p>
-  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
-<body>
+  <br>
+  <br>
   <section class="container">
     <nav>
       <ul>
@@ -34,6 +32,9 @@
       </ul>
     </nav>
   </section>
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
 
   <p style="text-align:center;">
       <b>Welcome to the instructor portal! <span class="user"><?= $_SESSION['username'] ?></span></b>
