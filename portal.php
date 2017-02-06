@@ -30,16 +30,18 @@
     </nav>
   </section>
 
+  <!--
   <section class="about">
     <p class="about-links">
       <a href="http://www.cssflow.com/snippets/menu-with-notification-badges" target="_parent">View Article</a>
       <a href="http://www.cssflow.com/snippets/menu-with-notification-badges.zip" target="_parent">Download</a>
     </p>
     <p class="about-author">
-      &copy; 2016&ndash;2017 <a href="http://thibaut.me" target="_blank">Thibaut Courouble</a> -
+      &copy; 2016&ndash;2017 <a href="portal.php" target="_blank">STEM Academy</a> -
       <a href="http://www.cssflow.com/mit-license" target="_blank">MIT License</a><br>
       Original PSD by <a href="http://www.premiumpixels.com/freebies/menu-notification-badges-psd/" target="_blank">Orman Clark</a>
     </p>
   </section>
+  -->
 </body>
 </html>
