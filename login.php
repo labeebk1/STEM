@@ -7,8 +7,8 @@
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			
 		$username = $mysqli->real_escape_string($_POST['username']);
-		$password = $mysqli->real_escape_string($_POST['password']);
-		$result = mysql_query("SELECT username, password FROM Users WHERE username = '".$username."' && password = '".$password."'");
+		$password = md5($_POST['password']);
+		$result = $mysqli->query("SELECT username, password FROM Users WHERE username = '".$username."' && password = '".$password."'");
 		if ($result && mysql_num_rows($result) > 0) {
 			$_SESSION['message'] = "Login Successful!";
 		} else {
