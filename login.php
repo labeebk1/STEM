@@ -14,7 +14,7 @@
 		$rows = $result->num_rows;
     	if($rows > 0){
 			$_SESSION['message'] = "Login Successful!";
-            header("Location: portal.php");
+            header("Location:portal.php");
     	} else {
 			$_SESSION['message'] = "Incorrect Username or Password";
 
@@ -82,7 +82,7 @@
   		<input  name="password" placeholder="Password" class="form-control" type="password" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
-  		<input type="submit" value="Login" class="btn btn-block btn-primary" style="display:inline-block; width: 150px; font-size: 20px;">
+  		<input type="submit" value="Login" class="btn btn-block btn-primary" style="display:inline-block; width: 130px; font-size: 20px;">
 		</form>
   		<br>
   		<br>
