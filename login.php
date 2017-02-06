@@ -63,11 +63,7 @@
   		<br>
   		<br>
   		<br>
-  		<br>
-  		<br>
-		<form action="register.php" class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off" >
-  		    <input type="submit" value="Register" class="btn btn-block btn-primary" style="display:inline-block; font-size: 20px;" />
-		</form>
+  		New instructors can register <a href="register.php">here</a>!
 
 </fieldset>
 
