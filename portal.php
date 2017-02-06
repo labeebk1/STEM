@@ -30,6 +30,10 @@
     </nav>
   </section>
 
+  <section>
+      Welcome <span class="user"><?= $_SESSION['username'] ?></span>
+  </section>
+
   <!--
   <section class="about">
     <p class="about-links">
