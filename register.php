@@ -89,11 +89,12 @@
 
 		<form class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off" style="text-align: center;">
       	<div class="alert alert-error"><b><?= $_SESSION['message'] ?><b></div>
-  		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i><span style="font-size:18px;">Username</span></span>
+
+  		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i><span style="font-size:18px;"> Username</span></span>
   		<input name="username" placeholder="Username" class="form-control" type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
   		<br>
   		<br>
-  		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-envelope"></i><span style="font-size:18px;">Email</span></span>
+  		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-envelope"></i><span style="font-size:18px;"> Email</span></span>
   		<input  name="email" placeholder="Email" class="form-control" type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
   		<br>
   		<br>
