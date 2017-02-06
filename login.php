@@ -8,22 +8,10 @@
 			
 		$username = $mysqli->real_escape_string($_POST['username']);
 		$password = md5($_POST['password']);
-
-    	$sql="SELECT * FROM STEM.users WHERE username='$username'";
-		$result=mysql_query($sql);
-
-		$count=mysql_num_rows($result);
-		if($count==1){
-		    $row = mysql_fetch_assoc($result);
-		    if ($password == $row['password']){
-		        session_register("username");
-		        session_register("password"); 
-				$_SESSION['message'] = "Login Successful!";
-		    } else {
-				$_SESSION['message'] = "Incorrect Username or Password 2";
-		    }
-		}
-		else{
+		$result = mysql_query("SELECT username, password FROM Users WHERE username = '".$username."' && password = '".$password."'");
+		if ($result && mysql_num_rows($result) > 0) {
+			$_SESSION['message'] = "Login Successful!";
+		} else {
 			$_SESSION['message'] = "Incorrect Username or Password";
 		}
 
@@ -55,7 +43,6 @@
 	<!-- Main Menu -->
 	<h2>
 	<div id="cssmenu">
-		
 	<!-- 	cog 	= Wheel
 			user 	= User Male
 			List 	= http://fontawesome.io/icons/	-->
@@ -85,11 +72,10 @@
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="fa fa-key"></i><span style="font-size:18px;"> Password</span></span>
-  		<input  name="password" placeholder="Password" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
+  		<input  name="password" placeholder="Password" class="form-control" type="password" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
   		<input type="submit" value="Login" class="btn btn-block btn-primary" style="display:inline-block; width: 150px; font-size: 20px;">
-
 		</form>
   		<br>
   		<br>
