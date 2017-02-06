@@ -1,11 +1,8 @@
 
 <?php
   session_start();
-
-
-  if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    session_destroy();
-    header("Location:index.html");      
+  if(empty($_SESSION['username'])){
+    exit("Error accessing portal: You are not logged in.");
   }
 
 ?>
