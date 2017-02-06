@@ -107,7 +107,6 @@
   		</br>
   		<input type="submit" value="Register" class="btn btn-block btn-primary" style="display:inline-block; width: 170px; font-size: 20px;">
   		</br>
-  		</br>
 
 
 
