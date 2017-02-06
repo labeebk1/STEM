@@ -1,7 +1,6 @@
 <?php
-
-	session_unset($_SESSION['username']);
-	session_destroy();
+    $_SESSION['username'] = NULL;
+    unset($_SESSION['username']);
 	header("location:index.html");
-	
+	exit;
 ?>
