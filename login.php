@@ -10,7 +10,7 @@
 				
 			$username = $mysqli->real_escape_string($_POST['username']);
 			$password = md5($_POST['password']);
-				
+
 			$sql = "SELECT * FROM STEM.users WHERE `username` = '$username' AND `password` = '$password'";
 			$result = $mysqli->query($sql);
 			$rows = $result->num_rows;
