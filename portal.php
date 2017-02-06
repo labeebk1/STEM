@@ -2,8 +2,9 @@
 <?php
   session_start();
   if(empty($_SESSION['username'])){
-    header("Refresh: 3;location:login.php");
-    exit("Error accessing instructor portal. You are not logged in. Redirecting in 3 seconds...");
+	echo 'Error accessing instructor portal. You are not logged in. Redirecting in 3 seconds...';
+	sleep(3);
+	header("location:login.php")
   }
 ?>
 
