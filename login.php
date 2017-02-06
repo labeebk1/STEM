@@ -50,14 +50,14 @@
       	<div class="alert alert-error"></div><!--<?= $_SESSION['message'] ?>-->
 
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i> <span style="font-size:18px;">Username</span></span>
-  		<input  name="username" placeholder="Username" class="form-control"  type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
+  		<input  name="username" placeholder="Username" class="form-control"  type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="fa fa-key"></i><span style="font-size:18px;"> Password</span></span>
-  		<input  name="password" placeholder="Password" class="form-control"  type="text" style="display: inline-block; width: 200px; font-size: 18px;" required>
+  		<input  name="password" placeholder="Password" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
-  		<input type="submit" value="Login" class="btn btn-block btn-primary" style="display:inline-block; width: 270px; font-size: 20px;">
+  		<input type="submit" value="Login" class="btn btn-block btn-primary" style="display:inline-block; width: 250px; font-size: 20px;">
 
 		</form>
   		<br>
