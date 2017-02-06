@@ -1,29 +1,29 @@
 <?php
 
 	session_start();
-	$_SESSION['message'] = '';
-	$mysqli = new mysqli('35.185.41.223','root','nickonly','STEM');
 
-	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-			
-		$username = $mysqli->real_escape_string($_POST['username']);
-		$password = md5($_POST['password']);
-			
-		$sql = "SELECT * FROM STEM.users WHERE `username` = '$username' AND `password` = '$password'";
-		$result = $mysqli->query($sql);
-		$rows = $result->num_rows;
-    	if($rows > 0){
-			$_SESSION['message'] = "Login Successful!";
-			$_SESSION['username'] = $username;
-            header("Location:portal.php");
-    	} else {
-			$_SESSION['message'] = "Incorrect Username or Password";
+	if(empty($_SESSION['username'])){
+		$_SESSION['message'] = '';
+		$mysqli = new mysqli('35.185.41.223','root','nickonly','STEM');
 
-    	}
-
-
-
-
+		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+				
+			$username = $mysqli->real_escape_string($_POST['username']);
+			$password = md5($_POST['password']);
+				
+			$sql = "SELECT * FROM STEM.users WHERE `username` = '$username' AND `password` = '$password'";
+			$result = $mysqli->query($sql);
+			$rows = $result->num_rows;
+	    	if($rows > 0){
+				$_SESSION['message'] = "Login Successful!";
+				$_SESSION['username'] = $username;
+	            header("Location:portal.php");
+	    	} else {
+				$_SESSION['message'] = "Incorrect Username or Password";
+	    	}
+	    }
+    } else {
+	    header("Location:portal.php");
 	}
 ?>
 <!-- Title -->
