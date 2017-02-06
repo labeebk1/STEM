@@ -14,9 +14,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title style="text-align: center; font-size: 20px;">Instructor Portal</title>
+  <title>Instructor Portal</title>
   <link rel="stylesheet" href="css/style.css">
-  STEM Academy Instructor Portal
+  <p style="text-align: center; font-size: 30px;"> STEM Academy Instructor Portal </p>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
