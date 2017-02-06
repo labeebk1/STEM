@@ -71,7 +71,7 @@
 		<ul>
 		<li><a href="#"><i class="fa fa-fw fa-bars"></i> Menu</a></li>
 		<li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
-		<li class="active"><a href="login.php"><i class="fa fa-fw fa-user"></i> Login</a></li>
+		<li class="active"><a href="login.php"><i class="fa fa-fw fa-user"></i> Portal</a></li>
 		<!--onclick="openNav()"-->
 		<li><a href="contact.html"><i class="fa fa-fw fa-phone"></i> Contact</a></li>
 		</ul>
