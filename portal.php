@@ -7,7 +7,7 @@
     session_destroy();
     header("Location:index.html");      
   }
-  
+
 ?>
 
 
@@ -30,7 +30,7 @@
         <li><a href="portal.php">Messages<span class="badge green">8</span></a></li>
         <li><a href="portal.php">Settings<span class="badge yellow">15</span></a></li>
         <li><a href="portal.php">Notifications<span class="badge red">16</span></a></li>
-        <li><a href="portal.php" method="post">Logout</a></li>
+        <li><a href="index.html">Logout</a></li>
       </ul>
     </nav>
   </section>
