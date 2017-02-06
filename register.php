@@ -105,7 +105,9 @@
   		<input type="password" style="text-align: center"; placeholder="STEM Instructor ID" name="STEMID" autocomplete="new-password" required />
   		</br>
   		</br>
-  		<input type="submit" value="Register" class="btn btn-block btn-primary" style="display:inline-block; width: 270px; font-size: 20px;">
+  		<input type="submit" value="Register" class="btn btn-block btn-primary" style="display:inline-block; width: 170px; font-size: 20px;">
+  		</br>
+  		</br>
 
 
 
