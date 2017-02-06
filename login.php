@@ -1,4 +1,36 @@
+<?php
 
+	session_start();
+	$_SESSION['message'] = '';
+	$mysqli = new mysqli('35.185.41.223','root','nickonly','STEM');
+
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+			
+		$username = $mysqli->real_escape_string($_POST['username']);
+		$password = md5($_POST['password']);
+
+    	$sql="SELECT * FROM STEM.users WHERE username='$username'";
+		$result=mysql_query($sql);
+
+		// Mysql_num_row is counting table row
+		$count=mysql_num_rows($result);
+		if($count==1){
+		    $row = mysql_fetch_assoc($result);
+		    if (md5(md5($row['salt']).md5($password)) == $row['password']){
+		        session_register("username");
+		        session_register("password"); 
+				$_SESSION['message'] = "Login Successful!";
+		    } else {
+				$_SESSION['message'] = "Incorrect Username or Password";
+		    }
+		}
+		else{
+			$_SESSION['message'] = "Incorrect Username or Password";
+		}
+
+
+	}
+?>
 <!-- Title -->
 <title>STEM Academy</title>
 
@@ -57,7 +89,7 @@
   		<input  name="password" placeholder="Password" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
-  		<input type="submit" value="Login" class="btn btn-block btn-primary" style="display:inline-block; width: 170px; font-size: 20px;">
+  		<input type="submit" value="Login" class="btn btn-block btn-primary" style="display:inline-block; width: 150px; font-size: 20px;">
 
 		</form>
   		<br>
