@@ -7,13 +7,21 @@
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			
 		$username = $mysqli->real_escape_string($_POST['username']);
-		$password = $mysqli->real_escape_string($_POST['password']);
-		$result = $mysqli->query("SELECT username, password FROM Users WHERE username = '".$username."' && password = '".$password."'");
-		if ($result && mysql_num_rows($result) > 0) {
+		$password = md5($_POST['password']);
+			
+		$sql = "SELECT * FROM STEM.users WHERE `username` = '$username' AND `password` = '$password'";
+		$result = $mysqli->query($sql);
+		$rows = $result->num_rows;
+    	if($rows > 0){
 			$_SESSION['message'] = "Login Successful!";
-		} else {
+    	} else {
 			$_SESSION['message'] = "Incorrect Username or Password";
-		}
+
+    	}
+
+
+
+
 	}
 ?>
 <!-- Title -->
