@@ -14,6 +14,7 @@
 		$rows = $result->num_rows;
     	if($rows > 0){
 			$_SESSION['message'] = "Login Successful!";
+			$_SESSION['username']= $username;
             header("Location:portal.php");
     	} else {
 			$_SESSION['message'] = "Incorrect Username or Password";
