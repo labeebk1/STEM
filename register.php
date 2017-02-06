@@ -91,15 +91,15 @@
       	<div class="alert alert-error"><b><?= $_SESSION['message'] ?></b></div>
 
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i><span style="font-size:18px;"> Username</span></span>
-  		<input name="username" placeholder="Username" class="form-control" type="text" style="display: inline-block; width: 170px; font-size: 18px;" required>
+  		<input name="username" placeholder="Username" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-envelope"></i><span style="font-size:18px;"> Email</span></span>
-  		<input  name="email" placeholder="Email" class="form-control" type="text" style="display: inline-block; width: 170px; font-size: 18px;" required>
+  		<input  name="email" placeholder="Email" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="fa fa-key"></i><span style="font-size:18px;"> Password</span></span>
-  		<input name="password" placeholder="Password" class="form-control"  type="password" style="display: inline-block; width: 170px; font-size: 18px;" required>
+  		<input name="password" placeholder="Password" class="form-control"  type="password" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
   		<input type="password" style="text-align: center"; placeholder="STEM Instructor ID" name="STEMID" autocomplete="new-password" required />
