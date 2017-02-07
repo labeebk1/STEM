@@ -31,22 +31,15 @@
     </nav>
   </section>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<script src="jquery.min.js"></script>
+  <?php echo getCalender(); ?>
+
 </head>
 <body>
 
 
 
-<div class="container">
-    <form class="well form-horizontal" action=" " method="post" style="text-align: center; font-size: 17px;" >
-<fieldset>
-  <script src="jquery.min.js"></script>
-  <div id="calendar_div">
-    <?php echo getCalender(); ?>
-  </div>
-</fieldset>
-</form>
-</div>
-    </div><!-- /.container -->
 
 </body>
 </html>
