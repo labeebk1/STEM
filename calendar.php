@@ -40,13 +40,7 @@
     <?php echo getCalender(); ?>  
 
   </div>
+  <br>
+  <br>
 </head>
-<body>
-
-  <br>
-  <br>
-
-
-
-</body>
 </html>
