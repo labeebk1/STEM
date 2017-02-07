@@ -13,11 +13,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-  <title>Instructor Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <br>
   <br>
-  <p style="text-align: center; font-size: 20px;"> STEM Academy Instructor Portal </p>
+  <h1> STEM Academy Instructor Portal </h1>
   <section class="container">
     <nav>
       <ul>
