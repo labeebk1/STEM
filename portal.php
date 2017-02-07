@@ -16,8 +16,9 @@
   <link rel="stylesheet" href="css/style.css">
   <br>
   <br>
-  <h1 style="font-size: 20px;"> <b>STEM Academy Instructor Portal </b></h1>
-  <section class="container">
+  <h1 style="font-size: 20px; text-align: center;"> <b>STEM Academy Instructor Portal </b></h1>
+
+
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -29,10 +30,8 @@
         <li><a href="logout.php">Logout</a></li> <!-- Destroy session variables once logout is hit. Also implement auto-login? from Login Tab in Index -->
       </ul>
     </nav>
-  </section>
-  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
-<body>
+
+
 
   <div class="container">
       <form class="well form-horizontal" action=" " method="post" style="text-align: center; font-size: 17px;" >
@@ -53,6 +52,11 @@
   </form>
   </div>
       </div><!-- /.container -->
+
+
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
   <!--
   <section class="about">
     <p class="about-links">
