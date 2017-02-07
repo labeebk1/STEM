@@ -32,8 +32,15 @@
   </section>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<script src="jquery.min.js"></script>
-  <?php echo getCalender(); ?>
+
+  <script src="jquery.min.js"></script>
+  <div id="calendar_div">
+    <?php echo getCalender(); ?>
+    <?php echo getEvents(); ?>
+    <?php echo getYearList(); ?>
+    <?php echo getAllMonths(); ?>
+  </div>
+  <br>
 
 </head>
 <body>
