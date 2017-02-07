@@ -35,10 +35,25 @@
 </head>
 <body>
 
-  <p style="text-align:center;">
-      <b>Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!</b>
-  </p>
+  <div class="container">
+      <form class="well form-horizontal" action=" " method="post" style="text-align: center; font-size: 17px;" >
+  <fieldset>
 
+  <!-- Form Name -->
+  <legend><b>Announcements</b></legend>
+
+    <p style="text-align: left; font-size: 18px;">
+      <b>February 2, 2017</b>
+      <br>
+      <br>
+      <b>Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!</b>
+    </p>
+
+  </fieldset>
+
+  </form>
+  </div>
+      </div><!-- /.container -->
   <!--
   <section class="about">
     <p class="about-links">

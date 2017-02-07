@@ -16,6 +16,7 @@
   <title>Instructor Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <br>
+  <br>
   <p style="text-align: center; font-size: 20px;"> STEM Academy Instructor Portal </p>
   <section class="container">
     <nav>
@@ -35,10 +36,7 @@
 
   <script src="jquery.min.js"></script>
   <div id="calendar_div">
-    <?php echo getCalender(); ?>
-    <?php echo getEvents(); ?>
-    <?php echo getYearList(); ?>
-    <?php echo getAllMonths(); ?>
+    <?php echo getCalender(); ?>  
   </div>
   <br>
 
