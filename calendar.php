@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <title>Instructor Portal</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
   <br>
   <br>
   <p style="text-align: center; font-size: 20px;"> STEM Academy Instructor Portal </p>
@@ -40,13 +40,11 @@
     <?php echo getCalender(); ?>  
 
   </div>
-  <br>
-
-
-
 </head>
 <body>
 
+  <br>
+  <br>
 
 
 
