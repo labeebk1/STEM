@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="css/style.css">
   <br>
   <p style="text-align: center; font-size: 20px;"> STEM Academy Instructor Portal </p>
-</head>
   <section class="container">
     <nav>
       <ul>
@@ -32,13 +31,16 @@
     </nav>
   </section>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="jquery.min.js"></script>
+  <div id="calendar_div">
+    <?php echo getCalender(); ?>
+  </div>
+
+</head>
 <body>
 
-<script src="jquery.min.js"></script>
-<div id="calendar_div">
-  <?php echo getCalender(); ?>
-</div>
-<br>
+
 
   <!--
   <section class="about">
