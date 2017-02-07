@@ -22,8 +22,8 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="portal.php">Dashboard</a></li>
-        <li><a href="calendar.php">Calendar</a></li><!-- <span class="badge">4</span> -->
+        <li><a href="portal.php">Dashboard</a></li>
+        <li class="active"><a href="calendar.php">Calendar</a></li><!-- <span class="badge">4</span> -->
         <li><a href="portal.php">Messages<span class="badge green">8</span></a></li>
         <li><a href="portal.php">Settings<span class="badge yellow">15</span></a></li>
         <li><a href="portal.php">Notifications<span class="badge red">16</span></a></li>
@@ -36,7 +36,7 @@
 <body>
 
   <p style="text-align:center;">
-      <b>Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!</b>
+      <b>Welcome to the instructor portal! <span class="user"><?= $_SESSION['username'] ?></span></b>
   </p>
 
   <!--

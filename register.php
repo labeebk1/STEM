@@ -95,7 +95,7 @@
   		<input name="username" placeholder="Username" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
-  		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-envelope"></i><span style="font-size:18px;"> Phone</span></span>
+  		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-earphone"></i><span style="font-size:18px;"> Phone</span></span>
   		<input  name="phone" placeholder="Phone" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
