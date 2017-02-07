@@ -16,12 +16,13 @@
   <title>Instructor Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <br>
-  <p style="text-align: center; font-size: 30px;"> STEM Academy Instructor Portal </p>
+  <br>
+  <p style="text-align: center; font-size: 20px;"> STEM Academy Instructor Portal </p>
   <section class="container">
     <nav>
       <ul>
-        <li class="active"><a href="portal.php">Dashboard</a></li>
         <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="portal.php">Dashboard</a></li>
         <li><a href="portal.php">Tasks<span class="badge">4</span></a></li>
         <li><a href="portal.php">Messages<span class="badge green">8</span></a></li>
         <li><a href="portal.php">Settings<span class="badge yellow">15</span></a></li>
