@@ -30,17 +30,17 @@
         <li><a href="logout.php">Logout</a></li> <!-- Destroy session variables once logout is hit. Also implement auto-login? from Login Tab in Index -->
       </ul>
     </nav>
-  </section>
-  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
 
 
   <script src="jquery.min.js"></script>
   <div id="calendar_div">
     <?php echo getCalender(); ?>  
-
   </div>
   <br>
-  <br>
+  </section>
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
 </head>
 </html>
