@@ -10,6 +10,10 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 		case 'getEvents':
 			getEvents($_POST['date']);
 			break;
+		//For Add Event
+		case 'addEvent':
+			addEvent($_POST['date'],$_POST['title']);
+			break;
 		default:
 			break;
 	}
@@ -36,6 +40,13 @@ function getCalender($year = '',$month = '')
             <a href="javascript:void(0);" onclick="getCalendar('calendar_div','<?php echo date("Y",strtotime($date.' + 1 Month')); ?>','<?php echo date("m",strtotime($date.' + 1 Month')); ?>');">&gt;&gt;</a>
         </h2>
 		<div id="event_list" class="none"></div>
+        <!--For Add Event-->
+        <div id="event_add" class="none">
+        	<p>Add Event on <span id="eventDateView"></span></p>
+            <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p>
+            <input type="hidden" id="eventDate" value=""/>
+            <input type="button" id="addEventBtn" value="Add"/>
+        </div>
 		<div id="calender_section_top">
 			<ul>
 				<li>Sun</li>
@@ -78,7 +89,9 @@ function getCalender($year = '',$month = '')
 						echo '<div id="date_popup_'.$currentDate.'" class="date_popup_wrap none">';
 						echo '<div class="date_window">';
 						echo '<div class="popup_event">Events ('.$eventNum.')</div>';
-						echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDate.'\');">view events</a>':'';
+						echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDate.'\');">view events</a><br/>':'';
+						//For Add Event
+						echo '<a href="javascript:;" onclick="addEvent(\''.$currentDate.'\');">add event</a>';
 						echo '</div></div>';
 						
 						echo '</li>';
@@ -110,22 +123,40 @@ function getCalender($year = '',$month = '')
 				data:'func=getEvents&date='+date,
 				success:function(html){
 					$('#event_list').html(html);
+					$('#event_add').slideUp('slow');
 					$('#event_list').slideDown('slow');
 				}
 			});
 		}
-		
+		//For Add Event
 		function addEvent(date){
-			$.ajax({
-				type:'POST',
-				url:'functions.php',
-				data:'func=addEvent&date='+date,
-				success:function(html){
-					$('#event_list').html(html);
-					$('#event_list').slideDown('slow');
-				}
-			});
+			$('#eventDate').val(date);
+			$('#eventDateView').html(date);
+			$('#event_list').slideUp('slow');
+			$('#event_add').slideDown('slow');
 		}
+		//For Add Event
+		$(document).ready(function(){
+			$('#addEventBtn').on('click',function(){
+				var date = $('#eventDate').val();
+				var title = $('#eventTitle').val();
+				$.ajax({
+					type:'POST',
+					url:'functions.php',
+					data:'func=addEvent&date='+date+'&title='+title,
+					success:function(msg){
+						if(msg == 'ok'){
+							var dateSplit = date.split("-");
+							$('#eventTitle').val('');
+							alert('Event Created Successfully.');
+							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
+						}else{
+							alert('Some problem occurred, please try again.');
+						}
+					}
+				});
+			});
+		});
 		
 		$(document).ready(function(){
 			$('.date_cell').mouseenter(function(){
@@ -157,7 +188,7 @@ function getAllMonths($selected = ''){
 	$options = '';
 	for($i=1;$i<=12;$i++)
 	{
-		$value = ($i < 10)?'0'.$i:$i;
+		$value = ($i < 01)?'0'.$i:$i;
 		$selectedOpt = ($value == $selected)?'selected':'';
 		$options .= '<option value="'.$value.'" '.$selectedOpt.' >'.date("F", mktime(0, 0, 0, $i+1, 0, 0)).'</option>';
 	}
@@ -196,5 +227,21 @@ function getEvents($date = ''){
 		$eventListHTML .= '</ul>';
 	}
 	echo $eventListHTML;
+}
+
+/*
+ * Add event to date
+ */
+function addEvent($date,$title){
+	//Include db configuration file
+	include 'dbConfig.php';
+	$currentDate = date("Y-m-d H:i:s");
+	//Insert the event data into database
+	$insert = $db->query("INSERT INTO events (title,date,created,modified) VALUES ('".$title."','".$date."','".$currentDate."','".$currentDate."')");
+	if($insert){
+		echo 'ok';
+	}else{
+		echo 'err';
+	}
 }
 ?>
