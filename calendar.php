@@ -16,8 +16,9 @@
   <link rel="stylesheet" href="css/style.css">
   <br>
   <br>
-  <h1 style="font-size: 20px;"> <b>STEM Academy Instructor Portal </b></h1>
-  <section class="container">
+  <h1 style="font-size: 20px; text-align: center;"> <b>STEM Academy Instructor Portal </b></h1>
+  <br>
+
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -30,13 +31,13 @@
       </ul>
     </nav>
 
+  <br>
 
   <script src="jquery.min.js"></script>
   <div id="calendar_div">
     <?php echo getCalender(); ?>  
   </div>
   <br>
-  </section>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 

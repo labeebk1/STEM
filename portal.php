@@ -17,7 +17,7 @@
   <br>
   <br>
   <h1 style="font-size: 20px; text-align: center;"> <b>STEM Academy Instructor Portal </b></h1>
-
+  <br>
 
     <nav>
       <ul>
@@ -30,7 +30,6 @@
         <li><a href="logout.php">Logout</a></li> <!-- Destroy session variables once logout is hit. Also implement auto-login? from Login Tab in Index -->
       </ul>
     </nav>
-
 
 
   <div class="container">
