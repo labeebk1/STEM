@@ -1,9 +1,9 @@
-
 <?php
   session_start();
   if(empty($_SESSION['username'])){
     header("Location:login.php");
   }
+  include_once('functions.php'); 
 ?>
 
 
@@ -12,10 +12,9 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <title>Instructor Portal</title>
   <link rel="stylesheet" href="css/style.css">
-  <br>
   <br>
   <p style="text-align: center; font-size: 20px;"> STEM Academy Instructor Portal </p>
   <section class="container">
@@ -35,6 +34,10 @@
 </head>
 <body>
 
+<script src="jquery.min.js"></script>
+<div id="calendar_div">
+  <?php echo getCalender(); ?>
+</div>
   <p style="text-align:center;">
       <b>Welcome to the instructor portal! <span class="user"><?= $_SESSION['username'] ?></span></b>
   </p>
