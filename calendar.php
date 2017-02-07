@@ -33,18 +33,16 @@
   </section>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
-<div id="event_add" class="none">
-    <p>Add Event on <span id="eventDateView"></span></p>
-    <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p>
-    <input type="hidden" id="eventDate" value=""/>
-    <input type="button" id="addEventBtn" value="Add"/>
-</div>
+
 
   <script src="jquery.min.js"></script>
   <div id="calendar_div">
     <?php echo getCalender(); ?>  
+
   </div>
   <br>
+
+
 
 </head>
 <body>
