@@ -31,29 +31,22 @@
     </nav>
   </section>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script src="jquery.min.js"></script>
-  <div id="calendar_div">
-    <?php echo getCalender(); ?>
-  </div>
-
 </head>
 <body>
 
 
 
-  <!--
-  <section class="about">
-    <p class="about-links">
-      <a href="http://www.cssflow.com/snippets/menu-with-notification-badges" target="_parent">View Article</a>
-      <a href="http://www.cssflow.com/snippets/menu-with-notification-badges.zip" target="_parent">Download</a>
-    </p>
-    <p class="about-author">
-      &copy; 2016&ndash;2017 <a href="portal.php" target="_blank">STEM Academy</a> -
-      <a href="http://www.cssflow.com/mit-license" target="_blank">MIT License</a><br>
-      Original PSD by <a href="http://www.premiumpixels.com/freebies/menu-notification-badges-psd/" target="_blank">Orman Clark</a>
-    </p>
-  </section>
-  -->
+<div class="container">
+    <form class="well form-horizontal" action=" " method="post" style="text-align: center; font-size: 17px;" >
+<fieldset>
+  <script src="jquery.min.js"></script>
+  <div id="calendar_div">
+    <?php echo getCalender(); ?>
+  </div>
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
 </body>
 </html>
