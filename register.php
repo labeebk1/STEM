@@ -8,6 +8,7 @@
 		if($_POST['STEMID'] == 'STEM'){
 			
 			$username = $mysqli->real_escape_string($_POST['username']);
+			$phone = $mysqli->real_escape_string($_POST['phone']);
 			$email = $mysqli->real_escape_string($_POST['email']);
 			$password = md5($_POST['password']);
 			
@@ -23,7 +24,7 @@
     		if($login == false){
 				$_SESSION['message'] = "Error! That username already exists in the Instructor Database!";
     		} else {
-				$sql = "INSERT INTO STEM.users (username, email, password) VALUES ('$username','$email','$password')";
+				$sql = "INSERT INTO STEM.users (username, phone, email, password) VALUES ('$username','$phone','$email','$password')";
 				if ($mysqli->query($sql) == true){
 					$_SESSION['message'] = "Registration Successful! Added $username to the Instructor Database!";
 				} else {
@@ -92,6 +93,10 @@
 
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-user"></i><span style="font-size:18px;"> Username</span></span>
   		<input name="username" placeholder="Username" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
+  		<br>
+  		<br>
+  		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-envelope"></i><span style="font-size:18px;"> Phone</span></span>
+  		<input  name="phone" placeholder="Phone" class="form-control" type="text" style="text-align: center; display: inline-block; width: 170px; font-size: 18px;" required>
   		<br>
   		<br>
   		<span class="input-group-addon" style="display:inline-block; width: 150px;"><i class="glyphicon glyphicon-envelope"></i><span style="font-size:18px;"> Email</span></span>
