@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/style.css">
   <br>
   <p style="text-align: center; font-size: 20px;"> STEM Academy Instructor Portal </p>
+</head>
   <section class="container">
     <nav>
       <ul>
@@ -31,16 +32,13 @@
     </nav>
   </section>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
 <body>
 
 <script src="jquery.min.js"></script>
 <div id="calendar_div">
   <?php echo getCalender(); ?>
 </div>
-  <p style="text-align:center;">
-      <b>Welcome to the instructor portal! <span class="user"><?= $_SESSION['username'] ?></span></b>
-  </p>
+<br>
 
   <!--
   <section class="about">
