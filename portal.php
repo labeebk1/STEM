@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <br>
   <br>
-  <h1> STEM Academy Instructor Portal </h1>
+  <title> STEM Academy Instructor Portal </title>
   <section class="container">
     <nav>
       <ul>
