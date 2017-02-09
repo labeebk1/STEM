@@ -41,9 +41,10 @@ function getCalender($year = '',$month = '')
         </h2>
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
-        <div id="event_add" class="none" style="display:inline-block; text-align: center; font-size: 20px; ">
+        <div id="event_add" class="none" style="display:inline-block; font-size: 10px; ">
         	<p>Add Class on <span id="eventDateView"></span></p>
             <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p> <!-- LK Edit -->
+            <input type="hidden" id="eventDate" value=""/>
             <input type="hidden" id="eventDate" value=""/>
             <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
