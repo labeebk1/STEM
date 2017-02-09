@@ -13,7 +13,7 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 			break;
 		//For Add Event
 		case 'addEvent':
-			addEvent($_SESSION['username'],$_POST['student'],$_POST['hours'],$_POST['date']);
+			addEvent($_POST['student'],$_POST['hours'],$_POST['date']);
 			break;
 		default:
 			break;
@@ -44,7 +44,8 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<p>Add Class on <span id="eventDateView"></span></p>
-            <p><b>Student Name: </b><input type="text" id="eventTitle" value=""/></p> <!-- LK Edit -->
+            <p><b>Student Name: </b><input type="text" id="student" value=""/></p> <!-- LK Edit --><br>
+            <p><b>Hours: </b><input type="text" id="hours" value=""/></p> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/>
             <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
@@ -147,15 +148,17 @@ function getCalender($year = '',$month = '')
 		$(document).ready(function(){
 			$('#addEventBtn').on('click',function(){
 				var date = $('#eventDate').val();
-				var title = $('#eventTitle').val();
+				var student = $('#student').val();
+				var hours = $('#hours').val();
 				$.ajax({
 					type:'POST',
 					url:'functions.php',
-					data:'func=addEvent&date='+date+'&title='+title,
+					data:'func=addEvent&date='+date+'&student='+student+'&hours='+hours,
 					success:function(msg){
 						if(msg == 'ok'){
 							var dateSplit = date.split("-");
-							$('#eventTitle').val('');
+							$('#student').val('');
+							$('#hours').val('');
 							alert('Class Created Successfully.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
