@@ -43,10 +43,10 @@ function getCalender($year = '',$month = '')
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
         <div id="event_add" class="none"">
-        	<p>Add Class on <span id="eventDateView"></span></p>
-            <p><b>Student Name: </b><input type="text" id="student" value=""/></p> <!-- LK Edit --><br>
-            <p><b>Hours: </b><input type="text" id="hours" value=""/></p> <!-- LK Edit -->
-            <input type="hidden" id="eventDate" value=""/>
+        	<p style="text-align: center">Add Class on <span id="eventDateView"></span></p>
+            <p style="text-align: center">Student Name: <input type="text" id="student" value=""/></p> <!-- LK Edit -->
+            <p style="text-align: center">Hours: <input type="text" id="hours" value=""/></p> <!-- LK Edit -->
+            <input type="hidden" id="eventDate" value=""/><br>
             <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
 		<div id="calender_section_top">
@@ -153,7 +153,7 @@ function getCalender($year = '',$month = '')
 				$.ajax({
 					type:'POST',
 					url:'functions.php',
-					data:'func=addEvent&date='+date+'&student='+student+'&hours='+hours,
+					data: 'func=addEvent&student='+student+'&hours='+hours+'&date='+date,
 					success:function(msg){
 						if(msg == 'ok'){
 							var dateSplit = date.split("-");
@@ -256,7 +256,7 @@ function addEvent($student,$hours,$date){
 	$currentDate = date("Y-m-d H:i:s");
 	//Insert the event data into database
 	$userlogin = $_SESSION['username'];
-	$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."')");
+	$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified, status) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."',1)");
 	if($insert){
 		echo 'ok';
 	}else{
