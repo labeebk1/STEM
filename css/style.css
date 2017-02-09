@@ -284,7 +284,7 @@ nav .badge.red {
 }
 .popup_event a {color: #000000 !important;}
 .packeg_box a {color: #F58220;float: right;}
-a:hover {color: #181919;text-decoration: underline;}
+a:hover {color: #181919;}
 
 @media only screen and (min-width:480px) and (max-width:767px) {
 #calender_section{ width:336px;}
