@@ -88,7 +88,7 @@ function getCalender($year = '',$month = '')
 						//Hover event popup
 						echo '<div id="date_popup_'.$currentDate.'" class="date_popup_wrap none">';
 						echo '<div class="date_window">';
-						echo '<div class="popup_event">Events ('.$eventNum.')</div>';
+						echo '<div class="popup_event">Classes ('.$eventNum.')</div>';
 						echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDate.'\');">view classes</a><br/>':'';
 						//For Add Event
 						echo '<a href="javascript:;" onclick="addEvent(\''.$currentDate.'\');">add class</a>';
@@ -148,7 +148,7 @@ function getCalender($year = '',$month = '')
 						if(msg == 'ok'){
 							var dateSplit = date.split("-");
 							$('#eventTitle').val('');
-							alert('Event Created Successfully.');
+							alert('Class Created Successfully.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
 							alert('Some problem occurred, please try again.');
