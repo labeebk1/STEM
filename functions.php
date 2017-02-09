@@ -43,7 +43,7 @@ function getCalender($year = '',$month = '')
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
         <div id="event_add" class="none"">
-        	<h2 style="text-align: center">Add a class on <span id="eventDateView"></span><br></h2>
+        	<h2 style="text-align: center">Add a class on <span id="eventDateView"></span><br>
         	<p>Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.</p>
             <p style="text-align: left">Student Name:</p>
             <input type="text" id="student" value=""/> <!-- LK Edit -->
@@ -51,6 +51,7 @@ function getCalender($year = '',$month = '')
             <input type="text" id="hours" value=""/> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/><br>
             <input type="button" id="addEventBtn" value="Add Class"/>
+           	</h2>
         </div>
 		<div id="calender_section_top">
 			<ul style="font-size:15px;"><b>
@@ -240,12 +241,12 @@ function getEvents($date = ''){
 	}
 
 	if($result->num_rows > 0){
-		$eventListHTML = '<h2>Classes on '.date("l, d M Y",strtotime($date)).'</h2>';
+		$eventListHTML = '<h2>Classes on '.date("l, d M Y",strtotime($date)).':';
 		$eventListHTML .= '<ul>';
 		while($row = $result->fetch_assoc()){ 
             $eventListHTML .= '<li>'.$row['username'].' - '.$row['student'].' - '.$row['hours'].' hours</li>';
         }
-		$eventListHTML .= '</ul>';
+		$eventListHTML .= '</ul></h2>';
 	}
 	echo $eventListHTML;
 }
