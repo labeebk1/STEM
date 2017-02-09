@@ -34,7 +34,7 @@
   <br>
 
   <script src="jquery.min.js"></script>
-  <div id="calendar_div" background: #333;>
+  <div id="calendar_div">
     <?php echo getCalender(); ?>  
   </div>
   <br>
