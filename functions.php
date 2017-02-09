@@ -43,7 +43,7 @@ function getCalender($year = '',$month = '')
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
         <div id="event_add" class="none"">
-        	<p style="text-align: center">Add Class on <span id="eventDateView"></span><br></p>
+        	<h2 style="text-align: center">Add a class on <span id="eventDateView"></span><br></h2>
         	<p>Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.</p>
             <p style="text-align: left">Student Name:</p>
             <input type="text" id="student" value=""/> <!-- LK Edit -->
