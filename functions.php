@@ -43,9 +43,10 @@ function getCalender($year = '',$month = '')
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
         <div id="event_add" class="none"">
-        	<p style="text-align: center">Add Class on <span id="eventDateView"></span></p>
-            <p style="text-align: left">Student Name: <input align="center" type="text" id="student" value=""/></p> <!-- LK Edit -->
-            <p style="text-align: left">Hours: <input align="center" type="text" id="hours" value=""/></p> <!-- LK Edit -->
+        	<p style="text-align: center">Add Class on <span id="eventDateView"></span><br>
+        	Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.</p>
+            <p style="text-align: left">Student Name: <input type="text" id="student" value=""/></p> <!-- LK Edit -->
+            <p style="text-align: left">Hours: </p><input type="text" id="hours" value=""/> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/><br>
             <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
@@ -257,11 +258,10 @@ function addEvent($student,$hours,$date){
 	//Insert the event data into database
 	$userlogin = $_SESSION['username'];
 
-	$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `modified`, `status`) VALUES
-		('".$_SESSION['username']."', '".$student."', '".$hours."', '".$date."', '".$currentDate."', '".$currentDate."', 1);");
+	$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `status`) VALUES
+		('".$_SESSION['username']."', '".$student."', '".$hours."', '".$date."', '".$currentDate."', 1);");
 	
 
-	//$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."')");
 
 	if($insert){
 		echo 'ok';
