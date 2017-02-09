@@ -43,10 +43,12 @@ function getCalender($year = '',$month = '')
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
         <div id="event_add" class="none"">
-        	<p style="text-align: center">Add Class on <span id="eventDateView"></span><br>
-        	Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.</p>
-            <p style="text-align: left">Student Name: <input type="text" id="student" value=""/></p> <!-- LK Edit -->
-            <p style="text-align: left">Hours: </p><input type="text" id="hours" value=""/> <!-- LK Edit -->
+        	<p style="text-align: center">Add Class on <span id="eventDateView"></span><br></p>
+        	<p>Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.</p>
+            <p style="text-align: left">Student Name:</p>
+            <input type="text" id="student" value=""/> <!-- LK Edit -->
+            <p style="text-align: left">Hours:</p>
+            <input type="text" id="hours" value=""/> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/><br>
             <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
@@ -160,7 +162,7 @@ function getCalender($year = '',$month = '')
 							var dateSplit = date.split("-");
 							$('#student').val('');
 							$('#hours').val('');
-							alert('Class Added Successfully.');
+							alert('Thank you for submitting your time sheet with STEM Academy! Successfully added.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
 							alert('Some problem occurred, please try again.');
