@@ -257,8 +257,8 @@ function addEvent($student,$hours,$date){
 	//Insert the event data into database
 	$userlogin = $_SESSION['username'];
 
-	$insert = $db->query("INSERT INTO `events` (`id`, `username`, `student`, `hours`, `date`, `created`, `modified`, `status`) VALUES
-		(2, '".$_SESSION['username']."', 'Student1', '2', '2017-02-20', '2017-02-20 06:15:17', '2017-02-20 06:15:17', 1);");
+	$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `modified`, `status`) VALUES
+		('".$_SESSION['username']."', 'Student1', '2', '2017-02-20', '2017-02-20 06:15:17', '2017-02-20 06:15:17', 1);");
 	
 	
 
