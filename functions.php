@@ -2,6 +2,7 @@
 /*
  * Function requested by Ajax
  */
+session_start();
 if(isset($_POST['func']) && !empty($_POST['func'])){
 	switch($_POST['func']){
 		case 'getCalender':
@@ -12,7 +13,7 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 			break;
 		//For Add Event
 		case 'addEvent':
-			addEvent($_POST['date'],$_POST['title']);
+			addEvent($_SESSION['username'],$_POST['student'],$_POST['hours'],$_POST['date']);
 			break;
 		default:
 			break;
@@ -43,8 +44,7 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<p>Add Class on <span id="eventDateView"></span></p>
-            <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p> <!-- LK Edit -->
-            <input type="hidden" id="eventDate" value=""/>
+            <p><b>Student Name: </b><input type="text" id="eventTitle" value=""/></p> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/>
             <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
@@ -68,10 +68,17 @@ function getCalender($year = '',$month = '')
 						//Current date
 						$currentDate = $dateYear.'-'.$dateMonth.'-'.$dayCount;
 						$eventNum = 0;
-						//Include db configuration file
+						$userlogin = $_SESSION['username'];
+						//Include db configuration filess
 						include 'dbConfig.php';
 						//Get number of events based on the current date
-						$result = $db->query("SELECT title FROM events WHERE date = '".$currentDate."' AND status = 1");
+						if($userlogin == "labeeb" || $userlogin == "m_mcmillan"){
+							$result = $db->query("SELECT student FROM events WHERE date = '".$currentDate."' AND status = 1");
+
+						} else {
+							$result = $db->query("SELECT student FROM events WHERE username = '".$userlogin."' AND date = '".$currentDate."' AND status = 1");
+							
+						}
 						$eventNum = $result->num_rows;
 						//Define date cell color
 						if(strtotime($currentDate) == strtotime(date("Y-m-d"))){
@@ -218,12 +225,19 @@ function getEvents($date = ''){
 	$eventListHTML = '';
 	$date = $date?$date:date("Y-m-d");
 	//Get events based on the current date
-	$result = $db->query("SELECT title FROM events WHERE date = '".$date."' AND status = 1");
+
+	$userlogin = $_SESSION['username'];
+	if($userlogin == "labeeb" || $userlogin == "m_mcmillan"){
+		$result = $db->query("SELECT student, hours FROM events WHERE date = '".$currentDate."' AND status = 1");
+	} else {
+		$result = $db->query("SELECT student, hours FROM events WHERE username = '".$userlogin."' AND date = '".$currentDate."' AND status = 1");
+	}
+
 	if($result->num_rows > 0){
-		$eventListHTML = '<h2>Events on '.date("l, d M Y",strtotime($date)).'</h2>';
+		$eventListHTML = '<h2>Classes on '.date("l, d M Y",strtotime($date)).'</h2>';
 		$eventListHTML .= '<ul>';
 		while($row = $result->fetch_assoc()){ 
-            $eventListHTML .= '<li>'.$row['title'].'</li>';
+            $eventListHTML .= '<li>'.$row['student'].' - '.$row['hours'].' hours</li>';
         }
 		$eventListHTML .= '</ul>';
 	}
@@ -233,12 +247,13 @@ function getEvents($date = ''){
 /*
  * Add event to date
  */
-function addEvent($date,$title){
+function addEvent($student,$hours,$date){
 	//Include db configuration file
 	include 'dbConfig.php';
 	$currentDate = date("Y-m-d H:i:s");
 	//Insert the event data into database
-	$insert = $db->query("INSERT INTO events (title,date,created,modified) VALUES ('".$title."','".$date."','".$currentDate."','".$currentDate."')");
+	$userlogin = $_SESSION['username'];
+	$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."')");
 	if($insert){
 		echo 'ok';
 	}else{
