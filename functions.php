@@ -44,14 +44,14 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<h2 style="text-align: center">Add a class on <span id="eventDateView"></span><br>
-        	<p>Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.</p>
-            <p style="text-align: left">Student Name:</p>
-            <input type="text" id="student" value=""/> <!-- LK Edit -->
-            <p style="text-align: left">Hours:</p>
+        	<p style="text-align: left; font-size: 20px;"> Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.
+            Student Name:<br>
+            <input type="text" id="student" value=""/><br> <!-- LK Edit -->
+            Hours:<br>
             <input type="text" id="hours" value=""/> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/><br>
-            <input type="button" id="addEventBtn" value="Add Class"/>
-           	</h2>
+            <input type="button" id="addEventBtn" value="Add Class"/><br>
+           	</p></h2>
         </div>
 		<div id="calender_section_top">
 			<ul style="font-size:15px;"><b>
