@@ -42,13 +42,13 @@ function getCalender($year = '',$month = '')
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
         <div id="event_add" class="none">
-        	<p>Add Event on <span id="eventDateView"></span></p>
-            <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p>
+        	<p>Add Class on <span id="eventDateView"></span></p>
+            <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/>
-            <input type="button" id="addEventBtn" value="Add"/>
+            <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
 		<div id="calender_section_top">
-			<ul>
+			<ul style="font-size:15px;"><b>
 				<li>Sun</li>
 				<li>Mon</li>
 				<li>Tue</li>
@@ -56,7 +56,7 @@ function getCalender($year = '',$month = '')
 				<li>Thu</li>
 				<li>Fri</li>
 				<li>Sat</li>
-			</ul>
+			</b></ul>
 		</div>
 		<div id="calender_section_bot">
 			<ul>
@@ -89,9 +89,9 @@ function getCalender($year = '',$month = '')
 						echo '<div id="date_popup_'.$currentDate.'" class="date_popup_wrap none">';
 						echo '<div class="date_window">';
 						echo '<div class="popup_event">Events ('.$eventNum.')</div>';
-						echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDate.'\');">view events</a><br/>':'';
+						echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDate.'\');">view classes</a><br/>':'';
 						//For Add Event
-						echo '<a href="javascript:;" onclick="addEvent(\''.$currentDate.'\');">add event</a>';
+						echo '<a href="javascript:;" onclick="addEvent(\''.$currentDate.'\');">add class</a>';
 						echo '</div></div>';
 						
 						echo '</li>';
