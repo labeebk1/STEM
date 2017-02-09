@@ -162,10 +162,10 @@ function getCalender($year = '',$month = '')
 							var dateSplit = date.split("-");
 							$('#student').val('');
 							$('#hours').val('');
-							alert('Thank you for submitting your time sheet with STEM Academy! Successfully added.');
+							alert('Thank you for submitting your time sheet with STEM Academy! Session Successfully Added.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
-							alert('Some problem occurred, please try again.');
+							alert('Some problem occurred, please contact Labeeb or Marie.');
 						}
 					}
 				});
@@ -234,9 +234,9 @@ function getEvents($date = ''){
 
 	$userlogin = $_SESSION['username'];
 	if($userlogin == "labeeb" || $userlogin == "m_mcmillan"){
-		$result = $db->query("SELECT username, student, hours FROM events WHERE date = '".$currentDate."' AND status = 1");
+		$result = $db->query("SELECT username, student, hours FROM events WHERE date = '".$date."' AND status = 1");
 	} else {
-		$result = $db->query("SELECT username, student, hours FROM events WHERE username = '".$userlogin."' AND date = '".$currentDate."' AND status = 1");
+		$result = $db->query("SELECT username, student, hours FROM events WHERE username = '".$userlogin."' AND date = '".$date."' AND status = 1");
 	}
 
 	if($result->num_rows > 0){
