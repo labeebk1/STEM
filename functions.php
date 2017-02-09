@@ -256,7 +256,7 @@ function addEvent($student,$hours,$date){
 	$currentDate = date("Y-m-d H:i:s");
 	//Insert the event data into database
 	$userlogin = $_SESSION['username'];
-	$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified, status) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."',1)");
+	$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified, status) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."')");
 	if($insert){
 		echo 'ok';
 	}else{
