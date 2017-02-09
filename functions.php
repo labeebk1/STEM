@@ -44,7 +44,7 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<h2 style="text-align: center">Add a class on <span id="eventDateView"></span><br>
-        	<p style="text-align: left; font-size: 20px;"> Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.
+        	<p style="text-align: left; font-size: 15px; line-height: 100%;"> Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.<br>
             Student Name:<br>
             <input type="text" id="student" value=""/><br> <!-- LK Edit -->
             Hours:<br>
