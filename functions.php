@@ -44,10 +44,10 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<p style="text-align: center">Add Class on <span id="eventDateView"></span></p>
-            <p style="text-align: center">Student Name: <input align="center" type="text" id="student" value=""/></p> <!-- LK Edit -->
-            <p style="text-align: center">Hours: <input align="center" type="text" id="hours" value=""/></p> <!-- LK Edit -->
+            <p style="text-align: left">Student Name: <input align="center" type="text" id="student" value=""/></p> <!-- LK Edit -->
+            <p style="text-align: left">Hours: <input align="center" type="text" id="hours" value=""/></p> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/><br>
-            <input align="center" type="button" id="addEventBtn" value="Add Class"/>
+            <input type="button" id="addEventBtn" value="Add Class"/>
         </div>
 		<div id="calender_section_top">
 			<ul style="font-size:15px;"><b>
@@ -159,7 +159,7 @@ function getCalender($year = '',$month = '')
 							var dateSplit = date.split("-");
 							$('#student').val('');
 							$('#hours').val('');
-							alert('Class Created Successfully.');
+							alert('Class Added Successfully.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
 							alert('Some problem occurred, please try again.');
@@ -258,7 +258,7 @@ function addEvent($student,$hours,$date){
 	$userlogin = $_SESSION['username'];
 
 	$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `modified`, `status`) VALUES
-		('".$_SESSION['username']."', '".$student."', '2', '2017-02-20', '2017-02-20 06:15:17', '2017-02-20 06:15:17', 1);");
+		('".$_SESSION['username']."', '".$student."', '".$hours."', '".$date."', '".$currentDate."', '".$currentDate."', 1);");
 	
 
 	//$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."')");
