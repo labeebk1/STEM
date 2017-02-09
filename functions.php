@@ -44,10 +44,10 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<p style="text-align: center">Add Class on <span id="eventDateView"></span></p>
-            <p style="text-align: center">Student Name: <input type="text" id="student" value=""/></p> <!-- LK Edit -->
-            <p style="text-align: center">Hours: <input type="text" id="hours" value=""/></p> <!-- LK Edit -->
+            <p style="text-align: left">Student Name: <input align="center" type="text" id="student" value=""/></p> <!-- LK Edit -->
+            <p style="text-align: center">Hours: <input align="center" type="text" id="hours" value=""/></p> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/><br>
-            <input type="button" id="addEventBtn" value="Add Class"/>
+            <input align="center" type="button" id="addEventBtn" value="Add Class"/>
         </div>
 		<div id="calender_section_top">
 			<ul style="font-size:15px;"><b>
@@ -231,16 +231,16 @@ function getEvents($date = ''){
 
 	$userlogin = $_SESSION['username'];
 	if($userlogin == "labeeb" || $userlogin == "m_mcmillan"){
-		$result = $db->query("SELECT student, hours FROM events WHERE date = '".$currentDate."' AND status = 1");
+		$result = $db->query("SELECT username, student, hours FROM events WHERE date = '".$currentDate."' AND status = 1");
 	} else {
-		$result = $db->query("SELECT student, hours FROM events WHERE username = '".$userlogin."' AND date = '".$currentDate."' AND status = 1");
+		$result = $db->query("SELECT username, student, hours FROM events WHERE username = '".$userlogin."' AND date = '".$currentDate."' AND status = 1");
 	}
 
 	if($result->num_rows > 0){
 		$eventListHTML = '<h2>Classes on '.date("l, d M Y",strtotime($date)).'</h2>';
 		$eventListHTML .= '<ul>';
 		while($row = $result->fetch_assoc()){ 
-            $eventListHTML .= '<li>'.$row['student'].' - '.$row['hours'].' hours</li>';
+            $eventListHTML .= '<li>'.$row['username'].' - '.$row['student'].' - '.$row['hours'].' hours</li>';
         }
 		$eventListHTML .= '</ul>';
 	}
@@ -256,7 +256,7 @@ function addEvent($student,$hours,$date){
 	$currentDate = date("Y-m-d H:i:s");
 	//Insert the event data into database
 	$userlogin = $_SESSION['username'];
-	$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified, status) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."')");
+	$insert = $db->query("INSERT INTO events (username,student,hours,date,created,modified) VALUES ('".$userlogin."','".$student."','".$hours."','".$date."','".$currentDate."','".$currentDate."')");
 	if($insert){
 		echo 'ok';
 	}else{
