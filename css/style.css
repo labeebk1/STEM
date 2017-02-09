@@ -228,7 +228,12 @@ nav .badge.red {
 .none{ display:none;}
 .dropdown{color: #444444;font-size:17px;}
 #calender_section{ width:700px; margin:30px auto 0;}
-#calender_section h2{ background-color:#efefef; color:#444444; font-size:17px; text-align:center; line-height:40px;}
+#calender_section h2{
+    font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    color: #404040;
+    background: #ecedef url("../images/bg2.png") 0 0 repeat;  
+    /*background-color:#efefef; color:#444444; font-size:17px; text-align:center; line-height:40px;*/
+  }
 #calender_section h2 a{ color:#00bfff; float:none;}
 #calender_section_top{ width:100%; float:left; margin-top:10px;}
 #calender_section_top ul{padding:0; list-style-type:none;}

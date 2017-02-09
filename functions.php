@@ -46,10 +46,10 @@ function getCalender($year = '',$month = '')
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span></b><br>
         	<p style="text-align: left; font-size: 16px; line-height: 100%;"> Any submissions cannot be undone through the website. For any changes, please contact Labeeb or Marie.<br><br>
             Student Name:<br>
-            <input type="text" id="student" value=""/><br> <!-- LK Edit -->
+            <input type="text" id="student" value=""/><br><br> <!-- LK Edit -->
             Hours:<br>
             <input type="text" id="hours" value=""/> <!-- LK Edit -->
-            <input type="hidden" id="eventDate" value=""/><br>
+            <input type="hidden" id="eventDate" value=""/><br><br>
             <input type="button" id="addEventBtn" value="Add Class"/><br>
            	</p></h2>
         </div>
