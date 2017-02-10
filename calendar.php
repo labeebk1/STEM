@@ -22,11 +22,17 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="portal.php">Dashboard</a></li>
-        <li class="active"><a href="calendar.php">Calendar</a></li><!-- <span class="badge">4</span> -->
+        <li class="active"><a href="portal.php">Dashboard</a></li>
+        <li><a href="calendar.php">Calendar</a></li><!-- <span class="badge">4</span> -->
         <li><a href="portal.php">Messages<span class="badge green">8</span></a></li>
-        <li><a href="portal.php">Settings<span class="badge yellow">15</span></a></li>
         <li><a href="portal.php">Notifications<span class="badge red">16</span></a></li>
+
+
+        <?php if ($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan): ?>
+          <li><a href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
+        <?php endif ?>
+
+
         <li><a href="logout.php">Logout</a></li> <!-- Destroy session variables once logout is hit. Also implement auto-login? from Login Tab in Index -->
       </ul>
     </nav>

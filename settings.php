@@ -49,7 +49,7 @@
       <b>February 2, 2017</b>
       <br>
       <br>
-      <b>Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!</b>
+      <b>Welcome to STEM Administration <span class="user"><?= $_SESSION['username'] ?></span></b>
     </p>
 
   </fieldset>
