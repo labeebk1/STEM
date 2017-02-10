@@ -25,14 +25,14 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="portal.php">Dashboard</a></li>
+        <li><a href="portal.php">Dashboard</a></li>
         <li><a href="calendar.php">Calendar</a></li><!-- <span class="badge">4</span> -->
         <li><a href="portal.php">Messages<span class="badge green">8</span></a></li>
         <li><a href="portal.php">Notifications<span class="badge red">16</span></a></li>
 
 
         <?php if ($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan): ?>
-          <li><a href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
+          <li><a class="active" href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
         <?php endif ?>
 
 
