@@ -23,7 +23,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
@@ -111,7 +110,7 @@ body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
-    padding-top: 80px;
+    padding-top: 10 10px;
     overflow-x: hidden;
     background: #ecedef url("../images/bg.png") 0 0 repeat;
 }
@@ -122,7 +121,7 @@ s
 }
 
 nav {
-  height: 26px;
+  height: 60px;
   text-align: center;
 }
 nav ul {
@@ -154,10 +153,10 @@ nav li:last-child a {
 nav a {
   display: block;
   position: relative;
-  padding: 0 0px;
-  height: 26px;
-  line-height: 26px;
-  font-size: 14px;
+  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
   font-weight: bold;
   color: #666;
   text-decoration: none;

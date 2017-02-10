@@ -10,7 +10,7 @@
 
 
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
+<body>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <link rel="stylesheet" href="css/style.css">
@@ -48,5 +48,5 @@
   
 
 
-</head>
+</body>
 </html>

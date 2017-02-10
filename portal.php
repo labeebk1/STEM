@@ -7,10 +7,14 @@
 ?>
 
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
 
 
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
+<body>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="stylesheet" href="css/style.css">
@@ -38,11 +42,18 @@
     </nav>
 
 
-  <div class="container">
-      <form class="well form-horizontal" action=" " method="post" style="text-align: center; font-size: 17px;" >
-  <fieldset>
 
   <!-- Form Name -->
+  <div class="panel panel-default panel-horizontal" style="text-align: center;">
+  <div class="panel-heading"> Announcements </div>
+  <div class="panel-body">hey </div>	
+  </div>
+
+  <div class="container">
+      <div class="well form-horizontal" action=" " method="post" style="text-align: center; font-size: 17px;" >
+  <fieldset>
+
+
   <legend><b>Announcements</b></legend>
 
     <p style="text-align: left; font-size: 18px;">
@@ -54,14 +65,14 @@
 
   </fieldset>
 
-  </form>
+
   </div>
       </div><!-- /.container -->
 
 
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
-<body>
+</body>
+
   <!--
   <section class="about">
     <p class="about-links">
@@ -75,5 +86,5 @@
     </p>
   </section>
   -->
-</body>
+
 </html>
