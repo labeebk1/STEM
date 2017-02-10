@@ -49,7 +49,7 @@
   <fieldset>
 
   <script src="jquery.min.js"></script>
-  <div id="calendar_div">
+  <div id="calendar_div" class="form-horizontal">
     <?php echo getCalender(); ?>  
   </div>
 
