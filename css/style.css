@@ -227,7 +227,7 @@ nav .badge.red {
 }
 .none{ display:none;}
 .dropdown{color: #444444;font-size:17px;}
-#calender_section{ width:700px; margin:30px auto 0;}
+#calender_section{ width:700px; margin:30px auto 0; background-color: white;}
 #calender_section h2{background-color:#efefef; color:#444444; font-size:17px; text-align:center; line-height:40px; }
 #calender_section h2 a{ color:#00bfff; float:none;}
 #calender_section_top{ width:100%; float:left; margin-top:10px;}
@@ -243,7 +243,7 @@ nav .badge.red {
 
 /*========== Hover Popup ===============*/
 .date_cell { cursor: pointer; cursor: hand; }
-.date_cell:hover { background: #DDDDDD !important; }
+.date_cell:hover { background: #99FF99 !important; }
 .date_popup_wrap {
   position: absolute;
   width: 143px;
