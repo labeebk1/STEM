@@ -48,12 +48,9 @@
 
 
   <!-- Form Name -->
-  <div class="container">
-  <fieldset>
-  <div class="panel panel-horizontal" style="text-align: center;">
+  <div class="container panel panel-horizontal" style="text-align: center;">
   <div class="panel-heading"> Announcements </div>
   <div class="panel-body">hey </div>	
-  </div>
   </div>
   </div>
 
@@ -71,7 +68,6 @@
       <b>Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!</b>
     </p>
 
-  </fieldset>
 
 
   </div>
