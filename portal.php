@@ -48,7 +48,7 @@
 
 
   <div class="container">
-      <div class="panel-horizontal" style="text-align: center; font-size: 17px;" >
+      <div class="form-horizontal" style="text-align: center; font-size: 17px;" >
   <fieldset>
 
 
@@ -58,7 +58,7 @@
       <b>February 2, 2017</b>
       <br>
       <br>
-      <b>Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!</b>
+      Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!
     </p>
 
   </fieldset>
