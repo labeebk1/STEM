@@ -106,11 +106,16 @@ table {
  * http://www.opensource.org/licenses/mit-license.php
  */
 body {
-  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
-    color: #404040;
+    background-color: #f2f2f2;
+    color: #000;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 80px;
+    overflow-x: hidden;
     background: #ecedef url("../images/bg.png") 0 0 repeat;
 }
-
+s
 .container {
   margin: 80px auto 120px;
   width: 640px;
