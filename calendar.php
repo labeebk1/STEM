@@ -44,10 +44,21 @@
       </ul>
     </nav>
 
+  <div class="container">
+      <div class="form-horizontal" style="text-align: center; font-size: 17px;" >
+  <fieldset>
+
   <script src="jquery.min.js"></script>
   <div id="calendar_div">
     <?php echo getCalender(); ?>  
   </div>
+
+
+  </fieldset>
+  </div>
+      </div><!-- /.container -->
+
+
   <br>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
