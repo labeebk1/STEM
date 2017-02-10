@@ -47,15 +47,8 @@
 
 
 
-  <!-- Form Name -->
-  <div class="container panel panel-horizontal" style="text-align: center;">
-  <div class="panel-heading"> Announcements </div>
-  <div class="panel-body">hey </div>	
-  </div>
-  </div>
-
   <div class="container">
-      <div class="well form-horizontal" style="text-align: center; font-size: 17px;" >
+      <div class="panel-horizontal" style="text-align: center; font-size: 17px;" >
   <fieldset>
 
 
@@ -68,6 +61,7 @@
       <b>Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!</b>
     </p>
 
+  </fieldset>
 
 
   </div>

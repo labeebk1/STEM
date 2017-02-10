@@ -44,8 +44,6 @@
       </ul>
     </nav>
 
-  <br>
-
   <script src="jquery.min.js"></script>
   <div id="calendar_div">
     <?php echo getCalender(); ?>  
