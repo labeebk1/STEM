@@ -4,6 +4,9 @@
   if(empty($_SESSION['username'])){
     header("Location:login.php");
   }
+  if(!($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan)){
+    header("Location:login.php");
+  }
 ?>
 
 
