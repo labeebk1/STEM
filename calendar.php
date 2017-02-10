@@ -45,7 +45,7 @@
     </nav>
 
   <div class="container">
-      <div class="form-horizontal" style="text-align: center; font-size: 17px;" >
+      <div class="well form-horizontal" style="text-align: center; font-size: 17px;" >
   <fieldset>
 
   <script src="jquery.min.js"></script>
