@@ -32,7 +32,7 @@
 
 
         <?php if ($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan): ?>
-          <li><a class="active" href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
+          <li class="active"><a href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
         <?php endif ?>
 
 
