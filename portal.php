@@ -48,9 +48,12 @@
 
 
   <div class="container">
-      <div class="well form-horizontal" style="color: white; text-align: center; font-size: 17px; background: #8a005e url("../images/lines.png") 0 0 repeat;" >
+      <div class="well form-horizontal" style="color: white;
+                                               text-align: center; 
+                                               font-size: 17px; 
+                                               background: #3d3e8a url("../images/lines.png") 0 0 repeat;" >
   <fieldset>
-  <legend><b>Announcements</b></legend>
+  <legend><b><span style="color: white;">Announcements</span></b></legend>
 
     <p style="text-align: left; font-size: 18px; color: white;">
       <b>February 2, 2017</b>
