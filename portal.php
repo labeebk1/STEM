@@ -1,10 +1,10 @@
 
-<?php
+<!--<?php
   session_start();
   if(empty($_SESSION['username'])){
     header("Location:login.php");
   }
-?>
+?>-->
 
 
 
@@ -49,7 +49,7 @@
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 17px; 
-                                               background: #638aed url("../images/lines.png") 0 0 repeat;" >
+                                               background: #5680ed url("../images/60-lines.png") 0 0 repeat;" >
   <fieldset>
   <legend><b><span style="color: white;">Announcements</span></b></legend>
 
