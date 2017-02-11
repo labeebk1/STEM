@@ -48,10 +48,8 @@
 
 
   <div class="container">
-      <div class="well form-horizontal" style="text-align: center; font-size: 17px;" >
+      <div class="well form-horizontal" style="text-align: center; font-size: 17px; background: #8a005e url("../images/bg2.png") 0 0 repeat;" >
   <fieldset>
-
-
   <legend><b>Announcements</b></legend>
 
     <p style="text-align: left; font-size: 18px;">

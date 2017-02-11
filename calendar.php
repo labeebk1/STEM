@@ -48,8 +48,9 @@
       <div class="well form-horizontal" style="text-align: center; font-size: 17px;" >
   <fieldset>
 
+  <div class=""
   <script src="jquery.min.js"></script>
-  <div id="calendar_div" class="form-horizontal">
+  <div id="calendar_div">
     <?php echo getCalender(); ?>  
   </div>
 
