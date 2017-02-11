@@ -45,13 +45,11 @@
       </ul>
     </nav>
 
-
-
   <div class="container">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 17px; 
-                                               background: #3d3e8a url("../images/lines.png") 0 0 repeat;" >
+                                               background: #638aed url("../images/lines.png") 0 0 repeat;" >
   <fieldset>
   <legend><b><span style="color: white;">Announcements</span></b></legend>
 
