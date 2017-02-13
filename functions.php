@@ -19,7 +19,6 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 			break;
 	}
 }
-
 /*
  * Get calendar full HTML
  */
@@ -35,7 +34,6 @@ function getCalender($year = '',$month = '')
 ?>
 
 	<div id="calender_section">
-  		<legend><b><span style="color: black;">Instructor Calendar</span></b></legend>
 		<h2 style="background-color: white";>
         	<a href="javascript:void(0);" onclick="getCalendar('calendar_div','<?php echo date("Y",strtotime($date.' - 1 Month')); ?>','<?php echo date("m",strtotime($date.' - 1 Month')); ?>');">&lt;&lt;</a>
             <select name="month_dropdown" class="month_dropdown dropdown"><?php echo getAllMonths($dateMonth); ?></select>
