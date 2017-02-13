@@ -15,6 +15,7 @@
       break;
     }
   }
+
 ?>
 
 
@@ -107,26 +108,6 @@
     </script>
 
 
-    <?php
-    }
-    /*
-     * Add event to date
-     */
-    function addEvent($student,$hours,$date){
-      //Include db configuration file
-      include 'dbConfig.php';
-      //Insert the event data into database
-      $userlogin = $_SESSION['username'];
-
-      $insert = $db->query("INSERT INTO `students` (`username`, `student`, `created`) VALUES
-        ('".$username"', '".$student."','".$date."');");
-      if($insert){
-        echo 'ok';
-      }else{
-        echo 'err';
-      }
-    }
-    ?>
 
 
   </p>
@@ -137,29 +118,22 @@
       </div><!-- /.container -->
 
 
-  </fieldset>
-
-
-  </div>
-      </div><!-- /.container -->
-
-
 
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </body>
-
-  <!--
-  <section class="about">
-    <p class="about-links">
-      <a href="http://www.cssflow.com/snippets/menu-with-notification-badges" target="_parent">View Article</a>
-      <a href="http://www.cssflow.com/snippets/menu-with-notification-badges.zip" target="_parent">Download</a>
-    </p>
-    <p class="about-author">
-      &copy; 2016&ndash;2017 <a href="portal.php" target="_blank">STEM Academy</a> -
-      <a href="http://www.cssflow.com/mit-license" target="_blank">MIT License</a><br>
-      Original PSD by <a href="http://www.premiumpixels.com/freebies/menu-notification-badges-psd/" target="_blank">Orman Clark</a>
-    </p>
-  </section>
-  -->
-
 </html>
+
+<?php
+    function addEvent($student,$hours,$date){
+      //Include db configuration file
+      include 'dbConfig.php';
+      //Insert the event data into database
+      $insert = $db->query("INSERT INTO `students` (`username`, `student`, `created`) VALUES
+        ('".$username"', '".$student."','".$date."');");
+      if($insert){
+        echo 'ok';
+      }else{
+        echo 'err';
+      }
+    }
+?>

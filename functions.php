@@ -60,7 +60,7 @@ function getCalender($year = '',$month = '')
 				<li>Sun</li>
 				<li>Mon</li>
 				<li>Tue</li>
-				<li>Wed</li>
+s				<li>Wed</li>
 				<li>Thu</li>
 				<li>Fri</li>
 				<li>Sat</li>
@@ -165,7 +165,7 @@ function getCalender($year = '',$month = '')
 							var dateSplit = date.split("-");
 							$('#student').val('');
 							$('#hours').val('');
-							alert('Thank you for submitting your time sheet with STEM Academy! Session Successfully Added.');
+								alert('Thank you for submitting your time sheet with STEM Academy! Session Successfully Added.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
 							alert('Some problem occurred, please contact Labeeb or Marie.');
