@@ -74,7 +74,7 @@
                                                background-color: white;
                                                width: 200px;" >
   <fieldset>
-  <legend><b><span style="color: black;">Instructor Calendar</span></b></legend>
+  <legend><b><span style="color: black;">Test</span></b></legend>
 
     <p style="text-align: left; font-size: 18px; color: black;">
       <b>February 2, 2017</b>
