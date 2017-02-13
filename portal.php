@@ -67,6 +67,30 @@
       </div><!-- /.container -->
 
 
+  <div class="container">
+      <div class="well form-horizontal" style="color: white;
+                                               text-align: left; 
+                                               font-size: 17px; 
+                                               background-color: white;
+                                               width: 200px;" >
+  <fieldset>
+  <legend><b><span style="color: black;">Announcements</span></b></legend>
+
+    <p style="text-align: left; font-size: 18px; color: black;">
+      <b>February 2, 2017</b>
+      <br>
+      <br>
+      Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!
+    </p>
+
+  </fieldset>
+
+
+  </div>
+      </div><!-- /.container -->
+
+
+
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </body>
 
