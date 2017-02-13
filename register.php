@@ -82,7 +82,7 @@
 
 <div class="container">
     <form class="well form-horizontal" action=" " method="post" style="text-align: center; font-size: 17px;" >
-<fieldset>
+	<fieldset>
 
 <!-- Form Name -->
 <legend><b>Instructor Register</b></legend>
@@ -113,14 +113,9 @@
   		<input type="submit" value="Register" class="btn btn-block btn-primary" style="display:inline-block; width: 170px; font-size: 20px;">
   		</br>
 
+	</form>
+	</fieldset>
 
-
-
-
-</fieldset>
-
-
-</form>
 </div>
     </div><!-- /.container -->
 	</body>

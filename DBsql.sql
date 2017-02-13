@@ -27,4 +27,12 @@ CREATE TABLE IF NOT EXISTS `events` (
   `date` date NOT NULL,
   `created` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1=Active, 0=Block'
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+
+
+CREATE TABLE IF NOT EXISTS `students` (
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `student` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
