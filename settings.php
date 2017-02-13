@@ -124,12 +124,12 @@
 </html>
 
 <?php
-    function addEvent($student,$hours,$date){
+    function addEvent($username,$student,$date){
       //Include db configuration file
       include 'dbConfig.php';
       //Insert the event data into database
       $insert = $db->query("INSERT INTO `students` (`username`, `student`, `created`) VALUES
-        ('".$username"', '".$student."','".$date."');");
+        ('".$username."', '".$student."','".$date."');");
       if($insert){
         echo 'ok';
       }else{
