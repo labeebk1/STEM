@@ -73,7 +73,7 @@
       Student:<br>
       <input type="text" id="student" value=""/> <!-- LK Edit --><br><br>
       Date Started (YYYY-MM-DD):<br>
-      <input type="text" id="eventDate" value=""/><br><br>
+      <input type="text" id="date" value=""/><br><br>
       <input type="button" id="addEventBtn" value="Add Student"/><br>
 
 
@@ -85,19 +85,17 @@
         $('#addEventBtn').on('click',function(){
           var username = $('#username').val();
           var student = $('#student').val();
-          var date = $('#eventDate').val();
+          var date = $('#date').val();
           $.ajax({
             type:'POST',
             url:'settings.php',
             data: 'func=addEvent&username='+username+'&student='+student+'&date='+date,
             success:function(msg){
               if(msg == 'ok'){
-                var dateSplit = date.split("-");
                 $('#student').val('');
                 $('#username').val('');
                 $('#date').val('');
                 alert('Student Successfully Added.');
-                getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
               }else{
                 alert('Some problem occurred, please contact Labeeb or Marie.');
               }
