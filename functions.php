@@ -60,7 +60,7 @@ function getCalender($year = '',$month = '')
 				<li>Sun</li>
 				<li>Mon</li>
 				<li>Tue</li>
-s				<li>Wed</li>
+				<li>Wed</li>
 				<li>Thu</li>
 				<li>Fri</li>
 				<li>Sat</li>
