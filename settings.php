@@ -105,7 +105,6 @@
       });
     </script>
     <?php
-    }
         function addEvent($username,$student,$date){
           //Include db configuration file
           include 'dbConfig.php';
