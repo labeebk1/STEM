@@ -49,11 +49,11 @@
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 17px; 
-                                               background: #5680ed url("../images/60-lines.png") 0 0 repeat;" >
+                                               background-color: white;" >
   <fieldset>
-  <legend><b><span style="color: white;">Announcements</span></b></legend>
+  <legend><b><span style="color: black;">Announcements</span></b></legend>
 
-    <p style="text-align: left; font-size: 18px; color: white;">
+    <p style="text-align: left; font-size: 18px; color: black;">
       <b>February 2, 2017</b>
       <br>
       <br>
