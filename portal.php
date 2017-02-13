@@ -72,9 +72,9 @@
                                                text-align: left; 
                                                font-size: 17px; 
                                                background-color: white;
-                                               width: 200px;" >
+                                               width: 350px;" >
   <fieldset>
-  <legend><b><span style="color: black;">Test</span></b></legend>
+  <legend><b><span style="color: black;">Summary</span></b></legend>
 
     <p style="text-align: left; font-size: 18px; color: black;">
       <b>February 2, 2017</b>
