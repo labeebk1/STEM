@@ -64,12 +64,12 @@
                                                background-color: white;" >
   <fieldset>
 
-  <p style="text-align: left; font-size: 18px; color: black;">
+  <p style="text-align: left; font-size: 14px; color: black;">
 
     <legend><b>Add a Student to an Instructor</b></legend>
 
       Username (Instructor Name):<br>
-      <input type="text" id="user" value=""/><br><br> <!-- LK Edit -->
+      <input type="text" id="username" value=""/><br><br> <!-- LK Edit -->
       Student:<br>
       <input type="text" id="student" value=""/> <!-- LK Edit --><br><br>
       Date Started (YYYY-MM-DD):<br>
@@ -83,9 +83,9 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('#addEventBtn').on('click',function(){
-          var username = $('#user').val();
-          var date = $('#eventDate').val();
+          var username = $('#username').val();
           var student = $('#student').val();
+          var date = $('#eventDate').val();
           $.ajax({
             type:'POST',
             url:'settings.php',
