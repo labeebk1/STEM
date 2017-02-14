@@ -16,6 +16,19 @@
     }
   }
 
+function addEvent($username,$student,$date){
+    //Include db configuration file
+    include 'dbConfig.php';
+    //Insert the event data into database
+    $insert = $db->query("INSERT INTO `students` (`username`, `student`, `created`) VALUES
+      ('".$username."', '".$student."','".$date."');");
+    if($insert){
+      echo 'ok';
+    }else{
+      echo 'err';
+    }
+}
+
 ?>
 
 
@@ -77,9 +90,6 @@
       <input type="button" id="addEventBtn" value="Add Student"/><br>
 
 
-    <legend><b></b></legend>
-
-
     <script type="text/javascript">
       $(document).ready(function(){
         $('#addEventBtn').on('click',function(){
@@ -104,20 +114,9 @@
         });
       });
     </script>
-    <?php
-        function addEvent($username,$student,$date){
-          //Include db configuration file
-          include 'dbConfig.php';
-          //Insert the event data into database
-          $insert = $db->query("INSERT INTO `students` (`username`, `student`, `created`) VALUES
-            ('".$username."', '".$student."','".$date."');");
-          if($insert){
-            echo 'ok';
-          }else{
-            echo 'err';
-          }
-        }
-    ?>
+
+
+    <legend><b></b></legend>
 
 
 
