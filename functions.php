@@ -50,7 +50,7 @@ function getCalender($year = '',$month = '')
             Student Name:<br>
 
 
-			<input list="student" name="student">
+			<input list="student" name="student" id="student">
 			<datalist id="student">
 
 			<?php
