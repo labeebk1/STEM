@@ -44,9 +44,10 @@ function getCalender($year = '',$month = '')
         </h2>
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
-        <div id="event_add" class="none" style="text-align: center;">
+        <div id="event_add" class="none">
+        	<span style="align-items: center;">
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
-        	<p style="text-align: center; font-size: 16px; line-height: 100%; background-color: #00FF7F; border: 1px solid black; width: 320px;">
+        	<p style="text-align: center; font-size: 17px; line-height: 100%; background-color: #99FF99; border: 1px solid black; width: 320px;">
         	<br>
             <b>Student Name:</b><br>
 			<input list="students" name="student" id="student" style="width:160px; text-align: center;">
@@ -80,7 +81,9 @@ function getCalender($year = '',$month = '')
             <input type="hidden" id="eventDate" value=""/><br><br>
             <input type="button" id="addEventBtn" value="Add Class"/><br>
             <br>
-           	</p></h2>
+           	</p>
+           	</h2>
+           	</span>
         </div>
 		<div id="calender_section_top">
 			<ul style="font-size:15px;"><b>
