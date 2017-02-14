@@ -92,14 +92,10 @@
             url:'settings.php',
             data: 'func=addEvent&username='+username+'&student='+student+'&date='+date,
             success:function(msg){
-              if(msg == 'ok'){
                 $('#student').val('');
                 $('#username').val('');
                 $('#date').val('');
-                alert('Student Successfully Added.');
-              }else{
-                alert('Some problem occurred, please contact Labeeb or Marie.');
-              }
+                alert('Request sent. Please validate this through our dropdown:');
             }
           });
         });
@@ -111,7 +107,6 @@
           //Insert the event data into database
           $insert = $db->query("INSERT INTO students (`username`,`student`,`date`) VALUES
             ('".$username."','".$student."','".$date."');");
-
           echo 'ok';
       }
     ?>
