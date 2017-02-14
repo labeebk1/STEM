@@ -13,35 +13,6 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 			break;
 		//For Add Event
 		case 'addEvent':
-			$userlogin = $_SESSION('username');
-			if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
-				$result = $db->query("SELECT distinct student FROM students;");
-			} else {
-				$result = $db->query("SELECT student FROM students where username = '".$userlogin."';");
-			}
-			while($results = mysqli_fetch_assoc($result)) {
-				if($results['student'] == $_POST['student']){
-					echo '<script language="javascript">';
-					echo 'alert("Error. Please select an entry from the dropdown list.")';
-					echo '</script>';
-   					header("Location:calendar.php");
-				}
-	    	}
-			while($results = mysqli_fetch_assoc($result)) {
-				if($results['hours'] == '0.5' || 
-					$results['hours'] == '1.0' || 
-					$results['hours'] == '1.5' || 
-					$results['hours'] == '2.0' || 
-					$results['hours'] == '2.5' || 
-					$results['hours'] == '3.0' || 
-					$results['hours'] == '3.5' || 
-					$results['hours'] == '4.0'){
-					echo '<script language="javascript">';
-					echo 'alert("Error. Please select an entry from the dropdown list.")';
-					echo '</script>';
-   					header("Location:calendar.php");
-				}
-	    	}
 			addEvent($_POST['student'],$_POST['hours'],$_POST['date']);
 			break;
 		default:
@@ -318,14 +289,46 @@ function addEvent($student,$hours,$date){
 	//Insert the event data into database
 	$userlogin = $_SESSION['username'];
 
-	$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `status`) VALUES
-		('".$_SESSION['username']."', '".$student."', '".$hours."', '".$date."', '".$currentDate."', 1);");
-
-
-	if($insert){
-		echo 'ok';
-	}else{
-		echo 'err';
+	if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
+		$result = $db->query("SELECT distinct student FROM students;");
+	} else {
+		$result = $db->query("SELECT student FROM students where username = '".$userlogin."';");
 	}
+	
+	$rejectStudent = true;
+	$rejectHours = true;
+
+	while($results = mysqli_fetch_assoc($result)) {
+		if($results['student'] == $student){
+			$rejectHours = false;
+		}
+	}
+	while($results = mysqli_fetch_assoc($result)) {
+		if($hours == '0.5' || 
+			$hours == '1.0' || 
+			$hours == '1.5' || 
+			$hours == '2.0' || 
+			$hours == '2.5' || 
+			$hours == '3.0' || 
+			$hours == '3.5' || 
+			$hours == '4.0'){
+			$rejectHours = false;
+		}
+	}
+	if($rejectHours == true || $rejectHours == true){
+		echo '<script language="javascript">';
+		echo 'alert("Error. Please select an entry from the dropdown list.")';
+		echo '</script>';
+   		header("Location:calendar.php");
+	} else {
+		$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `status`) VALUES
+			('".$_SESSION['username']."', '".$student."', '".$hours."', '".$date."', '".$currentDate."', 1);");
+		if($insert){
+			echo 'ok';
+		}else{
+			echo 'err';
+		}
+	}
+
 }
 ?>
