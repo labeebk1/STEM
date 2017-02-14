@@ -79,6 +79,7 @@
       <input type="button" id="addEventBtn" value="Add Student"/><br>
 
 
+    <script src="jquery.min.js"></script>
     <script type="text/javascript">
 
       $(document).ready(function(){
