@@ -47,10 +47,11 @@ function getCalender($year = '',$month = '')
         <div id="event_add" class="none"">
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
         	<p style="text-align: left; font-size: 16px; line-height: 100%;">
+        	<form>
             Student Name:<br>
 
 
-			<input list="student" name="student" id="student">
+			<input list="student" name="student">
 			<datalist id="student">
 
 			<?php
@@ -87,6 +88,7 @@ function getCalender($year = '',$month = '')
             </datalist>
             <input type="hidden" id="eventDate" value=""/><br><br>
             <input type="button" id="addEventBtn" value="Add Class"/><br>
+            </form>
            	</p></h2>
         </div>
 		<div id="calender_section_top">
