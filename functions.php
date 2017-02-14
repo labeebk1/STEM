@@ -46,9 +46,9 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
-        	<p style="text-align: left; font-size: 16px; line-height: 100%;">
+        	<p style="text-align: center; font-size: 16px; line-height: 100%;">
             Student Name:<br>
-			<input list="students" name="student" id="student"'>
+			<input list="students" name="student" id="student" style="width:180px; text-align: center;">
 			<datalist id="students">
 			<?php
 				include 'dbConfig.php';
@@ -63,9 +63,9 @@ function getCalender($year = '',$month = '')
 	    		}
 			?>	
 			</datalist>
-            <br>
+            <br><br>
             Hours:<br>
-            <input list="hour" name="hours" id="hours">
+            <input list="hour" name="hours" id="hours" style="width:180px; text-align: center;">
             <datalist id="hour">
             	<option value="0.5"></option>
             	<option value="1.0"></option>
