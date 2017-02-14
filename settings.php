@@ -121,16 +121,8 @@
       }
 
     ?>
-
-
-    <legend><b></b></legend>
-
-
-
-
   </p>
   </fieldset>
-
 
   </div>
       </div><!-- /.container -->
