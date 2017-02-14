@@ -194,7 +194,7 @@ function getCalender($year = '',$month = '')
 								alert('Thank you for submitting your time sheet with STEM Academy! Session Successfully Added.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
-							alert('Some problem occurred, please contact Labeeb or Marie.');
+							alert('Please confirm your Student Name and Hours are following the dropdown format. If the problem persists, please contact Labeeb.');
 						}
 					}
 				});
@@ -316,10 +316,7 @@ function addEvent($student,$hours,$date){
 		}
 	}
 	if($rejectHours == true || $rejectHours == true){
-		echo '<script language="javascript">';
-		echo 'alert("Error. Please select an entry from the dropdown list.")';
-		echo '</script>';
-   		header("Location:calendar.php");
+		echo 'err';
 	} else {
 		$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `status`) VALUES
 			('".$_SESSION['username']."', '".$student."', '".$hours."', '".$date."', '".$currentDate."', 1);");
