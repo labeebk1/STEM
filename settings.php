@@ -16,8 +16,6 @@
     }
   }
 
-
-
 ?>
 
 
@@ -112,8 +110,7 @@
           include 'dbConfig.php';
           //Insert the event data into database
           $insert = $db->query("INSERT INTO `students` (`username`, `student`, `date`) VALUES
-            ('".$username."', '".$student."','".$date."');");
-          echo $insert;
+            ('".$username."', '".$student."','".$date."')");
           if($insert){
             echo 'ok';
           }else{
