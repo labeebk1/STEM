@@ -46,6 +46,7 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none"">
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
+        	<span style="text-align: center;">
         	<p style="text-align: center; font-size: 16px; line-height: 100%; background-color: #00FF7F; border: 1px solid black; width: 320px;">
         	<br>
             <b>Student Name:</b><br>
@@ -80,7 +81,8 @@ function getCalender($year = '',$month = '')
             <input type="hidden" id="eventDate" value=""/><br><br>
             <input type="button" id="addEventBtn" value="Add Class"/><br>
             <br>
-           	</p></h2>
+           	</p></span>
+           	</h2>
         </div>
 		<div id="calender_section_top">
 			<ul style="font-size:15px;"><b>
@@ -195,7 +197,7 @@ function getCalender($year = '',$month = '')
 								alert('Session Successfully Added. Thank you for submitting your time sheet with STEM Academy!');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
-							alert('Error. Please confirm your Student Name and Hours are following the dropdown format. If the problem persists, please contact Labeeb.');
+							alert('Error. Please confirm your Student Name and Hours are following the dropdown entries. If the problem persists, please contact Labeeb.');
 						}
 					}
 				});
