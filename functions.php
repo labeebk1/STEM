@@ -48,7 +48,34 @@ function getCalender($year = '',$month = '')
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
         	<p style="text-align: left; font-size: 16px; line-height: 100%;">
             Student Name:<br>
-            <input type="text" id="student" value=""/><br><br> <!-- LK Edit -->
+
+
+			<input list="student" name="student">
+			<datalist id="student">
+
+			<?php
+
+
+			include 'dbConfig.php';
+			$userlogin = $_SESSION['username'];
+
+			if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
+				$result = $db->query("SELECT distinct student FROM students;");
+			} else {
+				$result = $db->query("SELECT student FROM students where username = '".$userlogin."';");
+			}
+
+			$num_rows = mysql_num_rows($result)
+			for ($i=0;$i<$num_rows;$i++) {
+				$row = mysql_fetch_assoc($result);
+				echo '<option value="$row['.$row['student'].']">'
+			}
+
+			?>
+			</datalist>
+
+
+            <br>
             Hours:<br>
             <input type="text" id="hours" value=""/> <!-- LK Edit -->
             <input type="hidden" id="eventDate" value=""/><br><br>

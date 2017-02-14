@@ -1,6 +1,8 @@
 /* View Entries */
 
 SELECT * FROM events;
+SELECT * FROM students;
+SELECT * FROM users;
 
 /* Delete Entries */
 
@@ -34,5 +36,5 @@ CREATE TABLE IF NOT EXISTS `events` (
 CREATE TABLE IF NOT EXISTS `students` (
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `student` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created` datetime NOT NULL
+  `date` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

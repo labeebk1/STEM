@@ -95,7 +95,7 @@
                 $('#student').val('');
                 $('#username').val('');
                 $('#date').val('');
-                alert('Request sent. Please validate this through our dropdown:');
+                alert('Request sent.');
             }
           });
         });
@@ -110,6 +110,7 @@
           echo 'ok';
       }
     ?>
+
   </p>
   </fieldset>
 
