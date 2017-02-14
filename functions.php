@@ -265,7 +265,6 @@ function addEvent($student,$hours,$date){
 
 	$insert = $db->query("INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `status`) VALUES
 		('".$_SESSION['username']."', '".$student."', '".$hours."', '".$date."', '".$currentDate."', 1);");
-	
 
 
 	if($insert){

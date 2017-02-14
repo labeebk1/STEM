@@ -106,12 +106,10 @@
       });
     </script>
     <?php
-
-      function addEvent($username,$student,$date){
-          //Include db configuration file
+      function addEvent($username,$student,$date){          //Include db configuration file
           include 'dbConfig.php';
           //Insert the event data into database
-          $insert = $db->query("INSERT INTO `students` (`username`,`student`,`date`) VALUES
+          $insert = $db->query("INSERT INTO students (`username`,`student`,`date`) VALUES
             ('".$username."','".$student."','".$date."');");
           if($insert){
             echo 'ok';
@@ -119,7 +117,6 @@
             echo 'err';
           }
       }
-
     ?>
   </p>
   </fieldset>
