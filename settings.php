@@ -111,9 +111,11 @@
           //Insert the event data into database
           $insert = $db->query("INSERT INTO students (`username`,`student`,`date`) VALUES
             ('".$username."','".$student."','".$date."');");
-          if($insert){
+
+          $result = $db->query("SELECT username FROM students where username = '".$username."' AND student = '".$student."'");
+          if($result->num_rows > 0){
             echo 'ok';
-          }else{
+          } else {
             echo 'err';
           }
       }
