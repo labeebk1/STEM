@@ -67,16 +67,24 @@ function getCalender($year = '',$month = '')
 
 
 			while($results = mysqli_fetch_assoc($result)) {
-				echo "<option value=".$results['student']."/>";
+				echo "<option value=".$results['student']."></option>";
     		}
 
 			?>	
 			</datalist>
-
-
             <br>
             Hours:<br>
-            <input type="text" id="hours" value=""/> <!-- LK Edit -->
+            <input list="hours" name="hours">
+            <datalist id="hours">
+            	<option value="0.5"></option>
+            	<option value="1.0"></option>
+            	<option value="1.5"></option>
+            	<option value="2.0"></option>
+            	<option value="2.5"></option>
+            	<option value="3.0"></option>
+            	<option value="3.5"></option>
+            	<option value="4.0"></option>
+            </datalist>
             <input type="hidden" id="eventDate" value=""/><br><br>
             <input type="button" id="addEventBtn" value="Add Class"/><br>
            	</p></h2>
