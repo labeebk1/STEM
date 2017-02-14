@@ -68,7 +68,7 @@ function getCalender($year = '',$month = '')
 			$num_rows = mysql_num_rows($result)
 			for ($i=0;$i<$num_rows;$i++) {
 				$row = mysql_fetch_assoc($result);
-				echo '<option value="$row['.$row['student'].']">'
+				echo '<option value="$row['.$row['student'].']">';
 			}
 
 			?>
