@@ -65,7 +65,7 @@ function getCalender($year = '',$month = '')
 			</datalist>
             <br><br>
             <b>Hours:</b><br>
-            <input list="hour" name="hours" id="hours" style="width:180px; text-align: center;">
+            <input list="hour" name="hours" id="hours" style="width:160px; text-align: center;">
             <datalist id="hour">
             	<option value="0.5"></option>
             	<option value="1.0"></option>
