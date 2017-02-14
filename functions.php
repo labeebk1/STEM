@@ -13,6 +13,35 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 			break;
 		//For Add Event
 		case 'addEvent':
+			$userlogin = $_SESSION('username');
+			if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
+				$result = $db->query("SELECT distinct student FROM students;");
+			} else {
+				$result = $db->query("SELECT student FROM students where username = '".$userlogin."';");
+			}
+			while($results = mysqli_fetch_assoc($result)) {
+				if($results['student'] == $_POST['student']){
+					echo '<script language="javascript">';
+					echo 'alert("Error. Please select an entry from the dropdown list.")';
+					echo '</script>';
+   					header("Location:calendar.php");
+				}
+	    	}
+			while($results = mysqli_fetch_assoc($result)) {
+				if($results['hours'] == '0.5' || 
+					$results['hours'] == '1.0' || 
+					$results['hours'] == '1.5' || 
+					$results['hours'] == '2.0' || 
+					$results['hours'] == '2.5' || 
+					$results['hours'] == '3.0' || 
+					$results['hours'] == '3.5' || 
+					$results['hours'] == '4.0'){
+					echo '<script language="javascript">';
+					echo 'alert("Error. Please select an entry from the dropdown list.")';
+					echo '</script>';
+   					header("Location:calendar.php");
+				}
+	    	}
 			addEvent($_POST['student'],$_POST['hours'],$_POST['date']);
 			break;
 		default:
@@ -47,10 +76,7 @@ function getCalender($year = '',$month = '')
         <div id="event_add" class="none"">
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
         	<p style="text-align: left; font-size: 16px; line-height: 100%;">
-
             Student Name:<br>
-
-
 			<input list="students" name="student" id="student"'>
 			<datalist id="students">
 			<?php
