@@ -16,18 +16,7 @@
     }
   }
 
-function addEvent($username,$student,$date){
-    //Include db configuration file
-    include 'dbConfig.php';
-    //Insert the event data into database
-    $insert = $db->query("INSERT INTO `students` (`username`, `student`, `created`) VALUES
-      ('".$username."', '".$student."','".$date."');");
-    if($insert){
-      echo 'ok';
-    }else{
-      echo 'err';
-    }
-}
+
 
 ?>
 
@@ -91,6 +80,7 @@ function addEvent($username,$student,$date){
 
 
     <script type="text/javascript">
+
       $(document).ready(function(){
         $('#addEventBtn').on('click',function(){
           var username = $('#username').val();
@@ -114,6 +104,22 @@ function addEvent($username,$student,$date){
         });
       });
     </script>
+    <?php
+
+      function addEvent($username,$student,$date){
+          //Include db configuration file
+          include 'dbConfig.php';
+          //Insert the event data into database
+          $insert = $db->query("INSERT INTO `students` (`username`, `student`, `created`) VALUES
+            ('".$username."', '".$student."','".$date."');");
+          if($insert){
+            echo 'ok';
+          }else{
+            echo 'err';
+          }
+      }
+
+    ?>
 
 
     <legend><b></b></legend>
