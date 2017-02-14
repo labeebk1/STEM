@@ -65,11 +65,10 @@ function getCalender($year = '',$month = '')
 				$result = $db->query("SELECT student FROM students where username = '".$userlogin."';");
 			}
 
-			$num_rows = mysql_num_rows($result);
-			for ($i=0;$i<$num_rows;$i++) {
-				$row = mysql_fetch_assoc($result);
-				echo '<option value="$row['.$row['student'].']">';
-			}
+
+			while($result = mysqli_fetch_assoc($results)) {
+				echo "<option value="$row[student]"/>";
+    		}
 
 			?>
 			</datalist>
