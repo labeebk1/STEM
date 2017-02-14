@@ -67,7 +67,7 @@ function getCalender($year = '',$month = '')
 
 
 			while($results = mysqli_fetch_assoc($result)) {
-				echo "<option value=".$row['student']."/>";
+				echo "<option value=".$results['student']."/>";
     		}
 
 			?>	
