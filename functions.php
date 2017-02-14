@@ -47,36 +47,29 @@ function getCalender($year = '',$month = '')
         <div id="event_add" class="none"">
         	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
         	<p style="text-align: left; font-size: 16px; line-height: 100%;">
-        	<form>
+
             Student Name:<br>
 
 
-			<input list="student" name="student">
-			<datalist id="student">
-
+			<input list="students" name="student" id="student"'>
+			<datalist id="students">
 			<?php
-
-
-			include 'dbConfig.php';
-			$userlogin = $_SESSION['username'];
-
-			if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
-				$result = $db->query("SELECT distinct student FROM students;");
-			} else {
-				$result = $db->query("SELECT student FROM students where username = '".$userlogin."';");
-			}
-
-
-			while($results = mysqli_fetch_assoc($result)) {
-				echo "<option value=".$results['student']."></option>";
-    		}
-
+				include 'dbConfig.php';
+				$userlogin = $_SESSION['username'];
+				if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
+					$result = $db->query("SELECT distinct student FROM students;");
+				} else {
+					$result = $db->query("SELECT student FROM students where username = '".$userlogin."';");
+				}
+				while($results = mysqli_fetch_assoc($result)) {
+					echo "<option value=".$results['student']."></option>";
+	    		}
 			?>	
 			</datalist>
             <br>
             Hours:<br>
-            <input list="hours" name="hours">
-            <datalist id="hours">
+            <input list="hour" name="hours" id="hours">
+            <datalist id="hour">
             	<option value="0.5"></option>
             	<option value="1.0"></option>
             	<option value="1.5"></option>
@@ -88,7 +81,7 @@ function getCalender($year = '',$month = '')
             </datalist>
             <input type="hidden" id="eventDate" value=""/><br><br>
             <input type="button" id="addEventBtn" value="Add Class"/><br>
-            </form>
+
            	</p></h2>
         </div>
 		<div id="calender_section_top">
@@ -177,7 +170,7 @@ function getCalender($year = '',$month = '')
 					$('#event_add').slideUp('slow');
 					$('#event_list').slideDown('slow');
 				}
-			});
+			});	
 		}
 		//For Add Event
 		function addEvent(date){
