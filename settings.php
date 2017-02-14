@@ -70,7 +70,7 @@
 
     <legend><b>Add a Student to an Instructor</b></legend>
 
-      Username (Instructor Name):<br>
+      Username (Instructor Username):<br>
       <input type="text" id="username" value=""/><br><br> <!-- LK Edit -->
       Student:<br>
       <input type="text" id="student" value=""/> <!-- LK Edit --><br><br>
