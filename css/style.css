@@ -234,7 +234,7 @@ nav .badge.red {
 #calender_section{ width:700px; margin:15px auto 0; background-color: white;}
 #calender_section h2{background-color:white; color:#444444; font-size:17px; text-align:center; line-height:40px; align-items: center;}
 #calender_section h2 a{ color:#00bfff; float:none;}
-#calender_section_top{ width:100%; float:left; margin-top:10px;}
+#calender_section_top{ width:100%; float:left; margin-top:20px;}
 #calender_section_top ul{padding:0; list-style-type:none;}
 #calender_section_top ul li{ float:left; display:inline-block; width:99px; border-right:1px solid #fff;  text-align:center; font-size:15px; min-height:0; background:none; box-shadow:none; margin:0; padding:0;}
 #calender_section_bot{ width:100%; margin-top:20px; float:left; border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
