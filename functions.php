@@ -272,11 +272,21 @@ function getEvents($date = ''){
 
 	if($result->num_rows > 0){
 		$eventListHTML = '<h2><b>Classes on '.date("l, d M Y",strtotime($date)).':</b>';
-		$eventListHTML .= '<ul>';
+		$eventListHTML = '<div class="table">';
+		$eventListHTML = '<div class="row header green">';
+		$eventListHTML = '<div class="cell">Instructor</div>';
+		$eventListHTML = '<div class="cell">Student</div>';
+		$eventListHTML = '<div class="cell">Hours</div>';
+		$eventListHTML = '</div>';
+
 		while($row = $result->fetch_assoc()){ 
-            $eventListHTML .= '<li>'.$row['username'].' - '.$row['student'].' - '.$row['hours'].' hours</li>';
+			$eventListHTML .= '<div class="row">';
+				$eventListHTML .= '<div class="cell">'.$row['username'].'</div>';
+				$eventListHTML .= '<div class="cell">'.$row['student'].'</div>';
+				$eventListHTML .= '<div class="cell">'.$row['hours'].'</div>';
+			$eventListHTML .= '</div>';
         }
-		$eventListHTML .= '</ul></h2>';
+		$eventListHTML = '</div>';
 	}
 	echo $eventListHTML;
 }
