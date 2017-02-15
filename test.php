@@ -47,7 +47,7 @@
 
 
 
-
+    <br>
 <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
   <tr><th>Task Details</th><th>Progress</th><th>Vital Task</th></tr><!-- Table Header -->
     
