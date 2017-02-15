@@ -118,6 +118,8 @@
       </div><!-- /.container -->
 
 
+
+
   <div class="container">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
@@ -135,11 +137,59 @@
   
     $userlogin = $_SESSION['username'];
     
+    $result = $db->query("SELECT username, student, sum(hours) as hours FROM events WHERE status = '1' GROUP BY username, student");
+
+    if($result->num_rows > 0){
+      $eventListHTML = '<div class="table" style="color:black;">';
+      $eventListHTML .= '<div class="row header blue">';
+      $eventListHTML .= '<div class="cell">Instructor</div>';
+      $eventListHTML .= '<div class="cell">Student</div>';
+      $eventListHTML .= '<div class="cell">Total Hours</div>';
+      $eventListHTML .= '</div>';
+
+      while($row = $result->fetch_assoc()){ 
+        $eventListHTML .= '<div class="row">';
+        $eventListHTML .= '<div class="cell">'.$row['username'].'</div>';
+        $eventListHTML .= '<div class="cell">'.$row['student'].'</div>';
+        $eventListHTML .= '<div class="cell">'.$row['hours'].'</div>';
+        $eventListHTML .= '</div>';
+      }
+      $eventListHTML .= '</div>';
+    }
+    echo $eventListHTML;
+
+
+  ?>
+
+  </p>
+  </fieldset>
+
+  </div>
+      </div><!-- /.container -->
+
+
+  <div class="container">
+      <div class="well form-horizontal" style="color: white;
+                                               text-align: center; 
+                                               font-size: 17px; 
+                                               background-color: white;" >
+  <fieldset>
+
+  <p style="text-align: left; font-size: 14px; color: black;">
+
+  <legend><b>Total Paid Hours</b></legend>
+
+  <?php
+    include 'dbConfig.php';
+    $eventListHTML = '';
+  
+    $userlogin = $_SESSION['username'];
+    
     $result = $db->query("SELECT username, student, sum(hours) as hours FROM events WHERE status = '0' GROUP BY username, student");
 
     if($result->num_rows > 0){
-      $eventListHTML = '<div class="table">';
-      $eventListHTML .= '<div class="row header">';
+      $eventListHTML = '<div class="table" style="color:black;">';
+      $eventListHTML .= '<div class="row header green">';
       $eventListHTML .= '<div class="cell">Instructor</div>';
       $eventListHTML .= '<div class="cell">Student</div>';
       $eventListHTML .= '<div class="cell">Total Hours</div>';
@@ -187,7 +237,7 @@
     $result = $db->query("SELECT username, student, sum(hours) as hours FROM events GROUP BY username, student");
 
     if($result->num_rows > 0){
-      $eventListHTML = '<div class="table">';
+      $eventListHTML = '<div class="table" style="color:black;">';
       $eventListHTML .= '<div class="row header">';
       $eventListHTML .= '<div class="cell">Instructor</div>';
       $eventListHTML .= '<div class="cell">Student</div>';
