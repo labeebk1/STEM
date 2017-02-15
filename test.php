@@ -45,49 +45,38 @@
       </ul>
     </nav>
 
-  <div class="container">
-      <div class="well form-horizontal" style="color: white;
-                                               text-align: center; 
-                                               font-size: 17px; 
-                                               background-color: white;" >
-  <fieldset>
-  <legend><b><span style="color: black;">Announcements</span></b></legend>
-
-    <p style="text-align: left; font-size: 18px; color: black;">
-      <b>February 2, 2017</b>
-      <br>
-      <br>
-      Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!
-    </p>
-
-  </fieldset>
 
 
-  </div>
-      </div><!-- /.container -->
-
-
-  <div class="container">
-      <div class="well form-horizontal" style="color: white;
-                                               text-align: left; 
-                                               font-size: 17px; 
-                                               background-color: white;
-                                               width: 350px;" >
-  <fieldset>
-  <legend><b><span style="color: black;">Summary</span></b></legend>
-
-    <p style="text-align: left; font-size: 18px; color: black;">
-      <b>February 2, 2017</b>
-      <br>
-      <br>
-      
-    </p>
-
-  </fieldset>
-
-
-  </div>
-      </div><!-- /.container -->
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">Month</th>
+<th class="text-left">Sales</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<td class="text-left">January</td>
+<td class="text-left">$ 50,000.00</td>
+</tr>
+<tr>
+<td class="text-left">February</td>
+<td class="text-left">$ 10,000.00</td>
+</tr>
+<tr>
+<td class="text-left">March</td>
+<td class="text-left">$ 85,000.00</td>
+</tr>
+<tr>
+<td class="text-left">April</td>
+<td class="text-left">$ 56,000.00</td>
+</tr>
+<tr>
+<td class="text-left">May</td>
+<td class="text-left">$ 98,000.00</td>
+</tr>
+</tbody>
+</table>
 
 
 
