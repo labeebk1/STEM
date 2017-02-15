@@ -44,12 +44,12 @@ function getCalender($year = '',$month = '')
         </h2>
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
-        <div id="event_add" class="portal portal">
+        <div id="event_add" class="none">
         	<h2 style="text-align: center;"><b>Add a class on <span id="eventDateView"></span>:</b><br>
-        	<p style="text-align: center; font-size: 17px; line-height: 100%; background-color: #99FF99; border: 1px solid black; width: 320px; display: inline-block;">
+        	<p style="text-align: center; font-size: 17px; line-height: 100%; background-color: #99FF99; border: 1px solid black; width: 300px; display: inline-block;">
         	<br>
             <b>Student Name:</b><br>
-			<input list="students" name="student" id="student" style="width:160px; text-align: center;">
+			<input list="students" name="student" id="student" style="width:140px; text-align: center;">
 			<datalist id="students">
 			<?php
 				include 'dbConfig.php';
@@ -66,7 +66,7 @@ function getCalender($year = '',$month = '')
 			</datalist>
             <br><br>
             <b>Hours:</b><br>
-            <input list="hour" name="hours" id="hours" style="width:160px; text-align: center;">
+            <input list="hour" name="hours" id="hours" style="width:140px; text-align: center;">
             <datalist id="hour">
             	<option value="0.5"></option>
             	<option value="1.0"></option>
