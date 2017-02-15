@@ -265,9 +265,9 @@ function getEvents($date = ''){
 
 	$userlogin = $_SESSION['username'];
 	if($userlogin == "labeeb" || $userlogin == "m_mcmillan"){
-		$result = $db->query("SELECT username, student, hours FROM events WHERE date = '".$date."'");
+		$result = $db->query("SELECT username, student, hours, status FROM events WHERE date = '".$date."'");
 	} else {
-		$result = $db->query("SELECT username, student, hours FROM events WHERE username = '".$userlogin."' AND date = '".$date."'");
+		$result = $db->query("SELECT username, student, hours, status FROM events WHERE username = '".$userlogin."' AND date = '".$date."'");
 	}
 
 	if($result->num_rows > 0){
@@ -277,6 +277,7 @@ function getEvents($date = ''){
 		$eventListHTML .= '<div class="cell">Instructor</div>';
 		$eventListHTML .= '<div class="cell">Student</div>';
 		$eventListHTML .= '<div class="cell">Hours</div>';
+		$eventListHTML .= '<div class="cell">Earnings</div>';
 		$eventListHTML .= '</div>';
 
 		while($row = $result->fetch_assoc()){ 
@@ -284,6 +285,11 @@ function getEvents($date = ''){
 				$eventListHTML .= '<div class="cell">'.$row['username'].'</div>';
 				$eventListHTML .= '<div class="cell">'.$row['student'].'</div>';
 				$eventListHTML .= '<div class="cell">'.$row['hours'].'</div>';
+				if($row['status'] == 1) {
+					$eventListHTML .= '<div class="cell">Unpaid</div>';
+				} else {
+					$eventListHTML .= '<div class="cell">Paid</div>';
+				}
 			$eventListHTML .= '</div>';
         }
 		$eventListHTML .= '</div>';
