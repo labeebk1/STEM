@@ -46,24 +46,50 @@
     </nav>
 
 
-
-    <br>
-<table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
-  <tr><th>Task Details</th><th>Progress</th><th>Vital Task</th></tr><!-- Table Header -->
     
-<tr><td>Create pretty table design</td><td>100%</td><td>Yes</td></tr><!-- Table Row -->
-  <tr class='even'><td>Take the dog for a walk</td><td>100%</td><td>Yes</td></tr><!-- Darker Table Row -->
-
-  <tr><td>Waste half the day on Twitter</td><td>20%</td><td>No</td></tr>
-  <tr class='even'><td>Feel inferior after viewing Dribble</td><td>80%</td><td>No</td></tr>
+<table class="responstable">
   
-    <tr><td>Wince at "to do" list</td><td>100%</td><td>Yes</td></tr>
-  <tr class='even'><td>Vow to complete personal project</td><td>23%</td><td>yes</td></tr>
-
-  <tr><td>Procrastinate</td><td>80%</td><td>No</td></tr>
-    <tr class='even'><td><a href="#yep-iit-doesnt-exist">Hyperlink Example</a></td><td>80%</td><td><a href="#inexistent-id">Another</a></td></tr>
+  <tr>
+    <th>Main driver</th>
+    <th data-th="Driver details"><span>First name</span></th>
+    <th>Surname</th>
+    <th>Date of birth</th>
+    <th>Relationship</th>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Steve</td>
+    <td>Foo</td>
+    <td>01/01/1978</td>
+    <td>Policyholder</td>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Steffie</td>
+    <td>Foo</td>
+    <td>01/01/1978</td>
+    <td>Spouse</td>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Stan</td>
+    <td>Foo</td>
+    <td>01/01/1994</td>
+    <td>Son</td>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Stella</td>
+    <td>Foo</td>
+    <td>01/01/1992</td>
+    <td>Daughter</td>
+  </tr>
+  
 </table>
-
 
 
 
