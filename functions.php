@@ -46,7 +46,7 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none">
         	<h2 style="text-align: center;"><b>Add a class on <span id="eventDateView"></span>:</b><br>
-        	<p style="text-align: center; font-size: 17px; line-height: 100%; background-color: #99FF99; border: 1px solid black; width: 320px; display: inline-block;" class="row-header green">
+        	<p style="text-align: center; font-size: 17px; line-height: 100%; background-color: #99FF99; border: 1px solid black; width: 320px; display: inline-block;">
         	<br>
             <b>Student Name:</b><br>
 			<input list="students" name="student" id="student" style="width:160px; text-align: center;">
@@ -272,7 +272,7 @@ function getEvents($date = ''){
 
 	if($result->num_rows > 0){
 		$eventListHTML = '<h2><b>Classes on '.date("l, d M Y",strtotime($date)).':</b>';
-		$eventListHTML .= '<div class="table">';
+		$eventListHTML .= '<div class="table" style="display:inline-block;">';
 		$eventListHTML .= '<div class="row header green">';
 		$eventListHTML .= '<div class="cell">Instructor</div>';
 		$eventListHTML .= '<div class="cell">Student</div>';
