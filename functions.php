@@ -107,7 +107,7 @@ function getCalender($year = '',$month = '')
 						//Include db configuration filess
 						include 'dbConfig.php';
 						//Get number of events based on the current date
-						if($userlogin == "labeeb" || $userlogin == "m_mcmillan"){
+						if($userlogin == "labeeb" || $userlogin == "m_mcmillan" || $userlogin == "aziz" || $userlogin == "aman"){
 							$result = $db->query("SELECT student FROM events WHERE date = '".$currentDate."'");
 
 						} else {
@@ -264,7 +264,7 @@ function getEvents($date = ''){
 	//Get events based on the current date
 
 	$userlogin = $_SESSION['username'];
-	if($userlogin == "labeeb" || $userlogin == "m_mcmillan"){
+	if($userlogin == "labeeb" || $userlogin == "m_mcmillan" || $userlogin == "aziz" || $userlogin == "aman"){
 		$result = $db->query("SELECT username, student, hours, status FROM events WHERE date = '".$date."'");
 	} else {
 		$result = $db->query("SELECT username, student, hours, status FROM events WHERE username = '".$userlogin."' AND date = '".$date."'");
