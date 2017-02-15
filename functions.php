@@ -272,7 +272,7 @@ function getEvents($date = ''){
 
 	if($result->num_rows > 0){
 		$eventListHTML = '<h2><b>Classes on '.date("l, d M Y",strtotime($date)).':</b>';
-		$eventListHTML .= '<div class="table" style="display:inline-block;">';
+		$eventListHTML .= '<div class="table">';
 		$eventListHTML .= '<div class="row header green">';
 		$eventListHTML .= '<div class="cell">Instructor</div>';
 		$eventListHTML .= '<div class="cell">Student</div>';
