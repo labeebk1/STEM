@@ -323,15 +323,15 @@ a:hover {color: #181919;}
 }
 
 .table {
-  margin: 0 0 40px 0;
+  margin: 0 0 30px 0;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: table;
 }
 @media screen and (max-width: 580px) {
   .table {
-    display: inline-block;
-  }
+    display: block;
+  } 
 }
 
 .row {
@@ -355,7 +355,7 @@ a:hover {color: #181919;}
 @media screen and (max-width: 580px) {
   .row {
     padding: 8px 0;
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -366,10 +366,9 @@ a:hover {color: #181919;}
 @media screen and (max-width: 580px) {
   .cell {
     padding: 2px 12px;
-    display: inline-block;
+    display: block;
   }
 }
-
 
 
 
