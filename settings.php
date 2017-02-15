@@ -59,65 +59,6 @@
       </ul>
     </nav>
 
-  <div class="container">
-      <div class="well form-horizontal" style="color: white;
-                                               text-align: center; 
-                                               font-size: 17px; 
-                                               background-color: white;" >
-  <fieldset>
-
-  <p style="text-align: left; font-size: 14px; color: black;">
-
-    <legend><b>Add a Student to an Instructor</b></legend>
-
-      Username (Instructor Username):<br>
-      <input type="text" id="username" value=""/><br><br> <!-- LK Edit -->
-      Student:<br>
-      <input type="text" id="student" value=""/> <!-- LK Edit --><br><br>
-      Date Started (YYYY-MM-DD):<br>
-      <input type="text" id="date" value=""/><br><br>
-      <input type="button" id="addEventBtn" value="Add Student"/><br>
-
-
-    <script src="jquery.min.js"></script>
-    <script type="text/javascript">
-
-      $(document).ready(function(){
-        $('#addEventBtn').on('click',function(){
-          var username = $('#username').val();
-          var student = $('#student').val();
-          var date = $('#date').val();
-          $.ajax({
-            type:'POST',
-            url:'settings.php',
-            data: 'func=addEvent&username='+username+'&student='+student+'&date='+date,
-            success:function(msg){
-                $('#student').val('');
-                $('#username').val('');
-                $('#date').val('');
-                alert('Request sent.');
-            }
-          });
-        });
-      });
-    </script>
-    <?php
-      function addEvent($username,$student,$date){          //Include db configuration file
-          include 'dbConfig.php';
-          //Insert the event data into database
-          $insert = $db->query("INSERT INTO students (`username`,`student`,`date`) VALUES
-            ('".$username."','".$student."','".$date."');");
-          echo 'ok';
-      }
-    ?>
-    <br>
-  </p>
-  </fieldset>
-
-  </div>
-      </div><!-- /.container -->
-
-
 
 
   <div class="container">
@@ -183,7 +124,7 @@
     include 'dbConfig.php';
     $eventListHTML = '';
   
-    $userlogin = $_SESSION['username'];
+    $userlogin = $_SESSION['username']; // Fix Database for Hours that are added as text
     
     $result = $db->query("SELECT username, student, sum(hours) as hours FROM events WHERE status = '0' GROUP BY username, student");
 
@@ -264,6 +205,65 @@
   </div>
       </div><!-- /.container -->
 
+
+
+  <div class="container">
+      <div class="well form-horizontal" style="color: white;
+                                               text-align: center; 
+                                               font-size: 17px; 
+                                               background-color: white;" >
+  <fieldset>
+
+  <p style="text-align: left; font-size: 14px; color: black;">
+
+    <legend><b>Add a Student to an Instructor</b></legend>
+
+      Username (Instructor Username):<br>
+      <input type="text" id="username" value=""/><br><br> <!-- LK Edit -->
+      Student:<br>
+      <input type="text" id="student" value=""/> <!-- LK Edit --><br><br>
+      Date Started (YYYY-MM-DD):<br>
+      <input type="text" id="date" value=""/><br><br>
+      <input type="button" id="addEventBtn" value="Add Student"/><br>
+
+
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('#addEventBtn').on('click',function(){
+          var username = $('#username').val();
+          var student = $('#student').val();
+          var date = $('#date').val();
+          $.ajax({
+            type:'POST',
+            url:'settings.php',
+            data: 'func=addEvent&username='+username+'&student='+student+'&date='+date,
+            success:function(msg){
+                $('#student').val('');
+                $('#username').val('');
+                $('#date').val('');
+                alert('Request sent.');
+            }
+          });
+        });
+      });
+    </script>
+    <?php
+      function addEvent($username,$student,$date){          //Include db configuration file
+          include 'dbConfig.php';
+          //Insert the event data into database
+          $insert = $db->query("INSERT INTO students (`username`,`student`,`date`) VALUES
+            ('".$username."','".$student."','".$date."');");
+          echo 'ok';
+      }
+    ?>
+    <br>
+  </p>
+  </fieldset>
+
+  </div>
+      </div><!-- /.container -->
 
 
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
