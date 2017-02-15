@@ -45,7 +45,7 @@ function getCalender($year = '',$month = '')
 		<div id="event_list" class="none"></div>
         <!--For Add Event-->
         <div id="event_add" class="none">
-        	<h2 style="text-align: center"><b>Add a class on <span id="eventDateView"></span>:</b><br>
+        	<h2 style="text-align: center; border: 1px solid black;"><b>Add a class on <span id="eventDateView"></span>:</b><br>
         	<p style="text-align: center; font-size: 17px; line-height: 100%; background-color: #99FF99; border: 1px solid black; width: 320px; display: inline-block;">
         	<br>
             <b>Student Name:</b><br>
