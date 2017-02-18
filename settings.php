@@ -55,7 +55,7 @@
 
         <?php if ($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan || $_SESSION['username'] == aziz || $_SESSION['username'] == aman): ?>
           <li class="active"><a href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
-        <?php endif ?>s
+        <?php endif ?>
 
 
         <li><a href="logout.php">Logout</a></li> <!-- Destroy session variables once logout is hit. Also implement auto-login? from Login Tab in Index -->
