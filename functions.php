@@ -94,7 +94,7 @@ function getCalender($year = '',$month = '')
         </div>
 
 		<div id="calender_section_top" >
-			<ul style="font-size:17px;"><b>
+			<ul style="font-size:20px;"><b>
 				<li>Sun</li>
 				<li>Mon</li>
 				<li>Tue</li>
@@ -104,7 +104,6 @@ function getCalender($year = '',$month = '')
 				<li>Sat</li>
 			</b></ul>
 		</div>
-
 
 		<div id="calender_section_bot">
 			<ul>
@@ -156,11 +155,11 @@ function getCalender($year = '',$month = '')
 				<li><span>&nbsp;</span></li>
 			<?php } } ?>
 			</ul>
+
+			<br>
 		</div>
-
-		<br>
-
 	</div>
+
 
 	<script type="text/javascript">
 		function getCalendar(target_div,year,month){
