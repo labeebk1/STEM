@@ -94,7 +94,7 @@ function getCalender($year = '',$month = '')
         </div>
 
 		<div id="calender_section_top" >
-			<ul style="font-size:20px;"><b>
+			<ul><b>
 				<li>Sun</li>
 				<li>Mon</li>
 				<li>Tue</li>
@@ -156,7 +156,6 @@ function getCalender($year = '',$month = '')
 			<?php } } ?>
 			</ul>
 
-			<br>
 		</div>
 	</div>
 
