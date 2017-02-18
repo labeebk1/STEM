@@ -95,7 +95,7 @@ function getCalender($year = '',$month = '')
 
 
         <div class="container">
-		      <div class="well form-horizontal" style="width: min-content;">
+		      <div class="well form-horizontal">
 		  		<fieldset>
 
 
