@@ -37,7 +37,7 @@ function getCalender($year = '',$month = '')
 		<h2 style="background-color: white;">
 
 
-		  <div class="container" style="align-self: center;">
+		  <div class="container" style="align-items: center; text-align: center;">
 		      <div class="well form-horizontal" style="text-align: center; color: white; font-size: 20px; 
 		                                               background-color: #00bfff; display: inline-block;" >
 		  		<fieldset>
