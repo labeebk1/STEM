@@ -37,16 +37,15 @@ function getCalender($year = '',$month = '')
 		<h2 style="background-color: white;">
 
 
-		  <div class="container" style="position: relative; left: 50%; transform: translateX(-50%); width: 100px; height: 50px;">
+		  <div class="container" style="position: relative; left: 50%; transform: translateX(-50%); width: 200px; height: 30px;">
 		      <div class="well form-horizontal" style="text-align: center; color: white; font-size: 20px; 
 		                                               background-color: #00bfff; display: inline-block;" >
 		  		<fieldset>
-					<b>Instructor Calendar</b><br>
+					<b>Instructor Calendar</b>
 		  		</fieldset>
 		  	</div>
 		  </div><!-- /.container -->
-
-
+		  <br>
         	<a href="javascript:void(0);" onclick="getCalendar('calendar_div','<?php echo date("Y",strtotime($date.' - 1 Month')); ?>','<?php echo date("m",strtotime($date.' - 1 Month')); ?>');">&lt;&lt;</a>
             <select name="month_dropdown" class="month_dropdown dropdown"><?php echo getAllMonths($dateMonth); ?></select>
 			<select name="year_dropdown" class="year_dropdown dropdown"><?php echo getYearList($dateYear); ?></select>
