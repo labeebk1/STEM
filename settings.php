@@ -24,7 +24,7 @@
 ?>
 
 
-
+	
 <html lang="en">
 
 
@@ -55,7 +55,7 @@
 
         <?php if ($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan || $_SESSION['username'] == aziz || $_SESSION['username'] == aman): ?>
           <li class="active"><a href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
-        <?php endif ?>
+        <?php endif ?>s
 
 
         <li><a href="logout.php">Logout</a></li> <!-- Destroy session variables once logout is hit. Also implement auto-login? from Login Tab in Index -->
@@ -68,7 +68,8 @@
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 17px; 
-                                               background-color: white;" >
+                                               background-color: #41a363;
+background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");" >
   <fieldset>
 
   <p style="text-align: left; font-size: 14px; color: black;">
