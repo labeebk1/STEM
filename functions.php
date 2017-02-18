@@ -92,6 +92,13 @@ function getCalender($year = '',$month = '')
            	</p>
            	</h2>
         </div>
+
+
+        <div class="container">
+		      <div class="well form-horizontal">
+		  		<fieldset>
+
+
 		<div id="calender_section_top">
 			<ul style="font-size:15px;"><b>
 				<li>Sun</li>
@@ -103,6 +110,8 @@ function getCalender($year = '',$month = '')
 				<li>Sat</li>
 			</b></ul>
 		</div>
+
+
 		<div id="calender_section_bot">
 			<ul>
 			<?php 
@@ -154,6 +163,13 @@ function getCalender($year = '',$month = '')
 			<?php } } ?>
 			</ul>
 		</div>
+
+
+
+		  		</fieldset>
+		  	</div>
+		  </div><!-- /.container -->
+
 	</div>
 
 	<script type="text/javascript">
