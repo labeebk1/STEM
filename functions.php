@@ -35,7 +35,7 @@ function getCalender($year = '',$month = '')
 
 	<div id="calender_section">
 		<h2 style="background-color: white;">
-			<b>Instructor Calendar</b><br>
+			<b><span style="font-size: 20px;">Instructor Calendar</span></b><br>
         	<a href="javascript:void(0);" onclick="getCalendar('calendar_div','<?php echo date("Y",strtotime($date.' - 1 Month')); ?>','<?php echo date("m",strtotime($date.' - 1 Month')); ?>');">&lt;&lt;</a>
             <select name="month_dropdown" class="month_dropdown dropdown"><?php echo getAllMonths($dateMonth); ?></select>
 			<select name="year_dropdown" class="year_dropdown dropdown"><?php echo getYearList($dateYear); ?></select>
