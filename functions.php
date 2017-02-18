@@ -277,7 +277,7 @@ function getEvents($date = ''){
 		$eventListHTML .= '<div class="cell">Instructor</div>';
 		$eventListHTML .= '<div class="cell">Student</div>';
 		$eventListHTML .= '<div class="cell">Hours</div>';
-		$eventListHTML .= '<div class="cell">Earnings</div>';
+		$eventListHTML .= '<div class="cell">Status</div>';
 		$eventListHTML .= '</div>';
 
 		while($row = $result->fetch_assoc()){ 

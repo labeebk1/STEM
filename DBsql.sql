@@ -14,10 +14,9 @@ INSERT INTO `events` (`username`, `student`, `hours`, `date`, `created`, `status
 ('Teacher1', 'Student1', '2', '2017-02-20', '2017-02-20 06:15:17', 1);
 
 /* Update Paid Status */
-
 update events
 set status = replace(status,'1','0')
-where username = 'hussainsobia@hotmail.com' and status = '1'
+where username = 'labeeb' and status = '1' and student = 'Vincent'
 
 
 /* Creatiing a Table */

@@ -4,6 +4,9 @@
   if(empty($_SESSION['username'])){ // kick out if name not in admin list
     header("Location:login.php");
   }
+  if(!($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan || $_SESSION['username'] == aziz || $_SESSION['username'] == aman)){ // kick out if name not in admin list
+    header("Location:login.php");
+  }
 
   if(isset($_POST['func']) && !empty($_POST['func'])){
   switch($_POST['func']){
