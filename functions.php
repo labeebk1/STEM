@@ -39,7 +39,7 @@ function getCalender($year = '',$month = '')
 
 		  <div class="container">
 		      <div class="well form-horizontal" style="text-align: center; font-size: 17px; 
-		                                               background-color: white;" >
+		                                               background-color: teal; display: inline-block;" >
 		  		<fieldset>
 					<b><span style="font-size: 20px;">Instructor Calendar</span></b><br>
 		  		</fieldset>
