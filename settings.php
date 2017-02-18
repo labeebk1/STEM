@@ -68,7 +68,7 @@
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 17px; 
-                                               background: #41a363 url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png") 0 0 repeat; " >
+                                               background-color: white; " >
   <fieldset>
 
   <p style="text-align: left; font-size: 14px; color: black;">
