@@ -54,10 +54,18 @@
   <legend><b><span style="color: black;">Announcements</span></b></legend>
 
     <p style="text-align: left; font-size: 18px; color: black;">
-      <b>February 2, 2017</b>
+      <b>April 9, 2017</b>
       <br>
       <br>
       Welcome to the instructor portal <span class="user"><?= $_SESSION['username'] ?></span>!
+      <br>
+      <br>
+      The website is currently under development. Updates as of recently:
+      <br>
+      <b>Office Space</b>
+      <br>
+      - Our office is located at 7025 Tomken Rd near the intersection of Tomken and Derry. The location will be available to use starting April 15, 2017. The office hours will be from Monday - Friday from 6 - 9 PM, and Saturday - Sunday from 12 - 9 PM (we will try to host two classes on the weekends). This office will be avaialable for you to use (optionally, of course) for your one on one sessions with your clients. We will be developing a booking application for you to use if you choose to teach on site. More updates to come on this.
+
     </p>
 
   </fieldset>
@@ -67,6 +75,7 @@
       </div><!-- /.container -->
 
 
+  <!-- Leave out temporarily, will add space for more functions later
   <div class="container">
       <div class="well form-horizontal" style="color: white;
                                                text-align: left; 
@@ -87,7 +96,10 @@
 
 
   </div>
-      </div><!-- /.container -->
+      </div>-->
+
+
+      <!-- /.container -->
 
 
 
