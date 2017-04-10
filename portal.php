@@ -62,10 +62,12 @@
       <br>
       The website is currently under development. Updates as of recently:
       <br>
+      <br>
       <b>Office Space</b>
       <br>
+      <br>
       - Our office is located at 7025 Tomken Rd near the intersection of Tomken and Derry. The location will be available to use starting April 15, 2017. The office hours will be from Monday - Friday from 6 - 9 PM, and Saturday - Sunday from 12 - 9 PM (we will try to host two classes on the weekends). This office will be avaialable for you to use (optionally, of course) for your one on one sessions with your clients. We will be developing a booking application for you to use if you choose to teach on site. More updates to come on this.
-
+      <br>
     </p>
 
   </fieldset>
