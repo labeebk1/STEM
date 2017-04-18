@@ -160,6 +160,28 @@
     </td>
   </tr>
 
+
+  <?php 
+    $userlogin = $_SESSION['username'];
+    if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman'){
+
+      $result = $dbhandle->query("SELECT username FROM users;");
+      echo "
+        <tr>
+          <td width="70">
+            <b>Instructor</b>
+          </td>
+          <td align='right' width='120'>
+            <input list='inst' name='instructor' id='instructor' style="width:100px; text-align: center;">
+            <datalist id='instructor'>
+      ";
+      while($results = mysqli_fetch_assoc($result)) {
+        echo "<option value=".$results['username']."></option>";
+      }
+      echo "</datalist></td></tr>";
+
+  ?>
+
 </table>
     <br>
     <input type="button" id="refreshChart" value="Update"/><br>
@@ -167,7 +189,6 @@
     <legend>
     </legend>
     </p>
-
 
   </fieldset>
 
