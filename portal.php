@@ -102,7 +102,7 @@
     </legend>
 
     <!-- Chart Settings: Dropdowns for  -->
-    <p style="text-align: center; font-size: 16px; color: black;">
+    <p style="text-align: center; font-size: 14px; color: black;">
 
     <b>Hours: </b>
       <input list="hour" name="hours" id="hours" style="width:140px;">
