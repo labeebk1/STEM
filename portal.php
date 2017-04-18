@@ -167,7 +167,7 @@
 
       $result = $dbhandle->query("SELECT username FROM users;");
       echo "
-        <th></th>
+        <br>
         <th><b>Admin Settings</b></th>
         <tr>
           <td width=\"70\">
