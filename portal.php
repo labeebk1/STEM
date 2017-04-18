@@ -221,7 +221,7 @@
                 "chart" => array(
                     "caption" => "Teaching Hours by Date",
                     "showValues"=> "0",
-                    "theme"=> "fint"
+                    "theme"=> "ocean"
                 )
             );
           $arrData["data"] = array();
