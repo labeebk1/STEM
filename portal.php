@@ -103,7 +103,7 @@
     </legend>
 
     <!-- Chart Settings: Dropdowns for  -->
-    <p style="text-align: left; font-size: 16px; color: black;">
+    <p style="text-align: center; font-size: 16px; color: black;">
     <b>Student Name: </b>
     <input list="students" name="student" id="student" style="width:140px; text-align: center;">
     <datalist id="students">
