@@ -88,7 +88,7 @@
       </div><!-- /.container -->
 
 
-  <div class="container">
+  <div class="container" style="overflow: hidden; position: relative;">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 16px; 
@@ -190,7 +190,7 @@
             );
           }
           $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 800, 400, "chart-1", "json", $jsonEncodedData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 900, 400, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
       }
