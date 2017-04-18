@@ -103,43 +103,66 @@
     <!-- Chart Settings: Dropdowns for  -->
     <p style="text-align: center; font-size: 14px; color: black;">
 
-    <b>Display: </b>
+
+
+
+<table class="table-responsive">
+  
+  <tr>
+    <td>
+      <b>Display: </b>
+    </td>
+    <td>
       <input list="display" name="disp" id="disp" style="width:100px; text-align: left;">
       <datalist id="display">
         <option value="Days"></option>
         <option value="Weeks"></option>
         <option value="Months"></option>
       </datalist>
+    </td>
+  </tr>
 
-    <br><br>
-    <b>Student Name: </b>
-    <input list="students" name="student" id="student" style="width:100px; text-align: left;">
-    <datalist id="students">
-    <?php
-      $userlogin = $_SESSION['username'];
-      if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
-       $result = $dbhandle->query("SELECT distinct student FROM students;");
-      } else {
-        $result = $dbhandle->query("SELECT student FROM students where username = '".$userlogin."';");
-      }
-      echo "<option value='Total'></option>";
-      while($results = mysqli_fetch_assoc($result)) {
-        echo "<option value=".$results['student']."></option>";
+
+  <tr>
+    <td>
+      <b>Student Name: </b>
+    </td>
+    <td>
+      <input list="students" name="student" id="student" style="width:100px; text-align: left;">
+      <datalist id="students">
+      <?php
+        $userlogin = $_SESSION['username'];
+        if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
+         $result = $dbhandle->query("SELECT distinct student FROM students;");
+        } else {
+          $result = $dbhandle->query("SELECT student FROM students where username = '".$userlogin."';");
         }
-    ?>  
-    </datalist>
-    <br><br>
+        echo "<option value='Total'></option>";
+        while($results = mysqli_fetch_assoc($result)) {
+          echo "<option value=".$results['student']."></option>";
+          }
+      ?>  
+      </datalist>
+    </td>
+  </tr>
 
-    <b>Paid: </b>
+  <tr>
+    <td>
+      <b>Paid: </b>
+    </td>
+    <td>
       <input list="paid" name="pd" id="pd" style="width:100px; text-align: left;">
       <datalist id="paid">
         <option value="Total"></option>
         <option value="Unpaid"></option>
         <option value="Paid"></option>
       </datalist>
+    </td>
+  </tr>
 
-    <br><br>
-    
+</table>
+
+    <br>
     <legend>
     </legend>
     </p>
@@ -157,10 +180,6 @@
                                            background-color: white;
                                            display:inline-block; float: right;" >
   <fieldset>
-
-    <legend>
-      <b><span style="color: black;">Instructor Summary</span></b>
-    </legend>
 
     <p style="text-align: left; font-size: 14px; color: black;">
 
