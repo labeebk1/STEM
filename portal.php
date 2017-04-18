@@ -89,7 +89,7 @@
 
 
 
-  <div class="container" style="float: left;">
+  <div class="container" style="float: left; display: inline-block;">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 16px; 
@@ -105,7 +105,7 @@
     <p style="text-align: center; font-size: 14px; color: black;">
 
     <b>Hours: </b>
-      <input list="hour" name="hours" id="hours" style="width:140px;">
+      <input list="hour" name="hours" id="hours" style="width:140px; text-align: left;">
       <datalist id="hour">
         <option value="0.5"></option>
         <option value="1.0"></option>
@@ -117,7 +117,7 @@
 
     <br><br>
     <b>Student Name: </b>
-    <input list="students" name="student" id="student" style="width:140px;">
+    <input list="students" name="student" id="student" style="width:140px; text-align: left;">
     <datalist id="students">
     <?php
       $userlogin = $_SESSION['username'];
@@ -147,7 +147,7 @@
       </div><!-- /.container -->
 
 
-  <div class="container" style="float: right;">
+  <div class="container" style="float: right; display: inline-block;">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 16px; 
