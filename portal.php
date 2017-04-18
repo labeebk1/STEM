@@ -124,7 +124,7 @@
                             ]
                         }');
 
-
+        $columnChart->render();
       ?>
       <div id="chart-1"><!-- Fusion Charts will render here--></div>
 
