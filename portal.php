@@ -93,7 +93,7 @@
                                                text-align: center; 
                                                font-size: 16px; 
                                                background-color: white;
-                                               display:inline-block; float: left;" >
+                                               display:inline-block; float: left; width: 140px;" >
   <fieldset>
 
     <legend>
@@ -195,7 +195,7 @@
             );
           }
           $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 840, 350, "chart-1", "json", $jsonEncodedData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 800, 350, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
       }
