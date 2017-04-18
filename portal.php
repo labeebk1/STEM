@@ -93,7 +93,7 @@
                                                text-align: center; 
                                                font-size: 16px; 
                                                background-color: white;
-                                               display:inline-block; float: left;" >
+                                               display:inline-block; float: left; height: 350px;" >
   <fieldset>
 
     <legend>
