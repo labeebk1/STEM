@@ -5,6 +5,7 @@
     header("Location:login.php");
   }  
 
+  include("fusioncharts/fusioncharts.php");
   $hostdb = '35.185.41.223';  
   $userdb = 'root';  
   $passdb = 'nickonly';  
@@ -15,8 +16,6 @@
    }
 ?>
 
-<script type="text/javascript" src="fusioncharts.js"></script>
-<script type="text/javascript" src="fusioncharts.theme.zune.js"></script>
 
 <html lang="en">
 
@@ -28,6 +27,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="fusioncharts/fusioncharts.js"></script>
+  <script type="text/javascript" src="fusioncharts/fusioncharts.theme.zune.js"></script>
+
 </head>
 
 <body>
@@ -96,37 +98,32 @@
     <!-- Statistics Chart -->
       <?php
 
-      include("fusioncharts.php");
-      $userlogin = $_SESSION['username'];
-      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date";
-      $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        $columnChart = new FusionCharts("Column2D", "myFirstChart" , 600, 300, "chart-1", "json",
+                    '{
+                        "chart": {
+                            "caption": "Monthly revenue for last year",
+                            "subCaption": "Harry\’s SuperMart",
+                            "xAxisName": "Month",
+                            "yAxisName": "Revenues (In USD)",
+                            "numberPrefix": "$",
+                            "theme": "zune"
+                        },
+                        "data": [
+                                {"label": "Jan", "value": "420000"}, 
+                                {"label": "Feb", "value": "810000"},
+                                {"label": "Mar", "value": "720000"},
+                                {"label": "Apr", "value": "550000"},
+                                {"label": "May", "value": "910000"},
+                                {"label": "Jun", "value": "510000"},
+                                {"label": "Jul", "value": "680000"},
+                                {"label": "Aug", "value": "620000"},
+                                {"label": "Sep", "value": "610000"},
+                                {"label": "Oct", "value": "490000"},
+                                {"label": "Nov", "value": "900000"},
+                                {"label": "Dec", "value": "730000"}
+                            ]
+                        }');
 
-      if ($result) {
-
-          $arrData = array(
-                "chart" => array(
-                    "caption" => "Teaching Hours by Date",
-                    "showValues"=> "0",
-                    "theme"=> "zune"
-                )
-            );
-
-          $arrData["data"] = array();
-
-
-          while($row = mysqli_fetch_array($result)) {
-            array_push($arrData["data"], array(
-                "label" => $row["Date"],
-                "value" => $row["Hours"]
-                "link" => ""
-                )
-            );
-          }
-
-          $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 600, 300, "chart-1", "json", $jsonEncodedData);
-          $columnChart->render();
-          $dbhandle->close();
 
       ?>
       <div id="chart-1"><!-- Fusion Charts will render here--></div>
