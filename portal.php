@@ -112,7 +112,7 @@
     <td>
       <b>Display: </b>
     </td>
-    <td>
+    <td align="right">
       <input list="display" name="disp" id="disp" style="width:100px; text-align: center;">
       <datalist id="display">
         <option value="Days"></option>
@@ -127,7 +127,7 @@
     <td>
       <b>Student Name: </b>
     </td>
-    <td>
+    <td align="right">
       <input list="students" name="student" id="student" style="width:100px; text-align: center;">
       <datalist id="students">
       <?php
@@ -150,7 +150,7 @@
     <td>
       <b>Paid: </b>
     </td>
-    <td>
+    <td align="right">
       <input list="paid" name="pd" id="pd" style="width:100px; text-align: center;">
       <datalist id="paid">
         <option value="Total"></option>
