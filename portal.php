@@ -127,6 +127,7 @@
           $columnChart = new FusionCharts("column2D", "myFirstChart" , 600, 300, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
+      }
       ?>
       <div id="chart-1"><!-- Fusion Charts will render here--></div>
 
