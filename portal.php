@@ -3,7 +3,17 @@
   session_start();
   if(empty($_SESSION['username'])){
     header("Location:login.php");
-  }
+  }  
+  include 'fusioncharts.php';
+
+  $hostdb = '35.185.41.223';  
+  $userdb = 'root';  
+  $passdb = 'nickonly';  
+  $namedb = 'STEM'; 
+  $dbhandle = new mysqli($hostdb, $userdb, $passdb, $namedb);
+   if ($dbhandle->connect_error) {
+    exit("There was an error with your connection: ".$dbhandle->connect_error);
+   }
 ?>
 
 
@@ -48,12 +58,12 @@
   <div class="container">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
-                                               font-size: 17px; 
+                                               font-size: 16px; 
                                                background-color: white;" >
   <fieldset>
   <legend><b><span style="color: black;">Announcements</span></b></legend>
 
-    <p style="text-align: left; font-size: 18px; color: black;">
+    <p style="text-align: left; font-size: 14px; color: black;">
       <b>April 9, 2017</b>
       <br>
       <br>
@@ -76,6 +86,62 @@
   </div>
       </div><!-- /.container -->
 
+  <div class="container">
+      <div class="well form-horizontal" style="color: white;
+                                               text-align: center; 
+                                               font-size: 16px; 
+                                               background-color: white;" >
+  <fieldset>
+    <p style="text-align: left; font-size: 14px; color: black;">
+
+    <!-- Statistics Chart -->
+<?php
+      
+      $userlogin = $_SESSION['username'];
+      $strQuery = "SELECT sum(hours) FROM STEM.events GROUP BY date ORDER BY date where username = '".$userlogin."';";
+      $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+
+
+      if ($result) {
+
+          $arrData = array(
+                "chart" => array(
+                    "caption" => "Teaching Hours by Date",
+                    "showValues"=> "0",
+                    "theme"=> "zune"
+                )
+            );
+
+          $arrData["data"] = array();
+
+          while($row = mysqli_fetch_array($result)) {
+            array_push($arrData["data"], array(
+                "label" => $row["Date"],
+                "value" => $row["Hours"],
+                "link" => "countryDrillDown.php?Country=".$row["Code"]
+                )
+            );
+          }
+
+          $jsonEncodedData = json_encode($arrData);
+
+
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 600, 300, "chart-1", "json", $jsonEncodedData);
+          $columnChart->render();
+          $dbhandle->close();
+
+      }
+
+    ?>
+    <div id="chart-1"><!-- Fusion Charts will render here--></div>
+      <br>
+    </p>
+
+  </fieldset>
+
+
+  </div>
+      </div><!-- /.container -->
 
   <!-- Leave out temporarily, will add space for more functions later
   <div class="container">
