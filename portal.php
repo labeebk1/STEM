@@ -93,49 +93,7 @@
     <p style="text-align: left; font-size: 14px; color: black;">
 
     <!-- Statistics Chart -->
-<?php
-      
-          include("fusioncharts.php");
-          <script type="text/javascript" src="fusioncharts.js"></script>
-          <script type="text/javascript" src="fusioncharts.theme.zune.js"></script>
-          $columnChart = new FusionCharts("column2d", "ex1", "100%", 400, "chart-1", "json", '{  
-                "chart":{  
-                  "caption":"Harry\'s SuperMart",
-                  "subCaption":"Top 5 stores in last month by revenue",
-                  "numberPrefix":"$",
-                  "theme":"zune"
-                },
-                "data":[  
-                  {  
-                     "label":"Bakersfield Central",
-                     "value":"880000"
-                  },
-                  {  
-                     "label":"Garden Groove harbour",
-                     "value":"730000"
-                  },
-                  {  
-                     "label":"Los Angeles Topanga",
-                     "value":"590000"
-                  },
-                  {  
-                     "label":"Compton-Rancho Dom",
-                     "value":"520000"
-                  },
-                  {  
-                     "label":"Daly City Serramonte",
-                     "value":"330000"
-                  }
-                ]
-            }');
 
-          $columnChart->render();
-          $dbhandle->close();
-
-      }
-
-    ?>
-    <div id="chart-1"><!-- Fusion Charts will render here--></div>
       <br>
     </p>
 
