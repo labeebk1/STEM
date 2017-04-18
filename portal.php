@@ -174,7 +174,7 @@
           </td>
           <td align=\"right\" width=\"120\">
             <input list=\"inst\" name=\"instructor\" id=\"instructor\" style=\"width:100px; text-align: center;\">
-            <datalist id=\"inst\">
+            <datalist id=\"inst\"><option value=\"Total\"></option>
       ";
       while($results = mysqli_fetch_assoc($result)) {
         echo "<option value=".$results['username']."></option>";
@@ -221,7 +221,7 @@
                 "chart" => array(
                     "caption" => "Teaching Hours by Date",
                     "showValues"=> "0",
-                    "theme"=> "ocean"
+                    "theme"=> "fint"
                 )
             );
           $arrData["data"] = array();
