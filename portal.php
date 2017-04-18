@@ -4,7 +4,6 @@
   if(empty($_SESSION['username'])){
     header("Location:login.php");
   }  
-  include("fusioncharts.php");
 
   $hostdb = '35.185.41.223';  
   $userdb = 'root';  
@@ -96,8 +95,9 @@
     <!-- Statistics Chart -->
 <?php
       
+          include("fusioncharts.php");
           <script type="text/javascript" src="fusioncharts.js"></script>
-          <script type="text/javascript" src="/themes/fusioncharts.theme.zune.js"></script>
+          <script type="text/javascript" src="fusioncharts.theme.zune.js"></script>
           $columnChart = new FusionCharts("column2d", "ex1", "100%", 400, "chart-1", "json", '{  
                 "chart":{  
                   "caption":"Harry\'s SuperMart",
@@ -128,7 +128,7 @@
                   }
                 ]
             }');
-          
+
           $columnChart->render();
           $dbhandle->close();
 
