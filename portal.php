@@ -4,7 +4,7 @@
   if(empty($_SESSION['username'])){
     header("Location:login.php");
   }  
-  include 'fusioncharts.php';
+  include("fusioncharts.php");
 
   $hostdb = '35.185.41.223';  
   $userdb = 'root';  
@@ -29,7 +29,6 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 </head>
-
 
 <body>
   <br>
@@ -112,6 +111,7 @@
             );
 
           $arrData["data"] = array();
+          
 
           while($row = mysqli_fetch_array($result)) {
             array_push($arrData["data"], array(
