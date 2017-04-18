@@ -15,7 +15,8 @@
    }
 ?>
 
-
+<script type="text/javascript" src="fusioncharts.js"></script>
+<script type="text/javascript" src="fusioncharts.theme.zune.js"></script>
 
 <html lang="en">
 
@@ -93,8 +94,44 @@
     <p style="text-align: left; font-size: 14px; color: black;">
 
     <!-- Statistics Chart -->
+      <?php
 
-      <br>
+      include("fusioncharts.php");
+      $userlogin = $_SESSION['username'];
+      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date";
+      $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+
+      if ($result) {
+
+          $arrData = array(
+                "chart" => array(
+                    "caption" => "Teaching Hours by Date",
+                    "showValues"=> "0",
+                    "theme"=> "zune"
+                )
+            );
+
+          $arrData["data"] = array();
+
+
+          while($row = mysqli_fetch_array($result)) {
+            array_push($arrData["data"], array(
+                "label" => $row["Date"],
+                "value" => $row["Hours"]
+                "link" => ""
+                )
+            );
+          }
+
+          $jsonEncodedData = json_encode($arrData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 600, 300, "chart-1", "json", $jsonEncodedData);
+          $columnChart->render();
+          $dbhandle->close();
+
+      ?>
+      <div id="chart-1"><!-- Fusion Charts will render here--></div>
+
+    <br>
     </p>
 
   </fieldset>
