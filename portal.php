@@ -136,6 +136,7 @@
     </datalist>  
     <legend>
     </legend>
+    <br>
     </p>
 
 
@@ -189,7 +190,7 @@
             );
           }
           $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 200, 400, "chart-1", "json", $jsonEncodedData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 800, 400, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
       }
