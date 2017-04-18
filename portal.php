@@ -162,9 +162,7 @@
 
 </table>
     <br>
-    <br>
     <input type="button" id="refreshChart" value="Update"/><br>
-    <br>
     <br>
     <legend>
     </legend>
