@@ -35,7 +35,7 @@
         <li><a href="portal.php">Notifications<span class="badge red">16</span></a></li>
 
 
-        <?php if ($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan || $_SESSION['username'] == aziz || $_SESSION['username'] == aman): ?>
+        <?php if ($_SESSION['username'] == labeeb || $_SESSION['username'] == m_mcmillan || $_SESSION['username'] == aman): ?>
           <li><a href="settings.php">Settings</a></li><!-- <span class="badge yellow">15</span> -->
         <?php endif ?>
 

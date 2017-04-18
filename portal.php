@@ -97,8 +97,31 @@
     <legend>
 
 
-      <b><span style="color: black;">Chart Settings</span></b>
+      <b><span style="color: black;">Instructor Summary</span></b>
 
+
+    </legend>
+    <legend>
+
+    <!-- Chart Settings: Dropdowns for  -->
+
+      <b>Student Name: </b>
+      <input list="students" name="student" id="student" style="width:140px; text-align: center;">
+      <datalist id="students">
+      <?php
+        include 'dbConfig.php';
+        $userlogin = $_SESSION['username'];
+        if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
+          $result = $dbhandle->query("SELECT distinct student FROM students;");
+        } else {
+          $result = $dbhandle->query("SELECT student FROM students where username = '".$userlogin."';");
+        }
+        echo "<option value='Total'></option>";
+        while($results = mysqli_fetch_assoc($result)) {
+          echo "<option value=".$results['student']."></option>";
+          }
+      ?>  
+      </datalist>  
 
     </legend>
     <p style="text-align: left; font-size: 14px; color: black;">
@@ -107,7 +130,9 @@
       <?php
 
       $userlogin = $_SESSION['username'];
-      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date";
+      
+      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date WHERE username = '".$userlogin."'";
+
       $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
 
       if ($result) {
@@ -137,7 +162,7 @@
           $dbhandle->close();
       }
       ?>
-      
+
       <div id="chart-1"><!-- Fusion Charts will render here--></div>
 
     <br>
