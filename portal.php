@@ -125,7 +125,7 @@
 
   <tr>
     <td>
-      <b>Student Name</b>
+      <b>Student</b>
     </td>
     <td align="right" width="120">
       <input list="students" name="student" id="student" style="width:100px; text-align: center;">
