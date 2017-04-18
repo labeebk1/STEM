@@ -98,18 +98,14 @@
   <fieldset>
 
     <legend>
-
-
-      <b><span style="color: black;">Instructor Summary</span></b>
-
-
+      <b><span style="color: black;">Chart Settings</span></b>
     </legend>
 
     <!-- Chart Settings: Dropdowns for  -->
     <p style="text-align: center; font-size: 16px; color: black;">
 
     <b>Hours: </b>
-      <input list="hour" name="hours" id="hours" style="width:140px; text-align: center;">
+      <input list="hour" name="hours" id="hours" style="width:140px;">
       <datalist id="hour">
         <option value="0.5"></option>
         <option value="1.0"></option>
@@ -121,7 +117,7 @@
 
     <br><br>
     <b>Student Name: </b>
-    <input list="students" name="student" id="student" style="width:140px; text-align: center;">
+    <input list="students" name="student" id="student" style="width:140px;">
     <datalist id="students">
     <?php
       $userlogin = $_SESSION['username'];
@@ -156,7 +152,7 @@
                                                text-align: center; 
                                                font-size: 16px; 
                                                background-color: white;
-                                               display:inline-block;" >
+                                               display:inline-block; vertical-align: top;" >
   <fieldset>
 
     <legend>
