@@ -110,7 +110,7 @@
   
   <tr>
     <td>
-      <b>Display: </b>
+      <b>Display</b>
     </td>
     <td align="right" width="120">
       <input list="display" name="disp" id="disp" style="width:100px; text-align: center;">
@@ -125,7 +125,7 @@
 
   <tr>
     <td>
-      <b>Student Name: </b>
+      <b>Student Name</b>
     </td>
     <td align="right" width="120">
       <input list="students" name="student" id="student" style="width:100px; text-align: center;">
@@ -148,7 +148,7 @@
 
   <tr>
     <td>
-      <b>Paid: </b>
+      <b>Paid</b>
     </td>
     <td align="right" width="120">
       <input list="paid" name="pd" id="pd" style="width:100px; text-align: center;">
