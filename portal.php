@@ -117,11 +117,11 @@
           while($row = mysqli_fetch_array($result)) {
             array_push($arrData["data"], array(
                 "label" => $row["Date"],
-                "value" => $row["Hours"],
-                "link" => ""
+                "value" => $row["Hours"]
                 )
             );
           }
+          
 
           $jsonEncodedData = json_encode($arrData);
 
