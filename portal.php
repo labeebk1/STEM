@@ -179,6 +179,7 @@
         echo "<option value=".$results['username']."></option>";
       }
       echo "</datalist></td></tr>";
+    }
   ?>
 
 </table>
