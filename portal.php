@@ -103,20 +103,17 @@
     <!-- Chart Settings: Dropdowns for  -->
     <p style="text-align: center; font-size: 14px; color: black;">
 
-    <b>Hours: </b>
-      <input list="hour" name="hours" id="hours" style="width:140px; text-align: left;">
-      <datalist id="hour">
-        <option value="0.5"></option>
-        <option value="1.0"></option>
-        <option value="1.5"></option>
-        <option value="2.0"></option>
-        <option value="2.5"></option>
-        <option value="3.0"></option>
+    <b>Display: </b>
+      <input list="display" name="display" id="display" style="width:100px; text-align: left;">
+      <datalist id="display">
+        <option value="Days"></option>
+        <option value="Weeks"></option>
+        <option value="Months"></option>
       </datalist>
 
     <br><br>
     <b>Student Name: </b>
-    <input list="students" name="student" id="student" style="width:140px; text-align: left;">
+    <input list="students" name="student" id="student" style="width:100px; text-align: left;">
     <datalist id="students">
     <?php
       $userlogin = $_SESSION['username'];
@@ -131,8 +128,18 @@
         }
     ?>  
     </datalist>
+    <br><br>
 
-    <br>
+    <b>Paid: </b>
+      <input list="paid" name="paid" id="paid" style="width:100px; text-align: left;">
+      <datalist id="paid">
+        <option value="Total"></option>
+        <option value="Unpaid"></option>
+        <option value="Paid"></option>
+      </datalist>
+
+    <br><br>
+    
     <legend>
     </legend>
     </p>
@@ -188,7 +195,7 @@
             );
           }
           $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 800, 250, "chart-1", "json", $jsonEncodedData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 800, 350, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
       }
