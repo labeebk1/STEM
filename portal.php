@@ -96,36 +96,39 @@
     <!-- Statistics Chart -->
 <?php
       
-      $userlogin = $_SESSION['username'];
-      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date";
-      $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-      <script type="text/javascript" src="fusioncharts.js"></script>
-      <script type="text/javascript" src="/themes/fusioncharts.theme.zune.js"></script>
-      if ($result) {
-
-          $arrData = array(
-                "chart" => array(
-                    "caption" => "Teaching Hours by Date",
-                    "showValues"=> "0",
-                    "theme"=> "zune"
-                )
-            );
-
-          $arrData["data"] = array();
-
-
-          while($row = mysqli_fetch_array($result)) {
-            array_push($arrData["data"], array(
-                "label" => $row["Date"],
-                "value" => $row["Hours"]
-                )
-            );
-          }
+          <script type="text/javascript" src="fusioncharts.js"></script>
+          <script type="text/javascript" src="/themes/fusioncharts.theme.zune.js"></script>
+          $columnChart = new FusionCharts("column2d", "ex1", "100%", 400, "chart-1", "json", '{  
+                "chart":{  
+                  "caption":"Harry\'s SuperMart",
+                  "subCaption":"Top 5 stores in last month by revenue",
+                  "numberPrefix":"$",
+                  "theme":"ocean"
+                },
+                "data":[  
+                  {  
+                     "label":"Bakersfield Central",
+                     "value":"880000"
+                  },
+                  {  
+                     "label":"Garden Groove harbour",
+                     "value":"730000"
+                  },
+                  {  
+                     "label":"Los Angeles Topanga",
+                     "value":"590000"
+                  },
+                  {  
+                     "label":"Compton-Rancho Dom",
+                     "value":"520000"
+                  },
+                  {  
+                     "label":"Daly City Serramonte",
+                     "value":"330000"
+                  }
+                ]
+            }');
           
-
-          $jsonEncodedData = json_encode($arrData);
-
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 600, 300, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
 
