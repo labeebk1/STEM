@@ -104,7 +104,7 @@
     <p style="text-align: center; font-size: 14px; color: black;">
 
     <b>Display: </b>
-      <input list="display" name="display" id="display" style="width:100px; text-align: left;">
+      <input list="display" name="disp" id="disp" style="width:100px; text-align: left;">
       <datalist id="display">
         <option value="Days"></option>
         <option value="Weeks"></option>
@@ -131,7 +131,7 @@
     <br><br>
 
     <b>Paid: </b>
-      <input list="paid" name="paid" id="paid" style="width:100px; text-align: left;">
+      <input list="paid" name="pd" id="pd" style="width:100px; text-align: left;">
       <datalist id="paid">
         <option value="Total"></option>
         <option value="Unpaid"></option>
