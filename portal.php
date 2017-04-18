@@ -189,7 +189,7 @@
             );
           }
           $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 900, 400, "chart-1", "json", $jsonEncodedData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 200, 400, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
       }
