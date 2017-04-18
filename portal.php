@@ -103,7 +103,7 @@
                   "caption":"Harry\'s SuperMart",
                   "subCaption":"Top 5 stores in last month by revenue",
                   "numberPrefix":"$",
-                  "theme":"ocean"
+                  "theme":"zune"
                 },
                 "data":[  
                   {  
