@@ -87,11 +87,14 @@
   </div>
       </div><!-- /.container -->
 
+
+
   <div class="container">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 16px; 
-                                               background-color: white;" >
+                                               background-color: white;
+                                               display:inline-block;" >
   <fieldset>
 
     <legend>
@@ -104,6 +107,19 @@
 
     <!-- Chart Settings: Dropdowns for  -->
     <p style="text-align: center; font-size: 16px; color: black;">
+
+    <b>Hours: </b>
+      <input list="hour" name="hours" id="hours" style="width:140px; text-align: center;">
+      <datalist id="hour">
+        <option value="0.5"></option>
+        <option value="1.0"></option>
+        <option value="1.5"></option>
+        <option value="2.0"></option>
+        <option value="2.5"></option>
+        <option value="3.0"></option>
+      </datalist>
+
+    <br><br>
     <b>Student Name: </b>
     <input list="students" name="student" id="student" style="width:140px; text-align: center;">
     <datalist id="students">
@@ -119,10 +135,34 @@
         echo "<option value=".$results['student']."></option>";
         }
     ?>  
+
+
+    <br>
     </datalist>  
     <legend>
     </legend>
     </p>
+
+
+  </fieldset>
+
+
+  </div>
+      </div><!-- /.container -->
+
+
+  <div class="container">
+      <div class="well form-horizontal" style="color: white;
+                                               text-align: center; 
+                                               font-size: 16px; 
+                                               background-color: white;
+                                               display:inline-block;" >
+  <fieldset>
+
+    <legend>
+      <b><span style="color: black;">Instructor Summary</span></b>
+    </legend>
+
     <p style="text-align: left; font-size: 14px; color: black;">
 
     <!-- Statistics Chart -->
