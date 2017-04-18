@@ -111,13 +111,13 @@
             );
 
           $arrData["data"] = array();
-          
+
 
           while($row = mysqli_fetch_array($result)) {
             array_push($arrData["data"], array(
                 "label" => $row["Date"],
                 "value" => $row["Hours"],
-                "link" => "countryDrillDown.php?Country=".$row["Code"]
+                "link" => ""
                 )
             );
           }
