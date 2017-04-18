@@ -102,9 +102,8 @@
 
     </legend>
 
-
     <!-- Chart Settings: Dropdowns for  -->
-
+    <p style="text-align: left; font-size: 16px; color: black;">
     <b>Student Name: </b>
     <input list="students" name="student" id="student" style="width:140px; text-align: center;">
     <datalist id="students">
@@ -123,6 +122,7 @@
     </datalist>  
     <legend>
     </legend>
+    </p>
     <p style="text-align: left; font-size: 14px; color: black;">
 
     <!-- Statistics Chart -->
@@ -130,7 +130,7 @@
 
       $userlogin = $_SESSION['username'];
       
-      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date WHERE 'username' = '".$userlogin."'";
+      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events where username = '".$userlogin."' GROUP BY date ORDER BY date";
 
       $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
 
