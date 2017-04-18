@@ -93,6 +93,14 @@
                                                font-size: 16px; 
                                                background-color: white;" >
   <fieldset>
+
+    <legend>
+
+
+      <b><span style="color: black;">Chart Settings</span></b>
+
+
+    </legend>
     <p style="text-align: left; font-size: 14px; color: black;">
 
     <!-- Statistics Chart -->
@@ -124,7 +132,7 @@
             );
           }
           $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 600, 300, "chart-1", "json", $jsonEncodedData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 900, 600, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
       }
