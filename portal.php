@@ -109,7 +109,7 @@
 <table class="table-responsive">
   
   <tr>
-    <td width="120">
+    <td width="70">
       <b>Display</b>
     </td>
     <td align="right" width="120">
@@ -124,7 +124,7 @@
 
 
   <tr>
-    <td width="120">
+    <td width="70">
       <b>Student</b>
     </td>
     <td align="right" width="120">
@@ -147,7 +147,7 @@
   </tr>
 
   <tr>
-    <td width="120">
+    <td width="70">
       <b>Paid</b>
     </td>
     <td align="right" width="120">
