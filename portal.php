@@ -109,7 +109,6 @@
       <input list="students" name="student" id="student" style="width:140px; text-align: center;">
       <datalist id="students">
       <?php
-        include 'dbConfig.php';
         $userlogin = $_SESSION['username'];
         if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
           $result = $dbhandle->query("SELECT distinct student FROM students;");
