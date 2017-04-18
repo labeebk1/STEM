@@ -173,7 +173,7 @@
           </td>
           <td align=\"right\" width=\"120\">
             <input list=\"inst\" name=\"instructor\" id=\"instructor\" style=\"width:100px; text-align: center;\">
-            <datalist id=\"instructor\">
+            <datalist id=\"inst\">
       ";
       while($results = mysqli_fetch_assoc($result)) {
         echo "<option value=".$results['username']."></option>";
