@@ -98,7 +98,7 @@
 <?php
       
       $userlogin = $_SESSION['username'];
-      $strQuery = "SELECT sum(hours) FROM STEM.events GROUP BY date ORDER BY date";
+      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date";
       $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
 
       if ($result) {
@@ -123,7 +123,6 @@
           }
 
           $jsonEncodedData = json_encode($arrData);
-
 
           $columnChart = new FusionCharts("column2D", "myFirstChart" , 600, 300, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
