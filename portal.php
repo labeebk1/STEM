@@ -132,11 +132,12 @@
             );
           }
           $jsonEncodedData = json_encode($arrData);
-          $columnChart = new FusionCharts("column2D", "myFirstChart" , 900, 600, "chart-1", "json", $jsonEncodedData);
+          $columnChart = new FusionCharts("column2D", "myFirstChart" , 900, 400, "chart-1", "json", $jsonEncodedData);
           $columnChart->render();
           $dbhandle->close();
       }
       ?>
+      
       <div id="chart-1"><!-- Fusion Charts will render here--></div>
 
     <br>
