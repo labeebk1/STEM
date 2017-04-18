@@ -89,7 +89,7 @@
 
 
 
-  <div class="container">
+  <div class="container" style="float: left;">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 16px; 
@@ -147,12 +147,12 @@
       </div><!-- /.container -->
 
 
-  <div class="container">
+  <div class="container" style="float: right;">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 16px; 
                                                background-color: white;
-                                               display:inline-block; vertical-align: top;" >
+                                               display:inline-block;" >
   <fieldset>
 
     <legend>
