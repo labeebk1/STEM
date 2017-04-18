@@ -101,27 +101,27 @@
 
 
     </legend>
-    <legend>
+
 
     <!-- Chart Settings: Dropdowns for  -->
 
-      <b>Student Name: </b>
-      <input list="students" name="student" id="student" style="width:140px; text-align: center;">
-      <datalist id="students">
-      <?php
-        $userlogin = $_SESSION['username'];
-        if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
-          $result = $dbhandle->query("SELECT distinct student FROM students;");
-        } else {
-          $result = $dbhandle->query("SELECT student FROM students where username = '".$userlogin."';");
+    <b>Student Name: </b>
+    <input list="students" name="student" id="student" style="width:140px; text-align: center;">
+    <datalist id="students">
+    <?php
+      $userlogin = $_SESSION['username'];
+      if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
+       $result = $dbhandle->query("SELECT distinct student FROM students;");
+      } else {
+        $result = $dbhandle->query("SELECT student FROM students where username = '".$userlogin."';");
+      }
+      echo "<option value='Total'></option>";
+      while($results = mysqli_fetch_assoc($result)) {
+        echo "<option value=".$results['student']."></option>";
         }
-        echo "<option value='Total'></option>";
-        while($results = mysqli_fetch_assoc($result)) {
-          echo "<option value=".$results['student']."></option>";
-          }
-      ?>  
-      </datalist>  
-
+    ?>  
+    </datalist>  
+    <legend>
     </legend>
     <p style="text-align: left; font-size: 14px; color: black;">
 
@@ -130,7 +130,7 @@
 
       $userlogin = $_SESSION['username'];
       
-      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date WHERE username = '".$userlogin."'";
+      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date WHERE 'username' = '".$userlogin."'";
 
       $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
 
