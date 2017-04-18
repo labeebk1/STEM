@@ -98,9 +98,8 @@
 <?php
       
       $userlogin = $_SESSION['username'];
-      $strQuery = "SELECT sum(hours) FROM STEM.events GROUP BY date ORDER BY date where username = '".$userlogin."';";
+      $strQuery = "SELECT sum(hours) FROM STEM.events GROUP BY date ORDER BY date";
       $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-
 
       if ($result) {
 
