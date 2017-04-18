@@ -87,8 +87,7 @@
   </div>
       </div><!-- /.container -->
 
-
-
+  <div class = "container">
   <div class="container" style="float: left; display: inline-block;">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
@@ -209,31 +208,8 @@
   </div>
       </div><!-- /.container -->
 
-  <!-- Leave out temporarily, will add space for more functions later
-  <div class="container">
-      <div class="well form-horizontal" style="color: white;
-                                               text-align: left; 
-                                               font-size: 17px; 
-                                               background-color: white;
-                                               width: 350px;" >
-  <fieldset>
-  <legend><b><span style="color: black;">Summary</span></b></legend>
-
-    <p style="text-align: left; font-size: 18px; color: black;">
-      <b>February 2, 2017</b>
-      <br>
-      <br>
-      
-    </p>
-
-  </fieldset>
-
 
   </div>
-      </div>-->
-
-
-      <!-- /.container -->
 
 
 
