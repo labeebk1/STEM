@@ -112,8 +112,8 @@
     <td>
       <b>Display: </b>
     </td>
-    <td style="text-align: center;">
-      <input list="display" name="disp" id="disp" style="width:100px; text-align: left;">
+    <td>
+      <input list="display" name="disp" id="disp" style="width:100px; text-align: center;">
       <datalist id="display">
         <option value="Days"></option>
         <option value="Weeks"></option>
@@ -127,8 +127,8 @@
     <td>
       <b>Student Name: </b>
     </td>
-    <td style="text-align: center;">
-      <input list="students" name="student" id="student" style="width:100px; text-align: left;">
+    <td>
+      <input list="students" name="student" id="student" style="width:100px; text-align: center;">
       <datalist id="students">
       <?php
         $userlogin = $_SESSION['username'];
@@ -150,8 +150,8 @@
     <td>
       <b>Paid: </b>
     </td>
-    <td style="text-align: center;">
-      <input list="paid" name="pd" id="pd" style="width:100px; text-align: left;">
+    <td>
+      <input list="paid" name="pd" id="pd" style="width:100px; text-align: center;">
       <datalist id="paid">
         <option value="Total"></option>
         <option value="Unpaid"></option>
