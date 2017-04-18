@@ -97,7 +97,7 @@
   <fieldset>
 
     <legend>
-      <b><span style="color: black;">Chart Settings</span></b>
+      <b><span style="color: black;">Chart Options</span></b>
     </legend>
 
     <!-- Chart Settings: Dropdowns for  -->
@@ -221,7 +221,7 @@
                 "chart" => array(
                     "caption" => "Teaching Hours by Date",
                     "showValues"=> "0",
-                    "theme"=> "zune"
+                    "theme"=> "ocean"
                 )
             );
 
