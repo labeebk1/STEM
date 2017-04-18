@@ -99,7 +99,8 @@
       $userlogin = $_SESSION['username'];
       $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events GROUP BY date ORDER BY date";
       $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-
+      <script type="text/javascript" src="fusioncharts.js"></script>
+      <script type="text/javascript" src="/themes/fusioncharts.theme.zune.js"></script>
       if ($result) {
 
           $arrData = array(
