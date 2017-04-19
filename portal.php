@@ -347,7 +347,7 @@
     from (select 0 as a union all select 1 union all select 2 union all select 3 union all select 4 union all select 5 union all select 6 union all select 7 union all select 8 union all select 9) as a
     cross join (select 0 as a union all select 1 union all select 2 union all select 3 union all select 4 union all select 5 union all select 6 union all select 7 union all select 8 union all select 9) as b
     cross join (select 0 as a union all select 1 union all select 2 union all select 3 union all select 4 union all select 5 union all select 6 union all select 7 union all select 8 union all select 9) as c
-) a LEFT JOIN (SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events where username = '".$userlogin."' GROUP BY date ORDER BY date) b ON a.Date = b.Date where a.Date between '2017-01-01' and CURDATE()";
+) a LEFT JOIN (SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events where username = '".$userlogin."' GROUP BY date ORDER BY date) b ON a.Date = b.Date where a.Date between '2017-01-01' and CURDATE() GROUP BY a.Date ORDER BY a.Date";
 
       		$title = "Teaching hours by Date";
 		}
