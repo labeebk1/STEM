@@ -248,6 +248,8 @@
 		    		} else {
 		    			$strQuery .= "status = 1 ";
 		    		}
+		    	} else {
+		    		$strQuery .= "(status = 0 or status = 1) ";
 		    	}
 		    	$title .= "Paid Status = ".$paid.")";
 		    } else {
