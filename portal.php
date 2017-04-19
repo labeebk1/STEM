@@ -221,10 +221,9 @@
   <?php 
     $userlogin = $_SESSION['username'];
     if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman'){
-
     	$result = $dbhandle->query("SELECT username FROM users;");
     	echo "
-        <th><b>Admin Settings</b></th>
+        <th>Admin Options:</th>
         <tr>
           <td width=\"70\">
       		<label for=\"inst\">Instructor</label>
@@ -247,7 +246,6 @@
 		    }
 	      	echo "</select></td></tr>";
         } else {
-
 	      echo "<option value=\"Total\">Total</option>";
 	      while($results = mysqli_fetch_assoc($result)) {
 	      	if($results['username'] == $userlogin){
@@ -257,7 +255,6 @@
 	      	}
 	      }
 	      echo "</select></td></tr>";
-
         }
 
 
