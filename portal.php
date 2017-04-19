@@ -263,7 +263,7 @@
 
 </table>
     <br>
-    <input type="submit" id="refreshChart" value="Update" style="color: black;"/><br>
+    <input type="submit" id="refreshChart" value="Refresh" style="color: green;"/><br>
     </form>
     <br>
     <legend>
@@ -271,8 +271,6 @@
     </p>
 
   </fieldset>
-
-
   </div>
 
 
