@@ -198,7 +198,7 @@
   </div>
 
 
-  <div class="well form-horizontal" style="color: white;
+  <div style="color: white;
                                            text-align: center; 
                                            font-size: 16px; 
                                            background-color: white;
