@@ -153,9 +153,9 @@
     <td align="right" width="120">
 
 	  <select class="form-control" id="paid" style="width:100px; text-align: center;">
-        <option>Total</option>
-        <option>Unpaid</option>
-        <option>Paid</option>
+        <option value="Total">Total</option>
+        <option value="Unpaid">Unpaid</option>
+        <option value="Paid">Paid</option>
 	  </select>
 
     </td>
