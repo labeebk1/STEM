@@ -152,12 +152,10 @@
     </td>
     <td align="right" width="120">
 
-
-
 	  <select class="form-control" id="paid" style="width:100px; text-align: center;">
-        <option value="Total"></option>
-        <option value="Unpaid"></option>
-        <option value="Paid"></option>
+        <option>Total</option>
+        <option>Unpaid</option>
+        <option>Paid</option>
 	  </select>
 
     </td>
