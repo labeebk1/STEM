@@ -354,7 +354,7 @@
                 "chart" => array(
                     "caption" => $title,
                     "showValues"=> "0",
-                    "theme"=> "ocean"
+                    "theme"=> "zune"
                 )
             );
           $arrData["data"] = array();
