@@ -104,7 +104,7 @@
     <p style="text-align: center; font-size: 14px; color: black;">
 
 
-
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
 <table class="table-responsive">
   
@@ -185,7 +185,8 @@
 
 </table>
     <br>
-    <input type="button" id="refreshChart" value="Update"/><br>
+    <input type="submit" id="refreshChart" value="Update"/><br>
+    </form>
     <br>
     <legend>
     </legend>
@@ -210,8 +211,49 @@
       <?php
 
       $userlogin = $_SESSION['username'];
-      
-      $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events where username = '".$userlogin."' GROUP BY date ORDER BY date";
+
+		// collect value of input field
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+		    $display = $_POST['disp']; 
+		    $student = $_POST['student'];
+		    $paid = $_POST['pd'];
+		    if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman'){
+		    	$instructor = $_POST['instructor'];
+		    }
+		    
+		    $strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events where ";
+
+		    if(!empty($student)){
+		    	if($student != "Total"){
+		    		$strQuery .= "student = '".$student."' and ";
+		 		}
+		    }
+		    if(!empty($instructor)){
+		    	if($instructor != "Total"){
+		    		$strQuery .= "username = '".$instructor."' and ";
+		 		}
+		    } else {
+		    	$strQuery .= "username = '".$userlogin."' and ";
+		    }
+		    if(!empty($paid)){
+		    	if($paid != "Total"){
+		    		if($paid == "Paid"){
+		    			$strQuery .= "status = 1 ";
+		    		} else {
+		    			$strQuery .= "status = 0 ";
+		    		}
+		    	}
+		    } else {
+		    	$strQuery .= "status >= 0 ";
+		    }
+		    $strQuery .= "GROUP BY date ORDER BY date";
+
+
+		} else {
+      		$strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events where username = '".$userlogin."' GROUP BY date ORDER BY date";
+		}
+		
 
       $result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
 
@@ -221,7 +263,7 @@
                 "chart" => array(
                     "caption" => "Teaching Hours by Date",
                     "showValues"=> "0",
-                    "theme"=> "fint"
+                    "theme"=> "carbon"
                 )
             );
           $arrData["data"] = array();
