@@ -247,7 +247,7 @@
 		    			$strQuery .= "status = 1 ";
 		    		}
 		    	}
-		    	$title .= "Paid = ".$paid.$")";
+		    	$title .= "Paid = ".$paid.")";
 		    } else {
 		    	$strQuery .= "status >= 0 ";
 		    }
