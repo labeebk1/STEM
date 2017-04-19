@@ -151,7 +151,6 @@
     <td align="right" width="120">
 	  <select class="form-control" id="paid" name="pd" style="width:100px; text-align: center;">
 	  <?php
-
 	  	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$paid = $_POST['pd'];
 			if($paid == "Total"){
@@ -169,6 +168,11 @@
 			} else {
 				echo "<option value=\"Paid\">Paid</option>";
 			}
+		} else {
+			echo "<option value=\"Total\">Total</option>";
+			echo "<option value=\"Unpaid\">Unpaid</option>";
+			echo "<option value=\"Paid\">Paid</option>";
+		}
 	  ?>
 	  </select>
     </td>
