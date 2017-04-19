@@ -148,16 +148,14 @@
 
   <tr>
     <td width="70">
-      <label for="pd">Paid</label>
+      <label for="paid">Paid</label>
     </td>
     <td align="right" width="120">
-
-	  <select class="form-control" id="pd" style="width:100px; text-align: center;">
+	  <select class="form-control" id="paid" name="pd" style="width:100px; text-align: center;">
         <option value="Total">Total</option>
         <option value="Unpaid">Unpaid</option>
         <option value="Paid">Paid</option>
 	  </select>
-
     </td>
   </tr>
 
