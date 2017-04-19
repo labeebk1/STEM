@@ -229,14 +229,14 @@
 		    	if($student != "Total"){
 		    		$strQuery .= "student = '".$student."' and ";
 		 		}
-		 		$title .= "Student = ".$student.",";
+		 		$title .= "Student = ".$student.", ";
 		    } else {
-		    	$title = "Student = Total,";
+		    	$title .= "Student = Total, ";
 		    }
 		    if(!empty($instructor)){
 		    	if($instructor != "Total"){
 		    		$strQuery .= "username = '".$instructor."' and ";
-		    		$title .= "Instructor = ".$instructor.",";
+		    		$title .= "Instructor = ".$instructor.", ";
 		 		}
 		    } else {
 		    	$strQuery .= "username = '".$userlogin."' and ";
