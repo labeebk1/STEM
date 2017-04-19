@@ -114,9 +114,31 @@
     </td>
     <td align="right" width="120">
 	  <select class="form-control" id="display" name="disp" style="width:100px; text-align: center;">
-        <option value="Days">Days</option>
-        <option value="Weeks">Weeks</option>
-        <option value="Months">Months</option>
+
+	  <?php
+	  	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$display = $_POST['disp'];
+			if($display == "Days"){
+				echo "<option value=\"Days\" selected=\"selected\">Days</option>";
+			} else {
+				echo "<option value=\"Days\">Days</option>";
+			}
+			if($display == "Weeks"){
+				echo "<option value=\"Weeks\" selected=\"selected\">Weeks</option>";
+			} else {
+				echo "<option value=\"Weeks\">Weeks</option>";
+			}
+			if($display == "Months"){
+				echo "<option value=\"Months\" selected=\"selected\">Months</option>";
+			} else {
+				echo "<option value=\"Months\">Months</option>";
+			}
+		} else {
+			echo "<option value=\"Days\">Days</option>";
+			echo "<option value=\"Weeks\">Weeks</option>";
+			echo "<option value=\"Months\">Months</option>";
+		}
+	  ?>
       </select>
     </td>
   </tr>
