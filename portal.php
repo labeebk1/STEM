@@ -230,6 +230,8 @@
 		    		$strQuery .= "student = '".$student."' and ";
 		 		}
 		 		$title .= "Student = ".$student.",";
+		    } else {
+		    	$title = "Student = Total,";
 		    }
 		    if(!empty($instructor)){
 		    	if($instructor != "Total"){
@@ -247,9 +249,10 @@
 		    			$strQuery .= "status = 1 ";
 		    		}
 		    	}
-		    	$title .= "Paid = ".$paid.")";
+		    	$title .= "Paid Status = ".$paid.")";
 		    } else {
-		    	$strQuery .= "status >= 0 ";
+		    	$strQuery .= "(status = 0 or status = 1) ";
+		    	$title .= "Paid Status = Total)";
 		    }
 		    $strQuery .= "GROUP BY date ORDER BY date";
 
