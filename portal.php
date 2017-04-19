@@ -148,15 +148,18 @@
 
   <tr>
     <td width="70">
-      <b>Paid</b>
+      <label for="paid">Paid</label>
     </td>
     <td align="right" width="120">
-      <input list="paid" name="pd" id="pd" style="width:100px; text-align: center;">
-      <datalist id="paid">
+
+
+
+	  <select class="form-control" id="paid" style="width:100px; text-align: center;">
         <option value="Total"></option>
         <option value="Unpaid"></option>
         <option value="Paid"></option>
-      </datalist>
+	  </select>
+
     </td>
   </tr>
 
@@ -273,7 +276,7 @@
                 "chart" => array(
                     "caption" => $title,
                     "showValues"=> "0",
-                    "theme"=> "carbon"
+                    "theme"=> "ocean"
                 )
             );
           $arrData["data"] = array();
