@@ -266,7 +266,7 @@
 
 </table>
     <br>
-    <button type="submit" id="refreshChart" value="Update"/><br>
+    <input type="submit" id="refreshChart" value="Update" style="color: black;"/><br>
     </form>
     <br>
     <legend>
