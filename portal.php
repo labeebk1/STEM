@@ -110,26 +110,24 @@
   
   <tr>
     <td width="70">
-      <b>Display</b>
+      <label for="display">Display</label>
     </td>
     <td align="right" width="120">
-      <input list="display" name="disp" id="disp" style="width:100px; text-align: center;">
-      <datalist id="display">
-        <option value="Days"></option>
-        <option value="Weeks"></option>
-        <option value="Months"></option>
-      </datalist>
+	  <select class="form-control" id="display" name="disp" style="width:100px; text-align: center;">
+        <option value="Days">Days</option>
+        <option value="Weeks">Weeks</option>
+        <option value="Months">Months</option>
+      </select>
     </td>
   </tr>
 
 
   <tr>
     <td width="70">
-      <b>Student</b>
+      <label for="students">Student</label>
     </td>
     <td align="right" width="120">
-      <input list="students" name="student" id="student" style="width:100px; text-align: center;">
-      <datalist id="students">
+	  <select class="form-control" id="students" name="student" style="width:100px; text-align: center;">
       <?php
         $userlogin = $_SESSION['username'];
         if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman' || $userlogin == 'aziz'){
@@ -139,10 +137,10 @@
         }
         echo "<option value='Total'></option>";
         while($results = mysqli_fetch_assoc($result)) {
-          echo "<option value=".$results['student']."></option>";
+          echo "<option value=".$results['student'].">".$results['student']."</option>";
           }
       ?>  
-      </datalist>
+      </select>
     </td>
   </tr>
 
