@@ -150,9 +150,26 @@
     </td>
     <td align="right" width="120">
 	  <select class="form-control" id="paid" name="pd" style="width:100px; text-align: center;">
-        <option value="Total">Total</option>
-        <option value="Unpaid">Unpaid</option>
-        <option value="Paid">Paid</option>
+	  <?php
+
+	  	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$paid = $_POST['pd'];
+			if($paid == "Total"){
+				echo "<option value=\"Total\" selected=\"selected\">Total</option>";
+			} else {
+				echo "<option value=\"Total\">Total</option>";
+			}
+			if($paid == "Unpaid"){
+				echo "<option value=\"Unpaid\" selected=\"selected\">Unpaid</option>";
+			} else {
+				echo "<option value=\"Unpaid\">Unpaid</option>";
+			}
+			if($paid == "Paid"){
+				echo "<option value=\"Paid\" selected=\"selected\">Paid</option>";
+			} else {
+				echo "<option value=\"Paid\">Paid</option>";
+			}
+	  ?>
 	  </select>
     </td>
   </tr>
