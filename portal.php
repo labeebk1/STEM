@@ -234,9 +234,9 @@
         if($_SERVER["REQUEST_METHOD"] == "POST"){
         	$instructor = $_POST['instructor'];
         	if($instructor == "Total"){
-	      		echo "<option selected='selected' value=\"Total\"></option>";
+	      		echo "<option selected='selected' value=\"Total\">Total</option>";
         	} else {
-	      		echo "<option value=\"Total\"></option>";
+	      		echo "<option value=\"Total\">Total</option>";
         	}
 		    while($results = mysqli_fetch_assoc($result)) {
 		      if($results['username'] == $instructor){
@@ -248,7 +248,7 @@
 	      	echo "</select></td></tr>";
         } else {
 
-	      echo "<option value=\"Total\"></option>";
+	      echo "<option value=\"Total\">Total</option>";
 	      while($results = mysqli_fetch_assoc($result)) {
 	      	if($results['username'] == $userlogin){
 	      		echo "<option selected='selected' value='".$results['username']."'>".$results['username']."</option>";
