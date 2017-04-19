@@ -157,10 +157,28 @@
         } else {
           $result = $dbhandle->query("SELECT student FROM students where username = '".$userlogin."';");
         }
-        echo "<option value='Total'>Total</option>";
-        while($results = mysqli_fetch_assoc($result)) {
-          echo "<option value=".$results['student'].">".$results['student']."</option>";
-          }
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+		    $student = $_POST['student'];
+		    if($student == "Total"){
+		    	echo "<option value='Total' selected='selected'>Total</option>";
+		    } else {
+		    	echo "<option value='Total'>Total</option>";
+		    }
+	        while($results = mysqli_fetch_assoc($result)) {
+	       		if($results['student'] == $student){
+	          		echo "<option selected='selected' value='".$results['student']."'>".$results['student']."</option>";
+	       		} else {
+	          		echo "<option value='".$results['student']."'>".$results['student']."</option>";
+	       		}
+	        }
+        } else {
+	        echo "<option value='Total'>Total</option>";
+	        while($results = mysqli_fetch_assoc($result)) {
+	          echo "<option value=".$results['student'].">".$results['student']."</option>";
+	        }
+        }
       ?>  
       </select>
     </td>
