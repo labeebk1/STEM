@@ -218,6 +218,7 @@
 		    $display = $_POST['disp']; 
 		    $student = $_POST['student'];
 		    $paid = $_POST['pd'];
+		    $title = "Teaching Hours by Date (";
 		    if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman'){
 		    	$instructor = $_POST['instructor'];
 		    }
@@ -228,10 +229,12 @@
 		    	if($student != "Total"){
 		    		$strQuery .= "student = '".$student."' and ";
 		 		}
+		 		$title .= "Student = ".$student.",";
 		    }
 		    if(!empty($instructor)){
 		    	if($instructor != "Total"){
 		    		$strQuery .= "username = '".$instructor."' and ";
+		    		$title .= "Instructor = ".$instructor.",";
 		 		}
 		    } else {
 		    	$strQuery .= "username = '".$userlogin."' and ";
@@ -239,11 +242,12 @@
 		    if(!empty($paid)){
 		    	if($paid != "Total"){
 		    		if($paid == "Paid"){
-		    			$strQuery .= "status = 1 ";
-		    		} else {
 		    			$strQuery .= "status = 0 ";
+		    		} else {
+		    			$strQuery .= "status = 1 ";
 		    		}
 		    	}
+		    	$title .= "Paid = ".$paid.$")";
 		    } else {
 		    	$strQuery .= "status >= 0 ";
 		    }
@@ -252,6 +256,7 @@
 
 		} else {
       		$strQuery = "SELECT date as 'Date', sum(hours) as 'Hours' FROM STEM.events where username = '".$userlogin."' GROUP BY date ORDER BY date";
+      		$title = "Teaching hours by Date";
 		}
 		
 
@@ -261,7 +266,7 @@
 
           $arrData = array(
                 "chart" => array(
-                    "caption" => "Teaching Hours by Date",
+                    "caption" => $title,
                     "showValues"=> "0",
                     "theme"=> "carbon"
                 )
