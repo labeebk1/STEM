@@ -135,7 +135,7 @@
         } else {
           $result = $dbhandle->query("SELECT student FROM students where username = '".$userlogin."';");
         }
-        echo "<option value='Total'></option>";
+        echo "<option value='Total'>Total</option>";
         while($results = mysqli_fetch_assoc($result)) {
           echo "<option value=".$results['student'].">".$results['student']."</option>";
           }
@@ -167,16 +167,16 @@
         <th><b>Admin Settings</b></th>
         <tr>
           <td width=\"70\">
-            <b>Instructor</b>
+      		<label for=\"inst\">Instructor</label>
           </td>
           <td align=\"right\" width=\"120\">
-            <input list=\"inst\" name=\"instructor\" id=\"instructor\" style=\"width:100px; text-align: center;\">
-            <datalist id=\"inst\"><option value=\"Total\"></option>
+          	<select class=\"form-control\" id=\"inst\" name=\"instructor\" style=\"width:100px; text-align: center;\">
+            <option value=\"Total\"></option>
       ";
       while($results = mysqli_fetch_assoc($result)) {
-        echo "<option value=".$results['username']."></option>";
+        echo "<option value=".$results['username'].">".$results['username']."</option>";
       }
-      echo "</datalist></td></tr>";
+      echo "</select></td></tr>";
     }
   ?>
 
