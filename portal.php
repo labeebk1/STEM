@@ -198,11 +198,6 @@
   </div>
 
 
-  <div style="color: white;
-                                           text-align: center; 
-                                           font-size: 16px; 
-                                           background-color: white;
-                                           display:inline-block; float: right;" >
   <fieldset>
 
     <p style="text-align: left; font-size: 14px; color: black;">
@@ -302,9 +297,8 @@
   </fieldset>
 
 
-  </div>
-      </div><!-- /.container -->
 
+      </div><!-- /.container -->
 
 
 
