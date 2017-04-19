@@ -159,7 +159,6 @@
         }
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-
 		    $student = $_POST['student'];
 		    if($student == "Total"){
 		    	echo "<option value='Total' selected='selected'>Total</option>";
@@ -223,21 +222,45 @@
     $userlogin = $_SESSION['username'];
     if($userlogin == 'labeeb' || $userlogin == 'm_mcmillan' || $userlogin == 'aman'){
 
-      $result = $dbhandle->query("SELECT username FROM users;");
-      echo "
+    	$result = $dbhandle->query("SELECT username FROM users;");
+    	echo "
         <th><b>Admin Settings</b></th>
         <tr>
           <td width=\"70\">
       		<label for=\"inst\">Instructor</label>
           </td>
           <td align=\"right\" width=\"120\">
-          	<select class=\"form-control\" id=\"inst\" name=\"instructor\" style=\"width:100px; text-align: center;\">
-            <option value=\"Total\"></option>
-      ";
-      while($results = mysqli_fetch_assoc($result)) {
-        echo "<option value=".$results['username'].">".$results['username']."</option>";
-      }
-      echo "</select></td></tr>";
+          	<select class=\"form-control\" id=\"inst\" name=\"instructor\" style=\"width:100px; text-align: center;\">";
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+        	$instructor = $_POST['instructor'];
+        	if($instructor == "Total"){
+	      		echo "<option selected='selected' value=\"Total\"></option>";
+        	} else {
+	      		echo "<option value=\"Total\"></option>";
+        	}
+		    while($results = mysqli_fetch_assoc($result)) {
+		      if($results['username'] == $instructor){
+		      	echo "<option selected='selected' value='".$results['username']."'>".$results['username']."</option>";
+		      } else {
+		       	echo "<option value='".$results['username']."'>".$results['username']."</option>";
+		      }
+		    }
+	      	echo "</select></td></tr>";
+        } else {
+
+	      echo "<option value=\"Total\"></option>";
+	      while($results = mysqli_fetch_assoc($result)) {
+	      	if($results['username'] == $userlogin){
+	      		echo "<option selected='selected' value='".$results['username']."'>".$results['username']."</option>";
+	      	} else {
+	       		echo "<option value='".$results['username']."'>".$results['username']."</option>";
+	      	}
+	      }
+	      echo "</select></td></tr>";
+
+        }
+
+
     }
   ?>
 
