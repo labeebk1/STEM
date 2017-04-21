@@ -402,7 +402,7 @@
                                            text-align: center; 
                                            font-size: 16px; 
                                            background-color: white;
-                                           display:inline-block; float: right;" >
+                                           display:inline-block;" >
   <fieldset>
 
 
