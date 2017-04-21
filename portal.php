@@ -399,7 +399,7 @@
 
 
   <div class="container" style="overflow: hidden; position: relative;">
-      <div class="well form-horizontal" style="color: white;
+      <div class="well form-horizontal" style="color: black;
                                                text-align: center; 
                                                font-size: 16px; 
                                                background-color: white;
