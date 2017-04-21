@@ -398,6 +398,19 @@
 
 
 
+  <div class="well form-horizontal" style="color: white;
+                                           text-align: center; 
+                                           font-size: 16px; 
+                                           background-color: white;
+                                           display:inline-block; float: right;" >
+  <fieldset>
+
+
+  <p> hello Tariq Khan </p>
+  </fieldset>
+  </div>
+
+
 
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </body>
