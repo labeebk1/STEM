@@ -398,19 +398,17 @@
 
 
 
-  <div class="well form-horizontal" style="color: white;
-                                           text-align: center; 
-                                           font-size: 16px; 
-                                           background-color: white;
-                                           display:inline-block;" >
-  <fieldset>
-
-
-  <p> hello Tariq Khan </p>
-  </fieldset>
-  </div>
-
-
+  <div class="container" style="overflow: hidden; position: relative;">
+      <div class="well form-horizontal" style="color: white;
+                                               text-align: center; 
+                                               font-size: 16px; 
+                                               background-color: white;
+                                               display:inline-block; float: left; width: 280px;" >
+                                               <fieldset>
+                                               <p> Hello Tariq Khan </p>
+                                               </fieldset>
+                                               </div>
+                                               </div>
 
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </body>
