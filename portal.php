@@ -88,7 +88,7 @@
       </div><!-- /.container -->
 
 
-  <div class="container" style="overflow: hidden; position: relative;">
+  <div class="container" style="position: relative;">
       <div class="well form-horizontal" style="color: white;
                                                text-align: center; 
                                                font-size: 16px; 
@@ -271,7 +271,6 @@
     </p>
 
   </fieldset>
-  </div>
   </div>
 
 
