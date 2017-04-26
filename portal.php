@@ -272,6 +272,7 @@
 
   </fieldset>
   </div>
+  </div>
 
 
   <div class="well form-horizontal" style="color: white;
